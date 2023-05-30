@@ -1,6 +1,6 @@
 # aureo-pdk
 
-This repository contains the Process Design Kit (PDK) for the Aureo process. The Aureo process is a unique 2-wafer Silicon-on-Insulator (SOI) process, specifically designed to enable the integration of Integrated Circuits (ICs) and Micro-Electro-Mechanical Systems (MEMS). This process is intended to make it possible to build combined systems such as microrobots and sensor motes.
+This repository contains the Process Design Kit (PDK) for the Aureo process. The Aureo process is a unique bonded 2-SCS layer Silicon-on-Insulator (SOI) process, specifically designed to enable the integration of Integrated Circuits (ICs) and Micro-Electro-Mechanical Systems (MEMS). This process is intended to make it possible to build combined systems such as microrobots and sensor motes.
 
 
 ## Contents
