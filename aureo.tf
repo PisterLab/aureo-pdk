@@ -7,7 +7,7 @@ layerDefinitions(
  techPurposes(
  ;( PurposeName               Purpose#   Abbreviation )
  ;( -----------               --------   ------------ )
-  ( drawing                   252        drw          )
+  ( drawing                   -1         drw          )
   ( net                       253        net          )
  ) ;techPurposes
 
@@ -15,48 +15,49 @@ layerDefinitions(
  ;( LayerName                 Layer#     Abbreviation )
  ;( ---------                 ------     ------------ )
  ;User-Defined Layers:
-  ( S1                        1          S1           )
-  ( P1                        2          P1           )
-  ( M1                        3          M1           )
-  ( M2                        6          M2           )
-  ( P2                        9          P2           )
-  ( S2                        10         S2           )
+  ( SOI1                      1          S1           )
+  ( POLY1                     2          P1           )
+  ( METAL1                    3          M1           )
+  ( METAL2                    6          M2           )
+  ( POLY2                     9          P2           )
+  ( SOI2                      10         S2           )
  ) ;techLayers
 
  techLayerPurposePriorities(
  ;layers are ordered from lowest to highest priority
  ;( LayerName                 Purpose    )
  ;( ---------                 -------    )
-  ( S2                        drawing    )
-  ( P2                        drawing    )
-  ( M2                        drawing    )
-  ( M1                        drawing    )
-  ( P1                        drawing    )
-  ( S1                        drawing    )
-  ( P1                        net        )
-  ( P2                        net        )
-  ( M1                        net        )
-  ( M2                        net        )
+  ( SOI2                      drawing    )
+  ( POLY2                     drawing    )
+  ( METAL2                    drawing    )
+  ( METAL1                    drawing    )
+  ( POLY1                     drawing    )
+  ( SOI1                      drawing    )
+  ( POLY1                     net        )
+  ( POLY2                     net        )
+  ( METAL1                    net        )
+  ( METAL2                    net        )
  ) ;techLayerPurposePriorities
 
  techDisplays(
  ;( LayerName    Purpose      Packet          Vis Sel Con2ChgLy DrgEnbl Valid)
  ;( ---------    -------      ------          --- --- --------- ------- -----)
-  ( S1           drawing      S1               t t t t t )
-  ( P1           drawing      P1               t t t t t )
-  ( M1           drawing      M1               t t t t t )
-  ( M2           drawing      M2               t t t t t )
-  ( P2           drawing      P2               t t t t t )
-  ( S2           drawing      S2               t t t t t )
-  ( P1           net          P1net            t t t t nil )
-  ( P2           net          P2net            t t t t nil )
-  ( M1           net          M1net            t t t t nil )
-  ( M2           net          M2net            t t t t nil )
+  ( SOI1         drawing      whiteSolid       t t t t t )
+  ( POLY1        drawing      yellowSolid      t t t t t )
+  ( METAL1       drawing      redSolid         t t t t t )
+  ( METAL2       drawing      greenSolid       t t t t t )
+  ( POLY2        drawing      blueSolid        t t t t t )
+  ( SOI2         drawing      magentaSolid     t t t t t )
+  ( POLY1        net          yellowDashed     t t t t nil )
+  ( POLY2        net          blueDashed       t t t t nil )
+  ( METAL1       net          redDashed        t t t t nil )
+  ( METAL2       net          greenDashed      t t t t nil )
  ) ;techDisplays
 
 techLayerProperties(
 ;( PropName               Layer1 [ Layer2 ]            PropValue )
 )
+
 
 ) ;layerDefinitions
 
