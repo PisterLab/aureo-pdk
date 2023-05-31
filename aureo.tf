@@ -28,6 +28,7 @@ layerDefinitions(
  ;( -----------               --------   ------------ )
   ( drawing                   -1         drw          )
   ( net                       253        net          )
+  ( derivedCut                13         dcut         )
  ) ;techPurposes
 
  techLayers(
@@ -42,21 +43,31 @@ layerDefinitions(
   ( SOI2                      10         S2           )
  ) ;techLayers
 
+ techDerivedLayers(
+  ;( t_derivedLayerName       x_derivedLayerNum   (tx_layer1 s_op tx_layer2) )
+  ( SOI1_POLY1                100                 (SOI1 'and POLY1) )
+  ( POLY1_METAL1              101                 (POLY1 'and METAL1) )
+  ( METAL1_METAL2             102                 (METAL1 'and METAL2) )
+  ( METAL2_POLY2              103                 (METAL2 'and POLY2) )
+  ( POLY2_SOI2                104                 (POLY2 'and SOI2) )
+ )
+
  techLayerPurposePriorities(
  ;layers are ordered from lowest to highest priority
  ;( LayerName                 Purpose    )
  ;( ---------                 -------    )
-  ( SOI2                      drawing    )
-  ( POLY2                     drawing    )
-  ( METAL2                    drawing    )
-  ( METAL1                    drawing    )
+  ( SOI1                      drawing    ) 
   ( POLY1                     drawing    )
-  ( SOI1                      drawing    )
+  ( METAL1                    drawing    )
+  ( METAL2                    drawing    )
+  ( POLY2                     drawing    )
+  ( SOI2                      drawing    )
   ( POLY1                     net        )
   ( POLY2                     net        )
   ( METAL1                    net        )
   ( METAL2                    net        )
  ) ;techLayerPurposePriorities
+
 
  techDisplays(
  ;( LayerName    Purpose      Packet          Vis Sel Con2ChgLy DrgEnbl Valid)
@@ -98,11 +109,12 @@ layerRules(
     ;( layer          function         [maskNumber] )
     ;( -----          --------          ----------  )
     ( SOI1          "substrate"        1          )
-    ( POLY1         "poly"             2          )
-    ( METAL1        "metal"            3          )
+    ( POLY1         "li"               2          )
+    ( METAL1        "padmetal"         3          )
+    ( METAL2        "padmetal"         4          )
+    ( POLY2         "li"               5          )
     ( SOI2          "substrate"        6          )
-    ( POLY2         "poly"             7          )
-    ( METAL2        "metal"            8          )
+    
   ) ;functions
 
   
@@ -119,6 +131,36 @@ layerRules(
 
 
 ;********************************
+; VIA DEFINITIONS
+;********************************
+
+viaDefs(
+  standardViaDefs(
+    ;(t_viaDefName    tx_layer1   tx_layer2 cutLayer )
+    ( SOI1xPOLY1      SOI1        POLY1     ( "POLY1"   1.0   1.0 ) 
+      ( 1 1 ( 0.0 0.0 ) )
+      ( 0.5 0.5 ) ( 0.5 0.5 )  ( 0.0 0.0 ) ( 0.0 0.0 ) ( 0.0 0.0 )
+    )
+    ( POLY1xMETAL1    POLY1       METAL1    ( "METAL1" 1.0   1.0 )
+      ( 1 1 ( 0.0 0.0 ) )
+      ( 0.5 0.5 ) ( 0.5 0.5 )  ( 0.0 0.0 ) ( 0.0 0.0 ) ( 0.0 0.0 )
+    )
+    ( METAL1xMETAL2   METAL1      METAL2    ( "METAL2" 1.0   1.0 )
+      ( 1 1 ( 0.0 0.0 ) )
+      ( 0.5 0.5 ) ( 0.5 0.5 )  ( 0.0 0.0 ) ( 0.0 0.0 ) ( 0.0 0.0 )
+    )
+    ( METAL2xPOLY2    METAL2      POLY2     ( "METAL2" 1.0   1.0 )
+      ( 1 1 ( 0.0 0.0 ) )
+      ( 0.5 0.5 ) ( 0.5 0.5 )  ( 0.0 0.0 ) ( 0.0 0.0 ) ( 0.0 0.0 )
+    )
+    ( POLY2xSOI2      POLY2       SOI2      ( "POLY2" 1.0   1.0 )
+      ( 1 1 ( 0.0 0.0 ) )
+      ( 0.5 0.5 ) ( 0.5 0.5 )  ( 0.0 0.0 ) ( 0.0 0.0 ) ( 0.0 0.0 )
+    )
+  );standardViaDefs
+) ;viaDefs
+
+;********************************
 ; CONSTRAINT GROUPS
 ;********************************
 constraintGroups(
@@ -127,7 +169,9 @@ constraintGroups(
   ( "virtuosoDefaultExtractorSetup"    nil
   ;  layer constraints
     interconnect(
-      ( validLayers    ( SOI1 POLY1 METAL1 SOI2 POLY2 METAL2 )   )
+      ( validLayers ( "SOI1" "POLY1" "METAL1" "SOI2" "POLY2" "METAL2" )   )
+      ( validVias ( "SOI1xPOLY1" "POLY1xMETAL1" "METAL1xMETAL2" "METAL2xPOLY2" "POLY2xSOI2" ) )
+      ( validPurposes 'include ("drawing" "net" "derivedCut") )
     );interconnect
   );virtuosoDefaultExtractorSetup
   ( "foundry"
