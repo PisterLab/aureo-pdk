@@ -30,6 +30,18 @@ Note that for a faster release of the substrate before bonding, it may be helpfu
 
 After the above steps, a 49% HF release etch is performed to release the structures. The individual dies are then diced and bonded together at the gold-gold contacts.
 
+
+## Working with the PDK
+
+The Aureo PDK is developed for Cadence Virtuoso, and exists as an ASCII Technology File together with a Virtuoso library.
+
+To allow for connectivity extraction to verify layout vs. schematic and perform parasitic extraction, a particular set of layers were defined in which users can layout their designs in.
+
+Of particular note is the concept of high-metal and low-metal, which captures the ability to design connectivity between the poly layers and SOI layers using the metal layer. The figure below explains the correspondence between the layout view's `LOWMETAL1`/`HIGHMETAL1`/`LOWMETAL2`/`HIGHMETAL2` and the physical result.
+
+![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/dc714a5b-d4a4-4abd-acce-a0b8fba3050d)
+
+
 ## Design Rules
 
 ### TRENCH
