@@ -2,6 +2,14 @@
 
 This repository contains the Process Design Kit (PDK) for the Aureo process. The Aureo process is a unique bonded 2-SCS layer Silicon-on-Insulator (SOI) process, specifically designed to enable the integration of Integrated Circuits (ICs) and Micro-Electro-Mechanical Systems (MEMS). This process is intended to make it possible to build combined systems such as microrobots and sensor motes.
 
+## Layer stackup
+
+![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/abacc744-3962-4fe8-acd8-cb80029c1709)
+
+## Bonded structure
+
+![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/e0779e61-25a8-4243-8b25-a8bb2ac41eb6)
+
 
 ## Contents
 
