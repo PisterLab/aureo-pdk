@@ -15,6 +15,7 @@ This repository contains the Process Design Kit (PDK) for the Aureo process. The
 
 - `aureo_lib/` - Cadence Virtuoso library with standard cells
 - `aureo.tf` - Cadence Virtuoso technology file
+- `display.drf` - Display resource file defining how layers are rendered in Cadence's Layout XL.
 
 ## Process Flow
 
