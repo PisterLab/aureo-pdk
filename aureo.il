@@ -1,5 +1,5 @@
 
-(defun soi_split ()
+(defun split_soi ()
 ; Splits the SOI1 and SOI2 layers up by performing a NOT operation 
 ; between SOI1 and SOIHOLE1 and using the result as the new SOI1 layer.
     cv = geGetEditCellView()
@@ -24,4 +24,26 @@
     abeDone()    
 )
 
+
+(defun merge_soi ()
+; Merges the SOI1 and SOI2 layers by performing an OR operation on the layers
+; and using the result as the new SOI1 and SOI2 layers
+    cv = geGetEditCellView()
+    abeInit(cv)
+    a2 = abeLayerFromCellView("SOI1")
+    a3 = abeNewLayer()
+    abeLayerOr(a2 a3)
+    foreach(object setof(shapes cv~>shapes shapes~>layerName == "SOI1")
+        dbDeleteObject(object))
+    abeLayerToCellView(a3 "SOI1")
+
+    a4 = abeLayerFromCellView("SOI2")
+    a5 = abeNewLayer()
+    abeLayerOr(a4 a5)
+    foreach(object setof(shapes cv~>shapes shapes~>layerName == "SOI2")
+        dbDeleteObject(object))
+    abeLayerToCellView(a5 "SOI2")
+
+    abeDone()    
+)
 
