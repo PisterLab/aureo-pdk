@@ -19,30 +19,23 @@ This repository contains the Process Design Kit (PDK) for the Aureo process. The
 
 ## Process Flow
 
-![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/1dd00361-0531-422c-900e-9edd9f600898)
+![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/0ff4ffb6-6a4a-4cc0-9540-0dc3eb88d8ad)
 
 1. The process begins with a 40/2/550um SOI wafer. Note that for a faster release of the substrate before bonding, it may be helpful to start with SOI wafers with pre-patterned buried oxide (BOX). Or alternatively, the substrate can be pre-patterned with an initial backside DRIE etch.
+2. 500nm of nitride is deposited via LPCVD 
+3. 1um of N+ doped polysilicon is deposited via LPCVD
 
-2. The `SOI` mask is applied with a timed DRIE
+![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/16907d1b-308a-4370-a489-655022b9720a)
 
-3. 500nm of nitride is deposited via LPCVD
+4. The `POLY` mask is applied using RIE
+5. A hot phopshoric acid etch of the nitride removes the exposed nitride. The polysilicon remains electrically isolated from the SOI.
+6. A 1um film of Au is patterned onto the wafer using lift-off.
 
-![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/62749289-2eeb-4ae3-ae51-fa702b7a86b4)
+![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/dd273e7f-42c2-443a-9da8-a8a27e047c28)
 
-4. 1um of N+ doped polysilicon is deposited via LPCVD
-
-5. The `POLY` mask is applied using RIE
-
-6. A hot phopshoric acid etch of the nitride removes the exposed nitride. The polysilicon remains electrically isolated from the SOI.
-
-![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/3a2a2357-0884-477f-adf5-014529fed43d)
-
-7. A 1um film of Au is patterned onto the wafer using lift-off.
-
-8. The buried oxide is etched away and the structure is released from the substrate in a 49% HF bath.
-
-9. The counterpart structure, most likely fabricated on the same wafer, is then bonded at the gold contacts.
-
+7. The `SOI` mask is applied with a timed DRIE
+8. The counterpart structure, most likely fabricated on the same wafer, is then bonded at the gold contacts.
+9. The buried oxide is etched away and the structure is released from the substrate in a 49% HF bath.
 
 ## Working with the PDK
 
@@ -53,6 +46,8 @@ To allow for connectivity extraction to verify layout vs. schematic and perform 
 Of particular note is the concept of high-metal and low-metal, which captures the ability to design connectivity between the poly layers and SOI layers using the metal layer. The figure below explains the correspondence between the layout view's `LOWMETAL1`/`HIGHMETAL1`/`LOWMETAL2`/`HIGHMETAL2` and the physical result.
 
 ![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/dc714a5b-d4a4-4abd-acce-a0b8fba3050d)
+
+### Exporting the masks
 
 
 ## Design Rules
