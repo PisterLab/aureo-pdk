@@ -47,7 +47,72 @@ Of particular note is the concept of high-metal and low-metal, which captures th
 
 ![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/dc714a5b-d4a4-4abd-acce-a0b8fba3050d)
 
-### Exporting the masks
+### Exporting the layout and masks
+
+The Aureo PDK offers a number of tools for streaming out the layouts to GDSII file format. The current layer number definition is as follows:
+
+**Layers for fabrication**
+| Layer Name | Layer Number | Description |
+| ---------- | ------------ | ----------- |
+| `SOIFAB` | 0 | Silicon on Insulator |
+| `POLYFAB` | 1 | Polysilicon |
+| `METALFAB` | 2 | Metal |
+
+<br>
+
+
+**Merged layers for inspection, visualization, and 3D rendering**
+
+| Layer Name | Layer Number | Description |
+| ---------- | ------------ | ----------- |
+| `SOI1FAB` | 3 | Silicon on Insulator |
+| `POLY1FAB` | 4 | Polysilicon |
+| `METAL1FAB` | 5 | Metal |
+| `METAL2FAB` | 6 | Metal |
+| `POLY2FAB` | 7 | Polysilicon |
+| `SOI2FAB` | 8 | Silicon on Insulator |
+
+<br>
+
+**Layers for layout**
+
+| Layer Name | Layer Number | Description |
+| ---------- | ------------ | ----------- |
+| `SOI1` | 9 | Silicon on Insulator |
+| `SOIHOLE1` | 10 | Silicon on Insulator |
+| `POLY1` | 11 | Polysilicon |
+| `LOWMETAL1` | 12 | Metal |
+| `HIGHMETAL1` | 13 | Metal |
+| `HIGHMETAL2` | 14 | Metal |
+| `LOWMETAL2` | 15 | Metal |
+| `POLY2` | 16 | Polysilicon |
+| `SOI2` | 17 | Silicon on Insulator |
+| `SOIHOLE2` | 18 | Silicon on Insulator |
+
+
+**Export GDS**
+
+To export the GDS of a particular library and cell, run the following command:
+
+```
+python3 tools/export_gds.py --lib="aureo_lib" --cell="test"
+```
+
+This will directly export the GDS to the directory from which the command was run. The GDS file exported will have layers with numbers corresponding to the table in the section above.
+
+
+**Preprocess GDS**
+
+To prepare the GDS for fabrication, run the following command. Note that this currently requires that `tools/export_gds.py` has been run first.
+
+```
+python3 tools/preprocess_gds.py --lib="aureo_lib" --cell="test"
+```
+
+
+
+
+
 
 
 ## Design Rules
