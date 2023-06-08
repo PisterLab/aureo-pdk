@@ -89,6 +89,7 @@ The Aureo PDK offers a number of tools for streaming out the layouts to GDSII fi
 | `SOI2` | 17 | Silicon on Insulator |
 | `SOIHOLE2` | 18 | Silicon on Insulator |
 
+### Export Scripts
 
 **Export GDS**
 
@@ -98,18 +99,31 @@ To export the GDS of a particular library and cell, run the following command:
 python3 tools/export_gds.py --lib="aureo_lib" --cell="test"
 ```
 
-This will directly export the GDS to the directory from which the command was run. The GDS file exported will have layers with numbers corresponding to the table in the section above.
+`tools/export_gds.py` - Given a library and cellview, export_fab.py will stream out a GDSII file 
+with all the drawn layers present (according the "Layer for layout" table above). It will first ensure that SOI layers have been split about
+the SOIHOLE layers (see aureo.il file). This will directly export the GDS to the directory from which the command was run.
 
 
-**Preprocess GDS**
+**Process the GDS**
 
 To prepare the GDS for fabrication, run the following command. Note that this currently requires that `tools/export_gds.py` has been run first.
 
 ```
-python3 tools/preprocess_gds.py --lib="aureo_lib" --cell="test"
+python3 tools/process_gds.py --lib="aureo_lib" --cell="test"
 ```
+`tools/process_gds.py` takes the drawn layers in the corresponding Aureo GDSII file and preprocesses them
+for fab by merging the metal layers: 
+ - (`LOWMETAL1` & `HIGHMETAL1` -> `METAL1FAB`)
+ - (`LOWMETAL2` & `HIGHMETAL2` -> `METAL2FAB`).
+ 
+Then `SOI1/2` become `SOIFAB1/2` and `POLY1/2` become `POLYFAB1/2`.
 
+At this point the first gds file is written out with the filename `[CELLNAME]_merged.gds.`
 
+Then, all `[LAYERNAME]2` layers are reflected about the X-axis and moved to `SOIFAB`, `POLYFAB`, `METALFAB` layers.
+The second gds file is written out. This final gds file contains only 3 layers for 3 masks.
+
+The final gds file is written out with the filename `[CELLNAME]_fab.gds.`
 
 
 

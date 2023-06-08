@@ -1,16 +1,6 @@
-# export_masks.py - Given a library and cellview, export_fab.py will stream out a GDSII file
-# with all the drawn layers present. It will first ensure that SOI layers have been split about
-# the SOIHOLE layers (see aureo.il file).
 #
-# The drawn layers are then preprocessed for fab by merging the metal layers (LOWMETAL1 & HIGHMETAL1 -> METAL1FAB)
-# (LOWMETAL2 & HIGHMETAL2 -> METAL2FAB).
-# SOI1/2 become SOIFAB1/2.
-# POLY1/2 become POLYFAB1/2.
-# At this point the first gds file is written out. 
-# 
-# Then, all [LAYERNAME]2 layers are reflected about the X-axis and moved to SOIFAB, POLYFAB, METALFAB layers.
-# The second gds file is written out. This final gds file contains only 3 layers for 3 masks.
-
+# Please see the script definition & description at https://github.com/PisterLab/aureo-pdk#export-scripts
+#
 
 import argparse
 import subprocess, os
