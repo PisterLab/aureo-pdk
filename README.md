@@ -50,6 +50,7 @@ To set up the environment to run Virtuoso, perform the followng steps:
 2. Add the corresponding license file and tools directories to `setup.sh`.
    If you are running on the BWRC servers, set `export CDS_HOME=/tools/cadence/ICADVM/ICADVM201`.
    If you are running on the Alcatraz server, set `export CDS_HOME=/usr/eesww/cadence/IC618`.
+   If you are running on the EDA servers, set `export CDS_HOME=/share/instsww/cadence/IC618`.
 
 To start Virtuoso, run the following commands to set up the environment and start Virtuoso.
 ```
