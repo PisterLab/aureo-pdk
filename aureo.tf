@@ -260,11 +260,6 @@ constraintGroups(
         ( minSpacing     "HIGHMETAL1" "SOI1"     5 )
         ( minSpacing     "LOWMETAL2" "SOI2"      5 )
         ( minSpacing     "HIGHMETAL2" "SOI2"     5 )
-
-        ( minSpacing     "LOWMETAL1" "POLY1"     2 )
-        ( minSpacing     "HIGHMETAL1" "POLY1"     2 )
-        ( minSpacing     "LOWMETAL2" "POLY2"     2 )
-        ( minSpacing     "HIGHMETAL2" "POLY2"     2 )
         
       );spacings
 
@@ -274,10 +269,9 @@ constraintGroups(
         ( minExtensionDistance "SOI2" "LOWMETAL2" 5 )
         ( minExtensionDistance "SOI2" "HIGHMETAL2" 5 )
 
-        ( minExtensionDistance "POLY1" "LOWMETAL1" 2 )
-        ( minExtensionDistance "POLY1" "HIGHMETAL1" 2 )
-        ( minExtensionDistance "POLY2" "LOWMETAL2" 2 )
-        ( minExtensionDistance "POLY2" "HIGHMETAL2" 2 )
+        ;( minExtensionDistance "POLY1" "HIGHMETAL1" 2 )
+        ;( minExtensionDistance "POLY2" "HIGHMETAL2" 2 )
+
         ;( minSideSpacing "LOWMETAL1" "SOI1"     5 )
       );orderedSpacings
   );foundry
