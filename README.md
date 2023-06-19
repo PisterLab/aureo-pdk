@@ -140,12 +140,35 @@ The final gds file is written out with the filename `[CELLNAME]_fab.gds.`
 
 ## Design Rules
 
-### TRENCH
+### Width / Line Rules
 
-- Minimum width: 2um
-- Minimum spacing: 2um
+| Layer Name | Minimum Width | 
+| ---------- | ------------ | 
+| `SOI1` | 2um | 
+| `SOIHOLE1` | 2um |
+| `POLY1` | 2um | 
+| `LOWMETAL1` | 2um |
+| `HIGHMETAL1` | 2um |
+| `HIGHMETAL2` | 2um |
+| `LOWMETAL2` | 2um | 
+| `POLY2` | 2um | 
+| `SOI2` | 2um | 
+| `SOIHOLE2` | 2um | 
 
-### POLY
+### Space Rules
 
-- Minimum width: 2um
-- Minimum spacing: 2um
+Single layer space rules are enforced on spaces between drawings/shapes on the same layer.
+
+| Layer Name | Minimum Width | 
+| ---------- | ------------ | 
+| `SOI1` | 2um | 
+| `SOIHOLE1` | 2um |
+| `POLY1` | 2um | 
+| `LOWMETAL1` | 4um |
+| `HIGHMETAL1` | 4um |
+| `HIGHMETAL2` | 4um |
+| `LOWMETAL2` | 4um | 
+| `POLY2` | 2um | 
+| `SOI2` | 2um | 
+| `SOIHOLE2` | 2um | 
+
