@@ -27,6 +27,7 @@ layerDefinitions(
  ;( PurposeName               Purpose#   Abbreviation )
  ;( -----------               --------   ------------ )
   ( drawing                   -1         drw          )
+  ( pin                       251        pin          )
   ( net                       253        net          )
   ( derivedCut                13         dcut         )
  ) ;techPurposes
@@ -83,6 +84,16 @@ layerDefinitions(
   ( LOWMETAL2                 net        )
   ( HIGHMETAL1                net        )
   ( HIGHMETAL2                net        )
+  ( SOI1                      net        )
+  ( SOI2                      net        )
+  ( POLY1                     pin        )
+  ( POLY2                     pin        )
+  ( LOWMETAL1                 pin        )
+  ( LOWMETAL2                 pin        )
+  ( HIGHMETAL1                pin        )
+  ( HIGHMETAL2                pin        )
+  ( SOI1                      pin        )
+  ( SOI2                      pin        )
  ) ;techLayerPurposePriorities
 
 
@@ -99,13 +110,24 @@ layerDefinitions(
   ( POLY2        drawing      orangeSolidDe    t t t t t )
   ( SOI2         drawing      magentaSolidSp   t t t t t )
   ( SOIHOLE2     drawing      magentaDiag      t t t t t )
+
   ( POLY1        net          yellowDashed     t t t t nil )
   ( POLY2        net          blueDashed       t t t t nil )
   ( LOWMETAL1    net          redDashed        t t t t nil )
   ( HIGHMETAL1   net          greenDashed      t t t t nil )
   ( LOWMETAL2    net          blueDashed       t t t t nil )
   ( HIGHMETAL2   net          purpleDashed     t t t t nil )
-  
+  ( SOI1         net          whiteDashed      t t t t nil )
+  ( SOI2         net          magentaDashed    t t t t nil )
+
+  ( POLY1        pin          yellowDashed     t t t t t )
+  ( POLY2        pin          blueDashed       t t t t t )
+  ( LOWMETAL1    pin          redDashed        t t t t t )
+  ( HIGHMETAL1   pin          greenDashed      t t t t t )
+  ( LOWMETAL2    pin          blueDashed       t t t t t )
+  ( HIGHMETAL2   pin          purpleDashed     t t t t t )
+  ( SOI1         pin          whiteDashed      t t t t t )
+  ( SOI2         pin          magentaDashed    t t t t t )
   
  ) ;techDisplays
 
@@ -138,11 +160,11 @@ layerRules(
     ( LOWMETAL1     "li"                3          )
     ( POLY1         "li"                4          )
     ( HIGHMETAL1    "li"                5          )
-    ( HIGHMETAL2    "li"         6          )
-    ( POLY2         "li"               8          )
-    ( LOWMETAL2     "li"               9          )
-    ( SOI2          "li"        10         )
-    ( SOIHOLE2      "li"        10         )
+    ( HIGHMETAL2    "li"                6          )
+    ( POLY2         "li"                8          )
+    ( LOWMETAL2     "li"                9          )
+    ( SOI2          "li"                10         )
+    ( SOIHOLE2      "li"                11         )
     
     
   ) ;functions
@@ -226,7 +248,7 @@ constraintGroups(
 
       ( validLayers ( "SOI1Stopped" "POLY1" "LOWMETAL1" "HIGHMETAL1" "SOI2Stopped" "POLY2" "LOWMETAL2" "HIGHMETAL2")   )
       ( validVias ( "POLY1xHM1" "SOI1xLM1" "LM1xHM1" "HM1xHM2" "HM2xLM2" "LM2xSOI2" "HM2xPOLY2" ) )
-      ( validPurposes 'include ("drawing" "net" "derivedCut") )
+      ( validPurposes 'include ("drawing" "net" "pin" "derivedCut") )
     );interconnect
   );virtuosoDefaultExtractorSetup
   ( "foundry"
