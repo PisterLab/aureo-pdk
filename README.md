@@ -138,14 +138,47 @@ The second gds file is written out. This final gds file contains only 3 layers f
 
 The final gds file is written out with the filename `[CELLNAME]_fab.gds.`
 
+### Updating the PDK
+
+Updates to the Aureo PDK's ASCII Technology File (`aureo.tf`) can be applied to an existing Cadence Library by reloading the Technology File in the Cadence CIW. 
+
+See the image below:
+
+![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/588b2cf3-6622-47de-a5a6-0237cd690231)
+
+Updates to the Display Resource File (`display.drf`) can be applied most easily by restarting Cadence, as the `display.drf` file is reloaded each time Cadence is launched from a directory.
+
 ## Design Rules
 
-### TRENCH
+### Width / Line Rules
 
-- Minimum width: 2um
-- Minimum spacing: 2um
+| Layer Name | Minimum Width | 
+| ---------- | ------------ | 
+| `SOI1` | 2um | 
+| `SOIHOLE1` | 2um |
+| `POLY1` | 2um | 
+| `LOWMETAL1` | 2um |
+| `HIGHMETAL1` | 2um |
+| `HIGHMETAL2` | 2um |
+| `LOWMETAL2` | 2um | 
+| `POLY2` | 2um | 
+| `SOI2` | 2um | 
+| `SOIHOLE2` | 2um | 
 
-### POLY
+### Space Rules
 
-- Minimum width: 2um
-- Minimum spacing: 2um
+Single layer space rules are enforced on spaces between drawings/shapes on the same layer.
+
+| Layer Name | Minimum Width | 
+| ---------- | ------------ | 
+| `SOI1` | 2um | 
+| `SOIHOLE1` | 2um |
+| `POLY1` | 2um | 
+| `LOWMETAL1` | 4um |
+| `HIGHMETAL1` | 4um |
+| `HIGHMETAL2` | 4um |
+| `LOWMETAL2` | 4um | 
+| `POLY2` | 2um | 
+| `SOI2` | 2um | 
+| `SOIHOLE2` | 2um | 
+
