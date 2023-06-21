@@ -10,7 +10,6 @@ This repository contains the Process Design Kit (PDK) for the Aureo process. The
 
 ![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/e0779e61-25a8-4243-8b25-a8bb2ac41eb6)
 
-
 ## Contents
 
 - `aureo_lib/` - Cadence Virtuoso library with standard cells
@@ -41,6 +40,26 @@ This repository contains the Process Design Kit (PDK) for the Aureo process. The
 
 The Aureo PDK is developed for Cadence Virtuoso, and exists as an ASCII Technology File together with a Virtuoso library.
 
+### Cadence setup
+
+To set up the environment to run Virtuoso, perform the followng steps:
+1. Run the following command to copy `setup-template.sh` to `setup.sh`.
+   ```
+   cp setup-template.sh setup.sh
+   ```
+2. Add the corresponding license file and tools directories to `setup.sh`.
+   If you are running on the BWRC servers, set `export CDS_HOME=/tools/cadence/ICADVM/ICADVM201`.
+   If you are running on the Alcatraz server, set `export CDS_HOME=/usr/eesww/cadence/IC618`.
+   If you are running on the EDA servers, set `export CDS_HOME=/share/instsww/cadence/IC618`.
+
+To start Virtuoso, run the following commands to set up the environment and start Virtuoso.
+```
+source .bashrc
+virtuoso &
+```
+
+### High and low metal
+
 To allow for connectivity extraction to verify layout vs. schematic and perform parasitic extraction, a particular set of layers were defined in which users can layout their designs in.
 
 Of particular note is the concept of high-metal and low-metal, which captures the ability to design connectivity between the poly layers and SOI layers using the metal layer. The figure below explains the correspondence between the layout view's `LOWMETAL1`/`HIGHMETAL1`/`LOWMETAL2`/`HIGHMETAL2` and the physical result.
@@ -58,9 +77,6 @@ The Aureo PDK offers a number of tools for streaming out the layouts to GDSII fi
 | `POLYFAB` | 1 | Polysilicon |
 | `METALFAB` | 2 | Metal |
 
-<br>
-
-
 **Merged layers for inspection, visualization, and 3D rendering**
 
 | Layer Name | Layer Number | Description |
@@ -71,8 +87,6 @@ The Aureo PDK offers a number of tools for streaming out the layouts to GDSII fi
 | `METAL2FAB` | 6 | Metal |
 | `POLY2FAB` | 7 | Polysilicon |
 | `SOI2FAB` | 8 | Silicon on Insulator |
-
-<br>
 
 **Layers for layout**
 
@@ -103,7 +117,6 @@ python3 tools/export_gds.py --lib="aureo_lib" --cell="test"
 with all the drawn layers present (according the "Layer for layout" table above). It will first ensure that SOI layers have been split about
 the SOIHOLE layers (see aureo.il file). This will directly export the GDS to the directory from which the command was run.
 
-
 **Process the GDS**
 
 To prepare the GDS for fabrication, run the following command. Note that this currently requires that `tools/export_gds.py` has been run first.
@@ -125,18 +138,47 @@ The second gds file is written out. This final gds file contains only 3 layers f
 
 The final gds file is written out with the filename `[CELLNAME]_fab.gds.`
 
+### Updating the PDK
 
+Updates to the Aureo PDK's ASCII Technology File (`aureo.tf`) can be applied to an existing Cadence Library by reloading the Technology File in the Cadence CIW. 
 
+See the image below:
 
+![image](https://github.com/PisterLab/aureo-pdk/assets/6250953/588b2cf3-6622-47de-a5a6-0237cd690231)
+
+Updates to the Display Resource File (`display.drf`) can be applied most easily by restarting Cadence, as the `display.drf` file is reloaded each time Cadence is launched from a directory.
 
 ## Design Rules
 
-### TRENCH
+### Width / Line Rules
 
-- Minimum width: 2um
-- Minimum spacing: 2um
+| Layer Name | Minimum Width | 
+| ---------- | ------------ | 
+| `SOI1` | 2um | 
+| `SOIHOLE1` | 2um |
+| `POLY1` | 2um | 
+| `LOWMETAL1` | 2um |
+| `HIGHMETAL1` | 2um |
+| `HIGHMETAL2` | 2um |
+| `LOWMETAL2` | 2um | 
+| `POLY2` | 2um | 
+| `SOI2` | 2um | 
+| `SOIHOLE2` | 2um | 
 
-### POLY
+### Space Rules
 
-- Minimum width: 2um
-- Minimum spacing: 2um
+Single layer space rules are enforced on spaces between drawings/shapes on the same layer.
+
+| Layer Name | Minimum Width | 
+| ---------- | ------------ | 
+| `SOI1` | 2um | 
+| `SOIHOLE1` | 2um |
+| `POLY1` | 2um | 
+| `LOWMETAL1` | 4um |
+| `HIGHMETAL1` | 4um |
+| `HIGHMETAL2` | 4um |
+| `LOWMETAL2` | 4um | 
+| `POLY2` | 2um | 
+| `SOI2` | 2um | 
+| `SOIHOLE2` | 2um | 
+

@@ -1,6 +1,7 @@
-# Gitignore for Cadence Virtuoso
-################################################################
+# Setup script
+setup.sh
 
+# Cadence Virtuoso
 .cadence/
 
 # Log files
