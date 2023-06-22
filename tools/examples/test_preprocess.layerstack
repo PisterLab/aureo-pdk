@@ -14,14 +14,14 @@ SOIHOLE2 = layer(18)
 
 # Define materials/colors
 
-m_SOI1 = Material("silicon", color=(0.4, 0.4, 0.4))
-m_SOI2 = Material("silicon", color=(0.4, 0.4, 0.4))
+m_SOI1 = Material("silicon1", color=(1, 1, 1))
+m_SOI2 = Material("silicon2", color=(0.4, 0.4, 0.4))
 m_POLY1 = Material("poly", color=(0.7, 0, 0))
-m_POLY2 = Material("poly", color=(0.7, 0, 0))
-m_LOWMETAL1 = Material("gold", color=(1, 1, 0))
-m_LOWMETAL2 = Material("gold", color=(1, 1, 0))
+m_POLY2 = Material("poly", color=(1, 0.7, 0))
+m_LOWMETAL1 = Material("gold", color=(0, 0, 0.7))
+m_LOWMETAL2 = Material("gold", color=(0, 0, 1))
 m_HIGHMETAL1 = Material("gold", color=(1, 1, 0))
-m_HIGHMETAL2 = Material("gold", color=(1, 1, 0))
+m_HIGHMETAL2 = Material("gold", color=(0, 1, 0))
 
 # Set materials/colors
 
@@ -35,15 +35,17 @@ HIGHMETAL1.material = m_HIGHMETAL1
 HIGHMETAL2.material = m_HIGHMETAL2
 
 # Define additional layers from boolean operation
-#NITRIDE1 = SOI1 - POLY1
-#NITRIDE2 = SOI2 - POLY2
+NITRIDE1 = SOI1 - POLY1
+NITRIDE2 = SOI2 - POLY2
 
 layerstack = [
-    (40000, [SOI1]),      
+    (40000, [SOI1]),    
+    (500, [NITRIDE1]),
     (500, [LOWMETAL1, POLY1]),          
     (500, [LOWMETAL1, HIGHMETAL1]),
     (500, HIGHMETAL1),
     (500, HIGHMETAL2),
+
     (500, [LOWMETAL2,HIGHMETAL2]),
     (500, [POLY2,LOWMETAL2]),
     (40000, SOI2),
