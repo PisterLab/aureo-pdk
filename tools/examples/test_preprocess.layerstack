@@ -57,14 +57,14 @@ bulk = nwell-pimplant-nimplant + pwell-pimplant-nimplant
 
 # Define materials/colors
 
-m_bulk = Material("silicon", color=(0.4, 0.4, 0.4))
-m_pimplant = Material("pimplant", color=(0.9, 0.6, 0.6))
-m_nimplant = Material("pimplant", color=(0.9, 0.6, 0.9))
-m_poly = Material("poly", color=(0.7, 0, 0))
-m_via = Material("tungsten", color=(0.1, 0.1, 0.1))
-m_metal1 = Material("copper1", color=(0.3, 0.3, 1))
-m_metal2 = Material("copper2", color=(0.3, 1, 0.3))
-m_metal3 = Material("copper3", color=(0.3, 1, 0.3))
+m_SOI1 = Material("silicon1", color=(1, 1, 1))
+m_SOI2 = Material("silicon2", color=(0.4, 0.4, 0.4))
+m_POLY1 = Material("poly", color=(0.7, 0, 0))
+m_POLY2 = Material("poly", color=(1, 0.7, 0))
+m_LOWMETAL1 = Material("gold", color=(0, 0, 0.7))
+m_LOWMETAL2 = Material("gold", color=(0, 0, 1))
+m_HIGHMETAL1 = Material("gold", color=(1, 1, 0))
+m_HIGHMETAL2 = Material("gold", color=(0, 1, 0))
 
 # Set materials/colors
 
@@ -82,22 +82,19 @@ via2.material = m_via
 metal3.material = m_metal3
 
 # Define additional layers from boolean operation
-contact_to_silicon = contact - poly
+NITRIDE1 = SOI1 - POLY1
+NITRIDE2 = SOI2 - POLY2
 
 layerstack = [
-    (100, [pimplant, nimplant, bulk]),    # silicon
-    (10, contact_to_silicon),           # gate oxide
-    (20, [contact, poly]),          # poly-silicon
-    (200, contact),                 # metal1-poly contacts
-    (50, metal1),
-    (200, via1),
-    (50, metal2),
-    (200, via2),
-    (50, metal3),
-    (200, via3),
-    (50, metal4),
-    (200, via4),
-    (50, metal5),
-    (200, via5),
-    (50, metal6),
+    (40000, [SOI1]),    
+    (500, [NITRIDE1]),
+    (500, [LOWMETAL1, POLY1]),          
+    (500, [LOWMETAL1, HIGHMETAL1]),
+    (500, HIGHMETAL1),
+    (500, HIGHMETAL2),
+
+    (500, [LOWMETAL2,HIGHMETAL2]),
+    (500, [POLY2,LOWMETAL2]),
+    (40000, SOI2),
+
 ]
