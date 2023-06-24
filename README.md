@@ -93,7 +93,6 @@ The Aureo PDK offers a number of tools for streaming out the layouts to GDSII fi
 | Layer Name | Layer Number | Description |
 | ---------- | ------------ | ----------- |
 | `SOI1` | 9 | Silicon on Insulator |
-| `SOIHOLE1` | 10 | Silicon on Insulator |
 | `POLY1` | 11 | Polysilicon |
 | `LOWMETAL1` | 12 | Metal |
 | `HIGHMETAL1` | 13 | Metal |
@@ -101,7 +100,6 @@ The Aureo PDK offers a number of tools for streaming out the layouts to GDSII fi
 | `LOWMETAL2` | 15 | Metal |
 | `POLY2` | 16 | Polysilicon |
 | `SOI2` | 17 | Silicon on Insulator |
-| `SOIHOLE2` | 18 | Silicon on Insulator |
 
 ### Export Scripts
 
@@ -114,8 +112,7 @@ python3 tools/export_gds.py --lib="aureo_lib" --cell="test"
 ```
 
 `tools/export_gds.py` - Given a library and cellview, export_fab.py will stream out a GDSII file 
-with all the drawn layers present (according the "Layer for layout" table above). It will first ensure that SOI layers have been split about
-the SOIHOLE layers (see aureo.il file). This will directly export the GDS to the directory from which the command was run.
+with all the drawn layers present (according the "Layer for layout" table above). This will directly export the GDS to the directory from which the command was run.
 
 **Process the GDS**
 
@@ -155,7 +152,6 @@ Updates to the Display Resource File (`display.drf`) can be applied most easily 
 | Layer Name | Minimum Width | 
 | ---------- | ------------ | 
 | `SOI1` | 2um | 
-| `SOIHOLE1` | 2um |
 | `POLY1` | 2um | 
 | `LOWMETAL1` | 2um |
 | `HIGHMETAL1` | 2um |
@@ -163,7 +159,6 @@ Updates to the Display Resource File (`display.drf`) can be applied most easily 
 | `LOWMETAL2` | 2um | 
 | `POLY2` | 2um | 
 | `SOI2` | 2um | 
-| `SOIHOLE2` | 2um | 
 
 ### Space Rules
 
@@ -172,13 +167,11 @@ Single layer space rules are enforced on spaces between drawings/shapes on the s
 | Layer Name | Minimum Width | 
 | ---------- | ------------ | 
 | `SOI1` | 2um | 
-| `SOIHOLE1` | 2um |
 | `POLY1` | 2um | 
 | `LOWMETAL1` | 4um |
 | `HIGHMETAL1` | 4um |
 | `HIGHMETAL2` | 4um |
 | `LOWMETAL2` | 4um | 
 | `POLY2` | 2um | 
-| `SOI2` | 2um | 
-| `SOIHOLE2` | 2um | 
+| `SOI2` | 2um |
 
