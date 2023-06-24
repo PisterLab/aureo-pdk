@@ -1,103 +1,53 @@
 from gds3xtrude.include import layer, Material
 
-# GDS2 layer numbers.
-
-# Layer numbers from FreePDK calibre/layer.inc. They don't match the layouts of the standard cells (?).
-# active = layer(1, 0)
-# pwell = layer(2, 0)
-# nwell = layer(3, 0)
-# nimplant = layer(4, 0)
-# pimplant = layer(5, 0)
-# vtg = layer(6, 0)
-# vth = layer(7, 0)
-# thkox = layer(8, 0)
-# poly = layer(9, 0)
-# contact = layer(10, 0)
-# metal1 = layer(11, 0)
-# via1 = layer(12, 0)
-# metal2 = layer(13, 0)
-# via2 = layer(14, 0)
-# metal3 = layer(15, 0)
-# via3 = layer(16, 0)
-# metal4 = layer(17, 0)
-# via4 = layer(18, 0)
-# metal5 = layer(19, 0)
-# via5 = layer(20, 0)
-# metal6 = layer(21, 0)
-# via6 = layer(22, 0)
-# metal7 = layer(23, 0)
-# via7 = layer(24, 0)
-# metal8 = layer(25, 0)
-# via8 = layer(26, 0)
-# metal9 = layer(27, 0)
-# via9 = layer(28, 0)
-# metal10 = layer(29, 0)
-# nodrc = layer(80, 0)
-# marker = layer(238, 0)
-
-nwell = layer(9)
-pwell = layer(10)
-nimplant = layer(11)
-pimplant = layer(12)
-poly = layer(13)
-contact = layer(14)
-metal1 = layer(15)
-via1 = layer(16)
-metal2 = layer(17)
-via2 = layer(18)
-metal3 = layer(19)
-via3 = layer(26)
-metal4 = layer(27)
-via4 = layer(28)
-metal5 = layer(29)
-via5 = layer(205)
-metal6 = layer(204)
-
-bulk = nwell-pimplant-nimplant + pwell-pimplant-nimplant
+# Define layers for layout
+SOI1 = layer(9)
+SOIHOLE1 = layer(10)
+POLY1 = layer(11)
+LOWMETAL1 = layer(12)
+HIGHMETAL1 = layer(13)
+HIGHMETAL2 = layer(14)
+LOWMETAL2 = layer(15)
+POLY2 = layer(16)
+SOI2 = layer(17)
+SOIHOLE2 = layer(18)
 
 # Define materials/colors
 
-m_bulk = Material("silicon", color=(0.4, 0.4, 0.4))
-m_pimplant = Material("pimplant", color=(0.9, 0.6, 0.6))
-m_nimplant = Material("pimplant", color=(0.9, 0.6, 0.9))
-m_poly = Material("poly", color=(0.7, 0, 0))
-m_via = Material("tungsten", color=(0.1, 0.1, 0.1))
-m_metal1 = Material("copper1", color=(0.3, 0.3, 1))
-m_metal2 = Material("copper2", color=(0.3, 1, 0.3))
-m_metal3 = Material("copper3", color=(0.3, 1, 0.3))
+m_SOI1 = Material("silicon1", color=(1, 1, 1))
+m_SOI2 = Material("silicon2", color=(0.4, 0.4, 0.4))
+m_POLY1 = Material("poly", color=(0.7, 0, 0))
+m_POLY2 = Material("poly", color=(1, 0.7, 0))
+m_LOWMETAL1 = Material("gold", color=(0, 0, 0.7))
+m_LOWMETAL2 = Material("gold", color=(0, 0, 1))
+m_HIGHMETAL1 = Material("gold", color=(1, 1, 0))
+m_HIGHMETAL2 = Material("gold", color=(0, 1, 0))
 
 # Set materials/colors
 
-bulk.material = m_bulk
-
-pimplant.material = m_pimplant
-nimplant.material = m_nimplant
-
-poly.material = m_poly
-contact.material = m_via
-metal1.material = m_metal1
-via1.material = m_via
-metal2.material = m_metal2
-via2.material = m_via
-metal3.material = m_metal3
+SOI1.material = m_SOI1 
+SOI2.material = m_SOI2
+POLY1.material = m_POLY1 
+POLY2.material = m_POLY2
+LOWMETAL1.material = m_LOWMETAL1 
+LOWMETAL2.material = m_LOWMETAL2 
+HIGHMETAL1.material = m_HIGHMETAL1 
+HIGHMETAL2.material = m_HIGHMETAL2
 
 # Define additional layers from boolean operation
-contact_to_silicon = contact - poly
+NITRIDE1 = SOI1 - POLY1
+NITRIDE2 = SOI2 - POLY2
 
 layerstack = [
-    (100, [pimplant, nimplant, bulk]),    # silicon
-    (10, contact_to_silicon),           # gate oxide
-    (20, [contact, poly]),          # poly-silicon
-    (200, contact),                 # metal1-poly contacts
-    (50, metal1),
-    (200, via1),
-    (50, metal2),
-    (200, via2),
-    (50, metal3),
-    (200, via3),
-    (50, metal4),
-    (200, via4),
-    (50, metal5),
-    (200, via5),
-    (50, metal6),
+    (40000, [SOI1]),    
+    (500, [NITRIDE1]),
+    (500, [LOWMETAL1, POLY1]),          
+    (500, [LOWMETAL1, HIGHMETAL1]),
+    (500, HIGHMETAL1),
+    (500, HIGHMETAL2),
+
+    (500, [LOWMETAL2,HIGHMETAL2]),
+    (500, [POLY2,LOWMETAL2]),
+    (40000, SOI2),
+
 ]
