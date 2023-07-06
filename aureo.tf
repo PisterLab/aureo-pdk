@@ -30,6 +30,7 @@ layerDefinitions(
   ( pin                       251        pin          )
   ( net                       253        net          )
   ( derivedCut                13         dcut         )
+  ( resMarker                 14         resID        )
  ) ;techPurposes
 
  techLayers(
@@ -59,9 +60,11 @@ layerDefinitions(
 
  techDerivedLayers(
   ;( t_derivedLayerName       x_derivedLayerNum   (tx_layer1 s_op tx_layer2) )
+  ;( -------------------      -----------------   ------------------------ )
   ;( D1                        100                 (SOI1 'and METAL1) )
   ;( SOI1Stopped  10001  ("SOI1" 'not "SOIHOLE1" ) )
   ;( SOI2Stopped  10002  ("SOI2" 'not "SOIHOLE2" ) )
+  ; End examples
  )
 
  techLayerPurposePriorities(
@@ -69,12 +72,10 @@ layerDefinitions(
  ;( LayerName                 Purpose    )
  ;( ---------                 -------    )
   ( SOI1                      drawing    ) 
-  ;( SOIHOLE1                  drawing    ) 
   ( POLY1                     drawing    )
   ( LOWMETAL1                 drawing    )
   ( HIGHMETAL1                drawing    )
   ( SOI2                      drawing    )
-  ;( SOIHOLE2                  drawing    )
   ( POLY2                     drawing    )
   ( LOWMETAL2                 drawing    )
   ( HIGHMETAL2                drawing    )
@@ -94,6 +95,14 @@ layerDefinitions(
   ( HIGHMETAL2                pin        )
   ( SOI1                      pin        )
   ( SOI2                      pin        )
+  ( POLY1                     resMarker  )
+  ( POLY2                     resMarker  )
+  ( LOWMETAL1                 resMarker  )
+  ( LOWMETAL2                 resMarker  )
+  ( HIGHMETAL1                resMarker  )
+  ( HIGHMETAL2                resMarker  )
+  ( SOI1                      resMarker  )
+  ( SOI2                      resMarker  )
  ) ;techLayerPurposePriorities
 
 
@@ -101,7 +110,6 @@ layerDefinitions(
  ;( LayerName    Purpose      Packet          Vis Sel Con2ChgLy DrgEnbl Valid)
  ;( ---------    -------      ------          --- --- --------- ------- -----)
   ( SOI1         drawing      whiteSolidSp     t t t t t )
-  ;( SOIHOLE1     drawing      whiteDiag        t t t t t )
   ( POLY1        drawing      redSolidDe       t t t t t )
   ( LOWMETAL1    drawing      cyanSolid        t t t t t )
   ( HIGHMETAL1   drawing      yellowSolid      t t t t t )
@@ -109,7 +117,6 @@ layerDefinitions(
   ( LOWMETAL2    drawing      blueSolid        t t t t t )
   ( POLY2        drawing      orangeSolidDe    t t t t t )
   ( SOI2         drawing      magentaSolidSp   t t t t t )
-  ;( SOIHOLE2     drawing      magentaDiag      t t t t t )
 
   ( POLY1        net          yellowDashed     t t t t nil )
   ( POLY2        net          blueDashed       t t t t nil )
@@ -128,6 +135,15 @@ layerDefinitions(
   ( HIGHMETAL2   pin          purpleDashed     t t t t t )
   ( SOI1         pin          whiteDashed      t t t t t )
   ( SOI2         pin          magentaDashed    t t t t t )
+
+  ( SOI1         resMarker    whiteSolidSp     t t t t t )
+  ( POLY1        resMarker    redSolidDe       t t t t t )
+  ( LOWMETAL1    resMarker    cyanSolid        t t t t t )
+  ( HIGHMETAL1   resMarker    yellowSolid      t t t t t )
+  ( HIGHMETAL2   resMarker    greenSolid       t t t t t )
+  ( LOWMETAL2    resMarker    blueSolid        t t t t t )
+  ( POLY2        resMarker    orangeSolidDe    t t t t t )
+  ( SOI2         resMarker    magentaSolidSp   t t t t t )
   
  ) ;techDisplays
 
@@ -156,7 +172,6 @@ layerRules(
     ;( layer          function         [maskNumber] )
     ;( -----          --------          ----------  )
     ( SOI1          "li"                1          )
-    ;( SOIHOLE1      "li"                2          )
     ( LOWMETAL1     "li"                3          )
     ( POLY1         "li"                4          )
     ( HIGHMETAL1    "li"                5          )
@@ -164,7 +179,6 @@ layerRules(
     ( POLY2         "li"                8          )
     ( LOWMETAL2     "li"                9          )
     ( SOI2          "li"                10         )
-    ;( SOIHOLE2      "li"                11         )
     
     
   ) ;functions
@@ -259,23 +273,19 @@ constraintGroups(
         ( minWidth       "LOWMETAL1"            2 )
         ( minWidth       "HIGHMETAL1"           2 )
         ( minWidth       "SOI1"                 2 )
-        ;( minWidth       "SOIHOLE1"             2 )
         ( minWidth       "POLY1"                2 )
         ( minWidth       "LOWMETAL2"            2 )
         ( minWidth       "HIGHMETAL2"           2 )
         ( minWidth       "SOI2"                 2 )
-        ;( minWidth       "SOIHOLE2"             2 )
         ( minWidth       "POLY2"                2 )
 
         ( minSpacing     "LOWMETAL1"            4 )
         ( minSpacing     "HIGHMETAL1"           4 )
         ( minSpacing     "SOI1"                 2 )
-        ;( minSpacing     "SOIHOLE1"             2 )
         ( minSpacing     "POLY1"                2 )
         ( minSpacing     "LOWMETAL2"            4 )
         ( minSpacing     "HIGHMETAL2"           4 )
         ( minSpacing     "SOI2"                 2 )
-        ;( minSpacing     "SOIHOLE2"             2 )
         ( minSpacing     "POLY2"                2 )
 
         ( minSpacing     "LOWMETAL1" "SOI1"      5 )
@@ -290,9 +300,6 @@ constraintGroups(
         ( minExtensionDistance "SOI1" "HIGHMETAL1" 5 )
         ( minExtensionDistance "SOI2" "LOWMETAL2" 5 )
         ( minExtensionDistance "SOI2" "HIGHMETAL2" 5 )
-
-        ;( minExtensionDistance "POLY1" "HIGHMETAL1" 2 )
-        ;( minExtensionDistance "POLY2" "HIGHMETAL2" 2 )
 
         ;( minSideSpacing "LOWMETAL1" "SOI1"     5 )
       );orderedSpacings
