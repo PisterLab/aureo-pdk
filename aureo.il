@@ -47,3 +47,56 @@
     abeDone()    
 )
 
+
+procedure( pcCFfingerl( )
+  prog(()
+    if( (cdfgData->maskLayoutViewName->value == 
+            cdfgData->maskLayoutViewName->defValue) 
+                 ; Do this only if maskLayoutViewName is 
+                 ; layout. Otherwise, mosLayout sets it.
+    then
+        tmp = cdfgData->Finger_Length->value
+        if( (tmp < cdfgData->Finger_Length->defValue)
+        then
+            error("Finger length value is less than 
+                 minimum (4u). Set to default." )
+            cdfgData->Finger_Length->value = cdfgData->Finger_Length->defValue
+            return(nil)
+        )
+        
+        grid = round(tmp/0.1)
+        newwidth = grid*0.10
+        if( (newwidth != tmp)
+        then
+                error("Finger Length is set to nearest value 
+                    on 0.10 micron pitch.")
+                cdfgData->Finger_Length->value = (newwidth * 1e-6)
+        )
+        c_float = cdfgData->Multiplier->value * ((((tmp * 1e-6) - (2 * cdfgData->End_Gap->value * 1e-6)) * 40e-6) / (cdfgData->Finger_Gap->value * 1e-6)) * 8.85e-12
+        cdfgData->C->value = sprintf(s "%g" c_float)
+    )
+  )
+)
+
+procedure( pcCFmult( )
+  prog(()
+    if( (cdfgData->maskLayoutViewName->value == 
+            cdfgData->maskLayoutViewName->defValue) 
+                 ; Do this only if maskLayoutViewName is 
+                 ; layout. Otherwise, mosLayout sets it.
+    then
+        tmp = cdfgData->Multiplier->value
+        if( (tmp < cdfgData->Multiplier->defValue)
+        then
+            error("Multiplier value is less than 
+                 minimum (1). Set to default." )
+            cdfgData->Multiplier->value = cdfgData->Multiplier->defValue
+            return(nil)
+        )
+        
+        
+        c_float = tmp * ((((cdfgData->Finger_Length->value * 1e-6) - (2 * cdfgData->End_Gap->value * 1e-6)) * 40e-6) / (cdfgData->Finger_Gap->value * 1e-6)) * 8.85e-12
+        cdfgData->C->value = sprintf(s "%g" c_float)
+    )
+  )
+)
