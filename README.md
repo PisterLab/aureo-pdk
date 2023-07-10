@@ -114,6 +114,21 @@ python3 tools/export_gds.py --lib="aureo_lib" --cell="test"
 `tools/export_gds.py` - Given a library and cellview, export_fab.py will stream out a GDSII file 
 with all the drawn layers present (according the "Layer for layout" table above). This will directly export the GDS to the directory from which the command was run.
 
+**Extract the GDS**
+
+Install OpenSCAD
+
+Move the GDS to 'aureo-pdk/tools/examples' file.
+
+To extract the GDS for a 3D view, run the following command in 'aureo-pdk/tools' working directory. Note that this currently requires that `tools/export_gds.py` has been run first.
+
+```
+python3 gds3xtrude.py --tech "examples/test_preprocess.layerstack" --input "examples/test_preprocess.gds" --view
+```
+`gds3xtrude.py` runs the GDS in OpenSCAD.
+
+`examples/test_preprocess.layerstack` defines the drawn layers order, thicknesses and colors.
+
 **Process the GDS**
 
 To prepare the GDS for fabrication, run the following command. Note that this currently requires that `tools/export_gds.py` has been run first.
@@ -175,3 +190,4 @@ Single layer space rules are enforced on spaces between drawings/shapes on the s
 | `POLY2` | 2um | 
 | `SOI2` | 2um |
 
+##
