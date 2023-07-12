@@ -114,21 +114,6 @@ python3 tools/export_gds.py --lib="aureo_lib" --cell="test"
 `tools/export_gds.py` - Given a library and cellview, export_fab.py will stream out a GDSII file 
 with all the drawn layers present (according the "Layer for layout" table above). This will directly export the GDS to the directory from which the command was run.
 
-**Extract the GDS**
-
-Install OpenSCAD
-
-Move the GDS to 'aureo-pdk/tools/examples' file.
-
-To extract the GDS for a 3D view, run the following command in 'aureo-pdk/tools' working directory. Note that this currently requires that `tools/export_gds.py` has been run first.
-
-```
-python3 gds3xtrude.py --tech "examples/test_preprocess.layerstack" --input "examples/test_preprocess.gds" --view
-```
-`gds3xtrude.py` runs the GDS in OpenSCAD.
-
-`examples/test_preprocess.layerstack` defines the drawn layers order, thicknesses and colors.
-
 **Process the GDS**
 
 To prepare the GDS for fabrication, run the following command. Note that this currently requires that `tools/export_gds.py` has been run first.
@@ -149,6 +134,50 @@ Then, all `[LAYERNAME]2` layers are reflected about the X-axis and moved to `SOI
 The second gds file is written out. This final gds file contains only 3 layers for 3 masks.
 
 The final gds file is written out with the filename `[CELLNAME]_fab.gds.`
+
+**Extract the preprocess GDS for a 3D view**
+
+Install OpenSCAD
+
+If not done, run `tools/export_gds.py`
+
+Move the preprocess GDS to 'aureo-pdk/tools/examples' file.
+
+Run the following command in 'aureo-pdk/tools' working directory. 
+
+```
+python3 gds3xtrude.py --tech "examples/test_preprocess.layerstack" --input "examples/test_preprocess.gds" --view
+```
+`gds3xtrude.py` runs the GDS in OpenSCAD.
+
+`examples/test_preprocess.layerstack` defines the drawn layers order, thicknesses and colors.
+
+`examples/test_preprocess.gds` is the preprocess GDS you want to extract
+
+To export the 3D view as STL file, press F6 for rendering, then press F7 for exporting, in OpenSCAD.
+
+**Extract the fab GDS for a 3D view**
+
+Extracting the fab GDS is useful for 3D printing.
+
+Install OpenSCAD
+
+If not done, run `tools/process_gds.py`
+
+Move the fab GDS to 'aureo-pdk/tools/examples' file.
+
+Run the following command in 'aureo-pdk/tools' working directory. 
+
+```
+python3 gds3xtrude.py --tech "examples/test_preprocess.layerstack" --input "examples/test_fab.gds" --view
+```
+`gds3xtrude.py` runs the GDS in OpenSCAD.
+
+`examples/test_preprocess.layerstack` defines the drawn layers order, thicknesses and colors.
+
+`examples/test_fab.gds` is the fab GDS you want to extract
+
+To export the 3D view as a STL file, press F6 for rendering, then press F7 for exporting, in OpenSCAD.
 
 ### Updating the PDK
 
