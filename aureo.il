@@ -100,3 +100,103 @@ procedure( pcCFmult( )
     )
   )
 )
+
+
+procedure( pcSpringL( )
+  prog(()
+
+    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (4* cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+    cdfgData->K->value = sprintf(s "%g" k_float)
+
+  )
+
+)
+
+ 
+
+procedure( pcSpringW( )
+  prog(()
+
+    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (4* cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+        cdfgData->K->value = sprintf(s "%g" k_float)
+
+  )
+
+)
+
+
+procedure( pcSerpSpringL( )
+  prog(()
+
+    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (4 * 4 * cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+    cdfgData->K->value = sprintf(s "%g" k_float)
+
+  )
+
+)
+
+ 
+
+procedure( pcSerpSpringW( )
+  prog(()
+
+    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (4 * 4 * cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+        cdfgData->K->value = sprintf(s "%g" k_float)
+
+  )
+
+)
+
+procedure( pcInchFlip( )
+  prog(()
+    if( (cdfgData->flip->value == t)
+	then 
+           cdfgData->SOI1?->value = sprintf(s "%s" "SOI2")
+           cdfgData->SOI2?->value = sprintf(s "%s" "SOI1")
+           
+		   ;cdfgData->POLY1?->value = "POLY2"
+           ;cdfgData->POLY2?->value = "POLY1"
+           ;cdfgData->HM1?->value = "HM2"
+           ;cdfgData->HM2?->value = "HM1"
+           ;cdfgData->LM1?->value = "LM2"
+           ;cdfgData->LM2?->value = "LM1"  
+    )
+	if( (cdfgData->flip->value == nil)
+	then 
+           cdfgData->SOI1?->value = "SOI1"
+           cdfgData->SOI2?->value = "SOI2"
+	)
+  )
+)
+
+procedure( pcContactFlip( )
+  prog(()
+    if( (cdfgData->flip->value == t)
+	then 
+           cdfgData->SOI1?->value = sprintf(s "%s" "SOI2")
+           cdfgData->SOI2?->value = sprintf(s "%s" "SOI1")
+		   cdfgData->POLY1?->value = sprintf(s "%s" "POLY2")
+           cdfgData->POLY2?->value = sprintf(s "%s" "POLY1")
+           cdfgData->HM1?->value = sprintf(s "%s" "HM2")
+           cdfgData->HM2?->value = sprintf(s "%s" "HM1")
+    )
+	if( (cdfgData->flip->value == nil)
+	then 
+           cdfgData->SOI1?->value = "SOI1"
+           cdfgData->SOI2?->value = "SOI2"
+           cdfgData->POLY1?->value = "POLY1"
+           cdfgData->POLY2?->value = "POLY2"
+           cdfgData->HM1?->value = "HM1"
+           cdfgData->HM2?->value = "HM2"
+         
+	)
+  )
+)
+
+
+
+
