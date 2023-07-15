@@ -155,15 +155,8 @@ procedure( pcInchFlip( )
   prog(()
     if( (cdfgData->flip->value == t)
 	then 
-           cdfgData->SOI1?->value = sprintf(s "%s" "SOI2")
-           cdfgData->SOI2?->value = sprintf(s "%s" "SOI1")
-           
-		   ;cdfgData->POLY1?->value = "POLY2"
-           ;cdfgData->POLY2?->value = "POLY1"
-           ;cdfgData->HM1?->value = "HM2"
-           ;cdfgData->HM2?->value = "HM1"
-           ;cdfgData->LM1?->value = "LM2"
-           ;cdfgData->LM2?->value = "LM1"  
+           cdfgData->SOI1?->value = "SOI2"
+           cdfgData->SOI2?->value = "SOI1"
     )
 	if( (cdfgData->flip->value == nil)
 	then 
@@ -176,27 +169,26 @@ procedure( pcInchFlip( )
 procedure( pcContactFlip( )
   prog(()
     if( (cdfgData->flip->value == t)
-	then 
-           cdfgData->SOI1?->value = sprintf(s "%s" "SOI2")
-           cdfgData->SOI2?->value = sprintf(s "%s" "SOI1")
-		   cdfgData->POLY1?->value = sprintf(s "%s" "POLY2")
-           cdfgData->POLY2?->value = sprintf(s "%s" "POLY1")
-           cdfgData->HM1?->value = sprintf(s "%s" "HM2")
-           cdfgData->HM2?->value = sprintf(s "%s" "HM1")
+        then
+           cdfgData->SOI1?->value = "SOI2"
+           cdfgData->SOI2?->value = "SOI1"
+           cdfgData->POLY1?->value = "POLY2"
+           cdfgData->POLY2?->value = "POLY1"
+           cdfgData->HIGHMETAL1?->value = "HIGHMETAL2"
+           cdfgData->HIGHMETAL2?->value = "HIGHMETAL1"
     )
-	if( (cdfgData->flip->value == nil)
-	then 
+    if( (cdfgData->flip->value == nil)
+        then
            cdfgData->SOI1?->value = "SOI1"
            cdfgData->SOI2?->value = "SOI2"
            cdfgData->POLY1?->value = "POLY1"
            cdfgData->POLY2?->value = "POLY2"
-           cdfgData->HM1?->value = "HM1"
-           cdfgData->HM2?->value = "HM2"
-         
-	)
+           cdfgData->HIGHMETAL1?->value = "HIGHMETAL1"
+           cdfgData->HIGHMETAL2?->value = "HIGHMETAL2"
+
+     )
   )
 )
-
 
 
 
