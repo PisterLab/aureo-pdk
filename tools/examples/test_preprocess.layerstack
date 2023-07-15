@@ -1,5 +1,10 @@
 from gds3xtrude.include import layer, Material
 
+#Define layers for fabrication
+SOIFAB = layer(0)
+POLYFAB = layer(1)
+METALFAB = layer(2)
+
 # Define layers for layout
 SOI1 = layer(9)
 SOIHOLE1 = layer(10)
@@ -16,12 +21,17 @@ SOIHOLE2 = layer(18)
 
 m_SOI1 = Material("silicon1", color=(1, 1, 1))
 m_SOI2 = Material("silicon2", color=(0.4, 0.4, 0.4))
-m_POLY1 = Material("poly", color=(0.7, 0, 0))
-m_POLY2 = Material("poly", color=(1, 0.7, 0))
-m_LOWMETAL1 = Material("gold", color=(0, 0, 0.7))
-m_LOWMETAL2 = Material("gold", color=(0, 0, 1))
-m_HIGHMETAL1 = Material("gold", color=(1, 1, 0))
-m_HIGHMETAL2 = Material("gold", color=(0, 1, 0))
+m_POLY1 = Material("poly1", color=(0.7, 0, 0))
+m_POLY2 = Material("poly2", color=(1, 0.7, 0))
+m_LOWMETAL1 = Material("gold1", color=(0, 0, 0.7))
+m_LOWMETAL2 = Material("gold2", color=(0, 0, 1))
+m_HIGHMETAL1 = Material("gold3", color=(1, 1, 0))
+m_HIGHMETAL2 = Material("gold4", color=(0, 1, 0))
+
+m_SOIFAB = Material("silicon1", color=(1, 1, 1))
+m_POLYFAB = Material("poly1", color=(0.7, 0, 0))
+m_METALFAB = Material("gold3", color=(1, 1, 0))
+
 
 # Set materials/colors
 
@@ -34,20 +44,26 @@ LOWMETAL2.material = m_LOWMETAL2
 HIGHMETAL1.material = m_HIGHMETAL1 
 HIGHMETAL2.material = m_HIGHMETAL2
 
+SOIFAB.material = m_SOIFAB
+POLYFAB.material = m_POLYFAB
+METALFAB.material = m_METALFAB
+
 # Define additional layers from boolean operation
-NITRIDE1 = SOI1 - POLY1
-NITRIDE2 = SOI2 - POLY2
+#NITRIDE1 = SOI1 
+#NITRIDE2 = SOI2 
 
 layerstack = [
-    (40000, [SOI1]),    
-    (500, [NITRIDE1]),
+    (40000, SOI1),    
+    #(500, [NITRIDE1]),
     (500, [LOWMETAL1, POLY1]),          
     (500, [LOWMETAL1, HIGHMETAL1]),
     (500, HIGHMETAL1),
     (500, HIGHMETAL2),
-
-    (500, [LOWMETAL2,HIGHMETAL2]),
+    (500, [LOWMETAL2, HIGHMETAL2]),
     (500, [POLY2,LOWMETAL2]),
     (40000, SOI2),
 
+    (40000, SOIFAB),
+    (500, POLYFAB),
+    (1000, METALFAB),
 ]
