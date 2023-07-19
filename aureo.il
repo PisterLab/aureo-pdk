@@ -72,7 +72,7 @@ procedure( pcCFfingerl( )
                     on 0.10 micron pitch.")
                 cdfgData->Finger_Length->value = (newwidth * 1e-6)
         )
-        c_float = cdfgData->Multiplier->value * ((((tmp * 1e-6) - (2 * cdfgData->End_Gap->value * 1e-6)) * 40e-6) / (cdfgData->Finger_Gap->value * 1e-6)) * 8.85e-12
+        c_float = cdfgData->Multiplier->value * ((((tmp * 1e-6) - (cdfgData->End_Gap->value * 1e-6)) * 40e-6) / (cdfgData->Finger_Gap->value * 1e-6)) * 8.85e-12
         cdfgData->C->value = sprintf(s "%g" c_float)
     )
   )
@@ -95,7 +95,7 @@ procedure( pcCFmult( )
         )
         
         
-        c_float = tmp * ((((cdfgData->Finger_Length->value * 1e-6) - (2 * cdfgData->End_Gap->value * 1e-6)) * 40e-6) / (cdfgData->Finger_Gap->value * 1e-6)) * 8.85e-12
+        c_float = tmp * ((((cdfgData->Finger_Length->value * 1e-6) - (cdfgData->End_Gap->value * 1e-6)) * 40e-6) / (cdfgData->Finger_Gap->value * 1e-6)) * 8.85e-12
         cdfgData->C->value = sprintf(s "%g" c_float)
     )
   )
