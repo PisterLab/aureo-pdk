@@ -135,6 +135,53 @@ The second gds file is written out. This final gds file contains only 3 layers f
 
 The final gds file is written out with the filename `[CELLNAME]_fab.gds.`
 
+### 3D view of the GDS
+
+**Prerequisites**
+- OpenSCAD
+- Python3
+
+**Extracting the preprocessed GDS for a 3D view**
+
+If not done, run `tools/export_gds.py`
+
+Move the preprocess GDS to `aureo-pdk/tools/examples` folder
+
+Run the following command in the `aureo-pdk/tools` working directory:
+
+```
+python3 gds3xtrude.py --tech "examples/test_preprocess.layerstack" --input "examples/test_preprocess.gds" --view
+```
+
+- `gds3xtrude.py` runs the GDS in OpenSCAD.
+
+- `examples/test_preprocess.layerstack` defines the drawn layers order, thicknesses and colors.
+
+- `examples/test_preprocess.gds` is the preprocess GDS you want to extract
+
+To export the 3D view as STL file, press F6 for rendering, then press F7 for exporting, in OpenSCAD.
+
+**Extracting the fab GDS for a 3D view and 3D printing**
+
+Extracting the fab GDS is useful for 3D printing.
+
+If not done, run `tools/process_gds.py`
+
+Move the fab GDS to `aureo-pdk/tools/examples` folder.
+
+Run the following command in 'aureo-pdk/tools' working directory. 
+
+```
+python3 gds3xtrude.py --tech "examples/test_preprocess.layerstack" --input "examples/test_fab.gds" --view
+```
+- `gds3xtrude.py` runs the GDS in OpenSCAD.
+
+- `examples/test_preprocess.layerstack` defines the drawn layers order, thicknesses and colors.
+
+- `examples/test_fab.gds` is the fab GDS you want to extract
+
+To export the 3D view as a STL file in OpenSCAD, press **F6 for rendering**, then press **F7 for exporting**
+
 ### Updating the PDK
 
 Updates to the Aureo PDK's ASCII Technology File (`aureo.tf`) can be applied to an existing Cadence Library by reloading the Technology File in the Cadence CIW. 

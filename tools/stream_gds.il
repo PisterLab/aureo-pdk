@@ -7,6 +7,9 @@ xstSetField( "topCell" ecell )
 xstSetField( "strmFile" efile )
 xstSetField( "showCompletionMsgBox" "false")
 xstSetField( "enableColoring" "false")
+xstSetField( "flattenPcells" "true")
+xstSetField( "higherDepth" "32767")
+
 printf("Exporting GDS...\n")
 procedure( xstOutOnCompletion( status ) 
     if( status == 0  then
