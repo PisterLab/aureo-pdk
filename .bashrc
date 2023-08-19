@@ -4,7 +4,7 @@ source ./setup.sh
 
 # Workaround for libssl for IC6.1.8 ISR20.
 # See https://support.cadence.com/apex/ArticleAttachmentPortal?id=a1O0V000009Mo6IUAS&pageName=ArticleContent.
-export LD_PRELOAD=/usr/lib64/libssl.so.1.0.2k:/usr/lib64/libcrypto.so.1.0.2k
+export LD_PRELOAD=/usr/lib64/libssl.so:/usr/lib64/libcrypto.so
 
 # PATH setup.
 export PATH=${CDS_HOME}/tools/plot/bin:${PATH}
