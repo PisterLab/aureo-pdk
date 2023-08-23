@@ -100,3 +100,125 @@ procedure( pcCFmult( )
     )
   )
 )
+
+
+procedure( pcSpringL( )
+  prog(()
+
+    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (4* cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+    cdfgData->K->value = sprintf(s "%g" k_float)
+
+  )
+
+)
+
+ 
+
+procedure( pcSpringW( )
+  prog(()
+
+    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (4* cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+        cdfgData->K->value = sprintf(s "%g" k_float)
+
+  )
+
+)
+
+
+procedure( pcSerpSpringL( )
+  prog(()
+;cdfgData->Multiplier->value * 
+    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (2 * 4 * cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+    cdfgData->K->value = sprintf(s "%g" k_float)
+
+  )
+
+)
+
+ 
+
+procedure( pcSerpSpringW( )
+  prog(()
+;cdfgData->Multiplier->value * 
+    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (2 * 4 * cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+        cdfgData->K->value = sprintf(s "%g" k_float)
+
+  )
+
+)
+
+
+
+
+
+procedure( pcSerpSpringmult( )
+  prog(()
+    if( (cdfgData->maskLayoutViewName->value == 
+            cdfgData->maskLayoutViewName->defValue) 
+                 ; Do this only if maskLayoutViewName is 
+                 ; layout. Otherwise, mosLayout sets it.
+    then
+        tmp = cdfgData->Multiplier->value
+        if( (tmp < cdfgData->Multiplier->defValue)
+        then
+            error("Multiplier value is less than 
+                 minimum (1). Set to default." )
+            cdfgData->Multiplier->value = cdfgData->Multiplier->defValue
+            return(nil)
+        )
+        
+        k_float = tmp* 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (2 * 4 * cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+        cdfgData->K->value = sprintf(s "%g" k_float)
+    )
+  )
+)
+
+
+
+
+procedure( pcContactFlip( )
+  prog(()
+    if( (cdfgData->flip->value == t)
+        then
+           cdfgData->SOI1?->value = "SOI2"
+           cdfgData->SOI2?->value = "SOI1"
+           cdfgData->POLY1?->value = "POLY2"
+           cdfgData->POLY2?->value = "POLY1"
+           cdfgData->HIGHMETAL1?->value = "HIGHMETAL2"
+           cdfgData->HIGHMETAL2?->value = "HIGHMETAL1"
+           cdfgData->LOWMETAL1?->value = "LOWMETAL2"
+           cdfgData->LOWMETAL2?->value = "LOWMETAL1"
+    )
+    if( (cdfgData->flip->value == nil)
+        then
+           cdfgData->SOI1?->value = "SOI1"
+           cdfgData->SOI2?->value = "SOI2"
+           cdfgData->POLY1?->value = "POLY1"
+           cdfgData->POLY2?->value = "POLY2"
+           cdfgData->HIGHMETAL1?->value = "HIGHMETAL1"
+           cdfgData->HIGHMETAL2?->value = "HIGHMETAL2"
+           cdfgData->LOWMETAL1?->value = "LOWMETAL1"
+           cdfgData->LOWMETAL2?->value = "LOWMETAL2"
+     )
+  )
+)
+
+procedure( pcSOIflip( )
+  prog(()
+    if( (cdfgData->flip->value == t)
+        then
+           cdfgData->SOI1?->value = "SOI2"
+           cdfgData->SOI2?->value = "SOI1"
+    )
+    if( (cdfgData->flip->value == nil)
+        then
+           cdfgData->SOI1?->value = "SOI1"
+           cdfgData->SOI2?->value = "SOI2"
+     )
+  )
+)
+
