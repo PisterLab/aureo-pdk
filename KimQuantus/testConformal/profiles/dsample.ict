@@ -1,0 +1,40 @@
+process "resistorOnly" {
+	background_dielectric_constant 1.0
+}
+conductor "POLY" {
+	min_spacing 0.25 
+	min_width 0.16
+	height 0.35
+	thickness 0.2
+	resistivity 8.6
+	gate_forming_layer false
+}
+dielectric "first" {
+	conformal FALSE
+	height 0.0
+	thickness 1.2
+	dielectric_constant 2.0
+}
+
+conductor "METAL" {
+	min_spacing 0.25
+	min_width 0.16
+	height 0.65
+	thickness 0.2
+	resistivity 7.0
+	gate_forming_layer false
+}
+dielectric "Nitride" {
+	conformal true
+	expanded_from METAL
+	bottom_expand 0.1
+	dielectric_constant 6.2
+}
+conductor "METAL2" {
+	min_spacing 0.25
+	min_width 0.16
+	height 0.95
+	thickness 0.2
+	resistivity 4.0
+	gate_forming_layer false
+}

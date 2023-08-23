@@ -1,0 +1,14 @@
+cd profiles; /share/instsww/cadence/QUANTUS.22.11.000/bin/Techgen -rcgen --with_fem2d  -generate  dsample.ict 0 -1 1400 2 0 1 2 P 0 0 0 1 0 0 0 ; cd ..;perl /home/aa/users/cs199-cwg/aureoProject/aureo-pdk/debugTech/testConformal2/.tech_scripts/generate_model_adaptive_test.pl 2_POLY_P_METAL_0_CSUBSTRATE_0_NONE_0_CSUBSTRATE profiles models 5 12 4 .9 50 2 /share/instsww/cadence/QUANTUS.22.11.000/bin/mg dsample.ict;
+
+cd profiles; /share/instsww/cadence/QUANTUS.22.11.000/bin/Techgen -rcgen --with_fem2d  -generate  dsample.ict 0 -1 1400 2 0 1 2 P 0 0 0 2 0 0 0 ; cd ..;perl /home/aa/users/cs199-cwg/aureoProject/aureo-pdk/debugTech/testConformal2/.tech_scripts/generate_model_adaptive_test.pl 2_POLY_P_METAL2_0_CSUBSTRATE_0_NONE_0_CSUBSTRATE profiles models 5 12 4 .9 50 2 /share/instsww/cadence/QUANTUS.22.11.000/bin/mg dsample.ict;
+
+cd profiles; /share/instsww/cadence/QUANTUS.22.11.000/bin/Techgen -rcgen --with_fem2d  -generate  dsample.ict 0 -1 1400 2 0 2 2 P 0 0 0 1 0 0 0 ; cd ..;perl /home/aa/users/cs199-cwg/aureoProject/aureo-pdk/debugTech/testConformal2/.tech_scripts/generate_model_adaptive_test.pl 2_METAL_P_METAL2_0_CSUBSTRATE_0_NONE_0_CSUBSTRATE profiles models 5 12 4 .9 50 2 /share/instsww/cadence/QUANTUS.22.11.000/bin/mg dsample.ict;
+
+cd profiles; /share/instsww/cadence/QUANTUS.22.11.000/bin/Techgen -rcgen --with_fem2d  -generate  dsample.ict 0 -1 1400 2 0 2 2 0 P 0 0 0 1 0 0 ; cd ..;perl /home/aa/users/cs199-cwg/aureoProject/aureo-pdk/debugTech/testConformal2/.tech_scripts/generate_model_adaptive_test.pl 2_METAL_0_NONE_P_POLY_0_NONE_0_CSUBSTRATE profiles models 5 12 4 .9 50 2 /share/instsww/cadence/QUANTUS.22.11.000/bin/mg dsample.ict;
+
+cd profiles; /share/instsww/cadence/QUANTUS.22.11.000/bin/Techgen -rcgen --with_fem2d  -generate  dsample.ict 0 -1 1400 2 0 2 2 P P 0 0 1 1 0 0 ; cd ..;perl /home/aa/users/cs199-cwg/aureoProject/aureo-pdk/debugTech/testConformal2/.tech_scripts/generate_model_adaptive_test.pl 2_METAL_P_METAL2_P_POLY_0_NONE_0_CSUBSTRATE profiles models 5 12 5 .9 50 2 /share/instsww/cadence/QUANTUS.22.11.000/bin/mg dsample.ict;
+
+cd profiles; /share/instsww/cadence/QUANTUS.22.11.000/bin/Techgen -rcgen --with_fem2d  -generate  dsample.ict 0 -1 1400 2 0 3 2 0 P 0 0 0 1 0 0 ; cd ..;perl /home/aa/users/cs199-cwg/aureoProject/aureo-pdk/debugTech/testConformal2/.tech_scripts/generate_model_adaptive_test.pl 2_METAL2_0_NONE_P_METAL_0_NONE_0_CSUBSTRATE profiles models 5 12 4 .9 50 2 /share/instsww/cadence/QUANTUS.22.11.000/bin/mg dsample.ict;
+
+cd profiles; /share/instsww/cadence/QUANTUS.22.11.000/bin/Techgen -rcgen --with_fem2d  -generate  dsample.ict 0 -1 1400 2 0 3 2 0 P 0 0 0 2 0 0 ; cd ..;perl /home/aa/users/cs199-cwg/aureoProject/aureo-pdk/debugTech/testConformal2/.tech_scripts/generate_model_adaptive_test.pl 2_METAL2_0_NONE_P_POLY_0_NONE_0_CSUBSTRATE profiles models 5 12 4 .9 50 2 /share/instsww/cadence/QUANTUS.22.11.000/bin/mg dsample.ict;
+
