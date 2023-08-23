@@ -79,6 +79,8 @@ layerDefinitions(
   ( POLY2                     drawing    )
   ( LOWMETAL2                 drawing    )
   ( HIGHMETAL2                drawing    )
+  ( DUMMY1                    drawing    )
+  ( DUMMY2                    drawing    )
   ( POLY1                     net        )
   ( POLY2                     net        )
   ( LOWMETAL1                 net        )
@@ -116,6 +118,8 @@ layerDefinitions(
   ( HIGHMETAL2   drawing      greenSolid       t t t t t )
   ( LOWMETAL2    drawing      blueSolid        t t t t t )
   ( POLY2        drawing      orangeSolidDe    t t t t t )
+  ( DUMMY1       drawing      purpleSolid      t t t t t )
+  ( DUMMY2       drawing      purpleSolidSp    t t t t t )
   ( SOI2         drawing      magentaSolidSp   t t t t t )
 
   ( POLY1        net          yellowDashed     t t t t nil )
