@@ -1,0 +1,6 @@
+pro_layer=first  ext_layer=first;
+pro_layer=SOI1  ext_layer=SOI1  sheet_res=2.5 ;
+pro_layer=LOWMETAL1  ext_layer=LOWMETAL1  sheet_res=0.0244 ;
+pro_layer=POLY1  ext_layer=POLY1  sheet_res=30 ;
+pro_layer=HIGHMETAL1  ext_layer=HIGHMETAL1  sheet_res=0.0244 ;
+ext_cont=LOWHIGHMETAL1 res=0 ;

@@ -1,0 +1,45 @@
+*
+* Techgen(tm) Tech file Generator.
+* FullVersion        : 22.1.1-p041
+* BuildNumber        : 041 
+* IRBuildNumber      : 041 
+* VersionDate        : Mon Apr 17 07:36:05 PDT 2023
+* Bitness            : 64-bit
+* 
+*
+process resistorOnly
+*
+*| temp_reference 25
+*| auto_reorder_off true
+*
+deposition
+*step #  material   p/n                 name        thick    diel.   side     bot     angle
+step  1  substrate                     first       1  2
+step  2  metal                          SOI1       0.1  0  
+step  3  dielectric p                first_1       0.01  2
+step  4  metal                     LOWMETAL1       0.08  0  
+step  5  dielectric p                first_2       0.01  2
+step  6  metal                         POLY1       0.09  0  
+step  7  dielectric p                first_3       0.01  2
+step  8  metal                    HIGHMETAL1       0.09  0  
+step  9  dielectric p                first_4       0.21  2
+step 10  dielectric p                    air       40  1
+enddeposition
+
+metal_variations auto_comb
+layer SOI1 w  2 
+layer SOI1 s  2 
+layer LOWMETAL1 w  2 
+layer LOWMETAL1 s  4 
+layer POLY1 w  2 
+layer POLY1 s  2 
+layer HIGHMETAL1 w  2 
+layer HIGHMETAL1 s  4 
+endmetal_variations
+
+via_effects
+* via_layer_name layer_b layer_t enc_b enc_t min_w [bot_delta top_delta minS]
+LOWHIGHMETAL1 LOWMETAL1 HIGHMETAL1 0 0 2 0 0 4
+endvia_effects
+endprocess
+
