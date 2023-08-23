@@ -1,0 +1,3 @@
+CAPGENOPTS="-C -Csw3d -p2lvs ./_p2lvsfile -lvs shieldLIRef2.xcn ."
+LVSFILE="${RCXBIN}/lvsfile"
+CAPS2DVERSION="* caps2d version: 10"

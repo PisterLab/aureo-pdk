@@ -1,0 +1,30 @@
+drcExtractRules(
+
+		layerDefs("df2"
+			SOI1 = layer("SOI1" type("drawing"))
+			POLY1 = layer("POLY1" type("drawing"))
+			LOWMETAL1 = layer("LOWMETAL1" type("drawing"))
+			HIGHMETAL1 = layer("HIGHMETAL1" type("drawing"))
+			HIGHMETAL2 = layer("HIGHMETAL2" type("drawing"))
+			LOWMETAL2 = layer("LOWMETAL2" type("drawing"))
+			POLY2 = layer("POLY2" type("drawing"))
+			SOI2 = layer("SOI2" type("drawing"))
+			contactCrossEdge_text=textToPin("CCE" type("drawing"))
+			DUMMY1 = layer("DUMMY1" type("drawing"))
+			DUMMY2 = layer("DUMMY2" type("drawing"))
+			POLY1_pinText = pinText("POLY1")
+			HIGHMETAL1_pinText = pinText("HIGHMETAL1")
+			SOI1_pinText = pinText("SOI1")
+			SOI2_pinText = pinText("SOI2")
+			)
+		recog = geomAnd(SOI1 DUMMY1)
+		terminal = geomAndNot(SOI1 DUMMY1)
+		recog2 = geomAnd(POLY1 DUMMY1)
+		terminal2 = geomAndNot(POLY1 DUMMY1)
+	geomConnect( label(SOI1_pinText terminal) label(POLY1_pinText terminal2) buttOrOver(terminal2 HIGHMETAL2) buttOrOver(terminal HIGHMETAL2) buttOrOver(HIGHMETAL1 HIGHMETAL2)
+)
+
+extractCAP("cap" recog terminal("vn" "vp") flagMalformed)
+extractRES("res" recog2 terminal2("vn" "vp") flagMalformed
+)
+)

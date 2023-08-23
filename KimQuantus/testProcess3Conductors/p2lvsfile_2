@@ -1,0 +1,4 @@
+pro_layer=first  ext_layer=first;
+pro_layer=POLY  ext_layer=POLY  sheet_res=8.6 ;
+pro_layer=METAL  ext_layer=METAL  sheet_res=7 ;
+pro_layer=METAL2  ext_layer=METAL2  sheet_res=4 ;

@@ -1,0 +1,3 @@
+pro_layer=METAL ext_layer=terminal2
+pro_layer=POLY ext_layer=terminal
+pro_layer=METAL2 ext_layer=HIGHMETAL1

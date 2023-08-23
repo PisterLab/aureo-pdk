@@ -1,0 +1,10 @@
+connect HIGHMETAL1 terminal2
+connect HIGHMETAL2 terminal
+text SOI1_pinText attach terminal
+text POLY1_pinText attach terminal2
+model=cap[cap],cap
+dfiimodel=cap[cap],cap
+element cap[cap] recog_CAP_1 terminal terminal 
+model=res[res],res
+dfiimodel=res[res],res
+element res[res] recog2_RES_2 terminal2 
