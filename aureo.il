@@ -129,8 +129,8 @@ procedure( pcSpringW( )
 
 procedure( pcSerpSpringL( )
   prog(()
-;cdfgData->Multiplier->value * 
-    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (2 * 4 * cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+   k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / ( (cdfgData->Multiplier->value / 2) cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
 
     cdfgData->K->value = sprintf(s "%g" k_float)
 
@@ -142,10 +142,10 @@ procedure( pcSerpSpringL( )
 
 procedure( pcSerpSpringW( )
   prog(()
-;cdfgData->Multiplier->value * 
-    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (2 * 4 * cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
 
-        cdfgData->K->value = sprintf(s "%g" k_float)
+    k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / ( (cdfgData->Multiplier->value / 2) cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+
+    cdfgData->K->value = sprintf(s "%g" k_float)
 
   )
 
@@ -171,7 +171,7 @@ procedure( pcSerpSpringmult( )
             return(nil)
         )
         
-        k_float = tmp* 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (2 * 4 * cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
+        k_float = 170e9 * cdfgData->Width->value * cdfgData->Width->value * cdfgData->Width->value * 40e-6 / (tmp/2) * cdfgData->Length->value * cdfgData->Length->value * cdfgData->Length->value)
         cdfgData->K->value = sprintf(s "%g" k_float)
     )
   )
