@@ -1,0 +1,7 @@
+SOFTINCLUDE /usr/eesww/cadence/IC618/share/cdssetup/cds.lib
+DEFINE aureo_lib /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_lib
+DEFINE aureo_scm3c /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_scm3c
+DEFINE scm3c_outline /home/eecs/lyichen/aureo/cadence/aureo-pdk/scm3c_outline/scm3c_outline
+DEFINE scm3c_outline /home/eecs/lyichen/aureo/cadence/aureo-pdk/scm3c_outline
+DEFINE aureo_mask_run /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_mask_run
+DEFINE aureo_test_structure /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_test_structure
