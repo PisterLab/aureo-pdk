@@ -3,3 +3,4 @@ DEFINE aureo_scm3c ./aureo_scm3c
 DEFINE scm3c_outline ./scm3c_outline
 DEFINE aureo_mask_run ./aureo_mask_run
 DEFINE aureo_test_structure ./aureo_test_structure
+DEFINE aureo_robot /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_robot

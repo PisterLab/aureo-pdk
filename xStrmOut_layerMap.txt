@@ -7,4 +7,10 @@
 ####################################################################
 
  POLY1  drawing  11  0 
+ HIGHMETAL2  drawing  14  0 
+ SOI1  drawing  9  0 
+ POLY2  drawing  16  0 
+ SOI2  drawing  17  0 
+ LOWMETAL1  drawing  12  0 
  HIGHMETAL1  drawing  13  0 
+ LOWMETAL2  drawing  15  0 

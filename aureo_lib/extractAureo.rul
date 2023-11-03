@@ -1,0 +1,55 @@
+drcExtractRules(
+
+		layerDefs("df2"
+			SOI1 = layer("SOI1" type("drawing"))
+			POLY1 = layer("POLY1" type("drawing"))
+			LOWMETAL1 = layer("LOWMETAL1" type("drawing"))
+			HIGHMETAL1 = layer("HIGHMETAL1" type("drawing"))
+			HIGHMETAL2 = layer("HIGHMETAL2" type("drawing"))
+			LOWMETAL2 = layer("LOWMETAL2" type("drawing"))
+			POLY2 = layer("POLY2" type("drawing"))
+			SOI2 = layer("SOI2" type("drawing"))
+			contactCrossEdge_text=textToPin("CCE" type("drawing"))
+			DUMMY1 = layer("SOI1" type("resMarker"))
+			DUMMY2 = layer("POLY1" type("resMarker"))
+			LOWMETAL1_pinText = pinText("LOWMETAL1")
+			HIGHMETAL2_pinText = pinText("HIGHMETAL2")
+			SOI1_pinText = pinText("SOI1")
+			)
+
+
+
+		POLY1POLY2 = geomAnd(POLY1 POLY2)
+		HM1HM2 = geomAnd(HIGHMETAL1 HIGHMETAL2)
+		POLY1POLY2OrHM1HM2 = geomOr(POLY1POLY2 HM1HM2)
+		relayRecognition = geomAnd(POLY1POLY2OrHM1HM2 DUMMY2)
+	
+		DUMMY1Or2 = geomOr(DUMMY1 DUMMY2)
+		POLY1_Connect = geomAndNot(POLY1 DUMMY1)
+		POLY2_Connect = geomAndNot(POLY2 DUMMY1)
+		HIGHMETAL1_Connect = geomAndNot(HIGHMETAL1 DUMMY1)
+		HIGHMETAL2_Connect = geomAndNot(HIGHMETAL2 DUMMY1)
+		SOIDUMMY1 = geomAnd(SOI1 DUMMY1)
+		combfingerRec = geomOr(SOIDUMMY1 DUMMY1)
+		SOINOTDUMMY1 = geomAndNot(SOI1 DUMMY1)
+		combfingerTerminal = SOINOTDUMMY1
+
+
+	
+
+
+	geomConnect(
+ label(LOWMETAL1_pinText LOWMETAL1)
+ label(HIGHMETAL2_pinText HIGHMETAL2_Connect)
+ buttOrOver(POLY1_Connect HIGHMETAL1_Connect)
+ buttOrOver(POLY2_Connect HIGHMETAL2_Connect)
+ buttOrOver(HIGHMETAL1_Connect HIGHMETAL2_Connect)
+ buttOrOver(LOWMETAL1 HIGHMETAL1_Connect)
+ buttOrOver(LOWMETAL2 HIGHMETAL2_Connect)
+ buttOrOver(combfingerTerminal LOWMETAL1)
+ buttOrOver(SOI2 LOWMETAL2) 
+  )
+
+extractCAP("cap" combfingerRec combfingerTerminal("PLUS" "MINUS") flagMalformed) extractRES("res" relayRecognition HIGHMETAL1_Connect("PLUS") SOINOTDUMMY1("MINUS") flagMalformed) 
+
+) 
