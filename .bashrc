@@ -15,9 +15,7 @@ export PATH=${CDS_HOME}/tools/bin:${PATH}
 # Virtuoso options.
 export CDS_Netlisting_Mode=Analog
 
-# MEMS+ 7.1 setup (Alcatraz Only)
-export MEMSPLUS_HOME=/usr/local/Coventor/CoventorMP2.1/MEMS+7.1
-export MCOSMLD_LICENSE_FILE=54000@ultrahighq.eecs.berkeley.edu
+# MEMS+ 7.1 setup
 export COV_NO_OPENGL=f
 
 
