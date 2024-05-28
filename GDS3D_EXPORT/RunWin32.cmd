@@ -1,0 +1,1 @@
+win32\GDS3D.exe -p techfiles/aureo_lib.txt -i gds/breakout_lyichen.gds

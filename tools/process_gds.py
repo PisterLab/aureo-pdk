@@ -118,8 +118,8 @@ if lm2paths or hm2paths:
     merged_m2paths = lm2paths + hm2paths
     for path in merged_m2paths:
         path = gdspy.copy(path)
-        path.layer = [ld_metal2fab[0]]
-        path.datatype = [ld_metal2fab[1]]
+        path.layers = [ld_metal2fab[0]]
+        path.datatypes = [ld_metal2fab[1]]
         cell.add(path)
 
 # Now assign the SOI1, POLY1, SOI2, POLY2 layers to the fab layers
@@ -155,7 +155,8 @@ for ld_fab in [(ld_soi2fab, ld_soifab), (ld_metal2fab, ld_metalfab), (ld_poly2fa
     if fab_shapes:
         for shape in fab_shapes:
             shape = gdspy.copy(shape)
-            shape.mirror((xmax,ymin), (xmax,ymax))  # reflect about the line x = rightmost
+            #shape.mirror((xmax,ymin), (xmax,ymax))  # reflect about the line x = rightmost
+            shape.translate(xmax*2,0)		
             shape.layers = [ld_fab[1][0]]
             shape.datatypes = [ld_fab[1][1]]
             fab_cell.add(shape)
@@ -164,7 +165,7 @@ for ld_fab in [(ld_soi2fab, ld_soifab), (ld_metal2fab, ld_metalfab), (ld_poly2fa
         copied = fab_paths.copy()
         for path in fab_paths:
             path = gdspy.copy(path)
-            path.mirror((xmax,ymin), (xmax,ymax))
+            path.translate(xmax*2,0)
             path.layers = [ld_fab[1][0]]
             path.datatypes = [ld_fab[1][1]]
             fab_cell.add(path)

@@ -222,3 +222,7 @@ Single layer space rules are enforced on spaces between drawings/shapes on the s
 | `POLY2` | 2um | 
 | `SOI2` | 2um |
 
+### MEMS+ 7.1 Connection (Alcatraz Only)
+MCOSMLD_LICENSE_FILE=54000@ultrahighq.EECS.Berkeley.EDU
+export CONV_NO_OPENGL=f
+/usr/local/Coventor/CoventorMP2.1/MEMSp7.1

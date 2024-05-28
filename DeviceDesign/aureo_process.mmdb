@@ -1,0 +1,1072 @@
+
+<___Document DocBuildTag="" DocCommit="62ee6a640569" DocType="mmdb" DocVersion="7.1.1">
+
+  <___Parser ___Name="Variables" ___Type="VariableRoot" isExpanded="true">
+    <___Item Overridden="true" ___Name="T" ___Type="Variable" isExpanded="true">
+      <___Properties isEnable="true">
+        <value ___expression="273.15" ___lastKnownValue="273.15" ___unitName="nounit"/>
+        <isExposed ___expression="true" readonly="true"/>
+        <limits isEnable="true">
+          <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+        </limits>
+      </___Properties>
+    </___Item>
+    <___Item Imported="true" ___Name="Pressure" ___Type="Variable">
+      <___Properties isEnable="true">
+        <value ___expression="101325" ___lastKnownValue="101325.0" ___unitName="nounit"/>
+        <isExposed ___expression="true" readonly="true"/>
+        <limits isEnable="true">
+          <lower ___expression="1e-3" ___lastKnownValue="0.001" ___unitName="nounit" readonly="true"/>
+          <upper ___expression="1e10" ___lastKnownValue="10000000000.0" ___unitName="nounit" readonly="true"/>
+        </limits>
+      </___Properties>
+    </___Item>
+    <___Item ___Name="ResidualStress" ___Type="VariableGroup" isExpanded="true">
+      <___Item ___Name="SiliconNitride" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="23.5" ___lastKnownValue="23.5" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item ___Name="Poly0" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="-25" ___lastKnownValue="-25.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item ___Name="Poly1" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="-10" ___lastKnownValue="-10.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item ___Name="Poly2" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="-10" ___lastKnownValue="-10.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item ___Name="Gold" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="50" ___lastKnownValue="50.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+    </___Item>
+  </___Parser>
+
+  <___DocumentTree ___Name="Material List" ___Type="MaterialTreeRoot" isExpanded="true">
+    <___Item ___Name="Air" ___Type="FluidMaterial">
+      <___Properties VersionNumber="2" isEnable="true">
+        <visualProperties isEnable="true">
+          <color ___blue="54" ___green="245" ___red="242" useDefaultColor="true"/>
+          <transparency ___expression="0"/>
+        </visualProperties>
+        <density Comment="&lt;body lang=EN-US style='tab-interval:.5in'>&lt;h3>Density of Air&lt;/h3>The density of air is calculated using the ideal gas law, expressed as a function of temperature &lt;b>T&lt;/b> and pressure &lt;b>p&lt;/b>: &lt;br>&lt;br>&lt;th>&amp;#948; = p /(R T) &lt;/th>&lt;br>&lt;br>where &lt;b>R&lt;/b> is the specific gas constant for dry air." ___expression="Pressure/(287.058*T)" ___lastKnownValue="1.292247655377802" ___unitName="kg/m^3"/>
+        <viscosity Comment="&lt;body lang=EN-US style='tab-interval:.5in'>&lt;h3>Viscosity of Air&lt;/h3>The default value of the (dynamic) viscosity of air is based on Sutherland's formula:&lt;br>&lt;br>&lt;th>&amp;#956; = &amp;#956;0*(T0+S)/(T+S)*(T/T0)^(3/2) &lt;/th>&lt;br>&lt;br>where &lt;b>&amp;#956;0&lt;/b> is the viscosity at the reference temperature &lt;b>T0&lt;/b> and &lt;b>S&lt;/b> is Sutherland's constant for the gaseous material in question.&lt;/th>&lt;br>&lt;br>&lt;h4>Reference:&lt;/h4>Sutherland, W. (1893), &quot;The viscosity of gases and molecular forces&quot;,Philosophical Magazine, S. 5, 36, pp.507-531(1893) " ___expression="1.716e-5*(273.15+110.4)/(T+110.4)*(T/273.15)^(3/2)" ___lastKnownValue="1.716e-05" ___unitName="Pa*s"/>
+        <relativePermittivity ___expression="1" ___lastKnownValue="1.0" ___unitName="nounit"/>
+        <compressibility Comment="&lt;body lang=EN-US style='tab-interval:.5in'>&lt;h3>Compressibility&lt;/h3>The compressibility is defined as: &lt;br>&lt;br>&lt;th>&amp;#946; = -1/V*&amp;#948;V/&amp;#948;p &lt;/th>&lt;br>&lt;br>where &lt;b>V&lt;/b> is volume and &lt;b>p&lt;/b> is pressure.&lt;br>The specification above is incomplete, because for any object or system the magnitude of the compressibility depends strongly on whether the process is adiabatic or isothermal.&lt;br>Isothermal compressibility is defined by: &lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>T&lt;/sub> = -1/V*(&amp;#948;V/&amp;#948;p)&lt;sub>T&lt;/sub>&lt;/th>&lt;br>&lt;br>where the subscript T indicates that the partial differential is to be taken at constant temperature.&lt;br>Isentropic compressibility is defined by: &lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>S&lt;/sub> = -1/V*(&amp;#948;V/&amp;#948;p)&lt;sub>S&lt;/sub>&lt;/th>&lt;br>&lt;br>where the subscript S indicates that the partial differential is to be taken at constant entropy.&lt;br>Isentropic compressibility can be expressed : &lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>S&lt;/sub> = 1/(&amp;#961;c&lt;sup>2&lt;/sup>)&lt;/th>&lt;br>&lt;br>where &lt;b>&amp;#961;&lt;/b> is the density, and &lt;b>c&lt;/b> is the speed of sound.&lt;br>&lt;br>Assuming ideal gas law, &lt;b>&amp;#946;&lt;sub>T&lt;/sub>&lt;/b> and &lt;b>&amp;#946;&lt;sub>S&lt;/sub>&lt;/b> have a simple expression: &lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>T&lt;/sub> = 1/p&lt;/th>&lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>S&lt;/sub> = 1/(&amp;#947;p)&lt;/th>&lt;br>&lt;br>where &lt;b>&amp;#947;&lt;/b> is the adiabic index. For monoatomic (noble) gases, it is equal to 1.6667, and for diatomic gases, it is equal to 1.4.&lt;br>" ___expression="1/(1.4*Pressure)" ___lastKnownValue="7.049451905114378e-06" ___unitName="1/Pa"/>
+      </___Properties>
+    </___Item>
+    <___Item ___Name="AirEncapsulated" ___Type="FluidMaterial">
+      <___Properties VersionNumber="2" isEnable="true">
+        <visualProperties isEnable="true">
+          <color ___blue="54" ___green="245" ___red="242" useDefaultColor="true"/>
+          <transparency ___expression="0"/>
+        </visualProperties>
+        <density Comment="&lt;body lang=EN-US style='tab-interval:.5in'>&lt;h3>Density of Air&lt;/h3>The density of air is calculated using the ideal gas law, expressed as a function of temperature &lt;b>T&lt;/b> and pressure &lt;b>p&lt;/b>: &lt;br>&lt;br>&lt;th>&amp;#948; = p /(R T) &lt;/th>&lt;br>&lt;br>where &lt;b>R&lt;/b> is the specific gas constant for dry air." ___expression="(Pressure*T/298.15)/(287.058*T)" ___lastKnownValue="1.183892158532438" ___unitName="kg/m^3"/>
+        <viscosity Comment="&lt;body lang=EN-US style='tab-interval:.5in'>&lt;h3>Viscosity of Air&lt;/h3>The default value of the (dynamic) viscosity of air is based on Sutherland's formula:&lt;br>&lt;br>&lt;th>&amp;#956; = &amp;#956;0*(T0+S)/(T+S)*(T/T0)^(3/2) &lt;/th>&lt;br>&lt;br>where &lt;b>&amp;#956;0&lt;/b> is the viscosity at the reference temperature &lt;b>T0&lt;/b> and &lt;b>S&lt;/b> is Sutherland's constant for the gaseous material in question.&lt;/th>&lt;br>&lt;br>&lt;h4>Reference:&lt;/h4>Sutherland, W. (1893), &quot;The viscosity of gases and molecular forces&quot;,Philosophical Magazine, S. 5, 36, pp.507-531(1893) " ___expression="1.716e-5*(273.15+110.4)/(T+110.4)*(T/273.15)^(3/2)" ___lastKnownValue="1.716e-05" ___unitName="Pa*s"/>
+        <relativePermittivity ___expression="1" ___lastKnownValue="1.0" ___unitName="nounit"/>
+        <compressibility Comment="&lt;body lang=EN-US style='tab-interval:.5in'>&lt;h3>Compressibility&lt;/h3>The compressibility is defined as: &lt;br>&lt;br>&lt;th>&amp;#946; = -1/V*&amp;#948;V/&amp;#948;p &lt;/th>&lt;br>&lt;br>where &lt;b>V&lt;/b> is volume and &lt;b>p&lt;/b> is pressure.&lt;br>The specification above is incomplete, because for any object or system the magnitude of the compressibility depends strongly on whether the process is adiabatic or isothermal.&lt;br>Isothermal compressibility is defined by: &lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>T&lt;/sub> = -1/V*(&amp;#948;V/&amp;#948;p)&lt;sub>T&lt;/sub>&lt;/th>&lt;br>&lt;br>where the subscript T indicates that the partial differential is to be taken at constant temperature.&lt;br>Isentropic compressibility is defined by: &lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>S&lt;/sub> = -1/V*(&amp;#948;V/&amp;#948;p)&lt;sub>S&lt;/sub>&lt;/th>&lt;br>&lt;br>where the subscript S indicates that the partial differential is to be taken at constant entropy.&lt;br>Isentropic compressibility can be expressed : &lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>S&lt;/sub> = 1/(&amp;#961;c&lt;sup>2&lt;/sup>)&lt;/th>&lt;br>&lt;br>where &lt;b>&amp;#961;&lt;/b> is the density, and &lt;b>c&lt;/b> is the speed of sound.&lt;br>&lt;br>Assuming ideal gas law, &lt;b>&amp;#946;&lt;sub>T&lt;/sub>&lt;/b> and &lt;b>&amp;#946;&lt;sub>S&lt;/sub>&lt;/b> have a simple expression: &lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>T&lt;/sub> = 1/p&lt;/th>&lt;br>&lt;br>&lt;th>&amp;#946;&lt;sub>S&lt;/sub> = 1/(&amp;#947;p)&lt;/th>&lt;br>&lt;br>where &lt;b>&amp;#947;&lt;/b> is the adiabic index. For monoatomic (noble) gases, it is equal to 1.6667, and for diatomic gases, it is equal to 1.4.&lt;br>" ___expression="1/(Pressure*T/298.15)" ___lastKnownValue="1.077251224497087e-05" ___unitName="1/Pa"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Single Crystal Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Monocrystalline silicon is an anisotropic material.  Proper material property definition and device orientation with respect to the wafer crystallographic structure are critical when constructing devices on SOI wafers or micromachining bulk silicon.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Default settings for Silicon:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Material Orientation&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;> can be used to orient the wafer with the crystalline planes of the material.  The most common form of single crystal silicon in MEMS is a standard (100) fabrication wafer; thus the default Material Orientation for Silicon is Wafer Orientation &amp;gt; 100 Wafer.  Other common MEMS fabrication wafers are available.  However, the silicon material may serve nothing more than the substrate for surface micromachining, in which case the orientation of the crystalline planes is not critical and any Material Orientation choice is appropriate. &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Elastic Constants&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, which define linear elastic behavior, are specified depending on the crystalline structure (or lack thereof) of the material. Monocrystalline silicon is a cubic material; thus the default Elastic Constant definition for Silicon is Cubic.  The elastic quantities for silicon oriented with respect to the cube principal axes (X,Y,Z aligned with [100], [010], and [001], respectively) are specified.  These elastic constants combined with the 100 Wafer orientation above construct the proper stiffness matrix for a silicon (100) fabrication wafer.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>As a material with cubic symmetry, Silicon may also be represented by orthotropic material constants or a complete set of anisotropic stiffness matrix parameters.  These are supplied for convenience.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;> &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___Name="SCS" ___Type="SolidMaterial">
+      <___Properties isEnable="true">
+        <visualProperties isEnable="true" isExpanded="true">
+          <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          <transparency ___expression="0"/>
+        </visualProperties>
+        <waferOrientation ___activeMember="waferCut " isExpanded="true">
+          <waferCut Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Wafer Orientation&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Set Wafer Orientation to reflect the type of fabrication wafer being used.  This option orients the canvas coordinate system with the crystalline planes of the material.&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>100 Wafer&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;> designates a fabrication wafer wherein the top surface of the wafer is oriented in the (100) plane of the silicon crystal and the flat is aligned with the [110] crystalline direction.  Consequently, the material properties will be automatically rotated to align the X,Y, Z axes of the canvas coordinate system with (110), (-110), (001) crystal planes, respectively. &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>If a &amp;quot;generic&amp;quot; Silicon material is desired wherein the {100} crystalline planes are oriented along the X,Y,Z axes of the canvas, Euler Angles of 0 are appropriate.  &lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___activeMember="wafer100" isExpanded="true"/>
+          <orientationEulerAngles isEnable="true">
+            <Phi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Theta ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Psi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerAngles>
+          <orientationEulerParameters isEnable="true">
+            <rx ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <ry ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <rz ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerParameters>
+        </waferOrientation>
+        <density Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Density of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="2331" ___lastKnownValue="2331.0" ___unitName="kg/m^3" isExpanded="true"/>
+        <elastic ___activeMember="elasticCubic " isExpanded="true">
+          <elasticIsotropic isEnable="true" isExpanded="true">
+            <E ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <nu ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" isExpanded="true"/>
+          </elasticIsotropic>
+          <elasticCubic isEnable="true" isExpanded="true">
+            <E Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Young's Modulus of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>M. A. Hopcroft, W. D. Nix, and T. W. Kenny, &amp;quot;What is the Young's Modulus of Silicon?&amp;quot;, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>IEEE Journal of Microelectromechanical Systems&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, vol. 19, Issue 2, pp. 229-238, 2010.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="130" ___lastKnownValue="130.0" ___unitName="GPa" isExpanded="true"/>
+            <nu Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Poisson's Ratio of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>M. A. Hopcroft, W. D. Nix, and T. W. Kenny, &amp;quot;What is the Young's Modulus of Silicon?&amp;quot;, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>IEEE Journal of Microelectromechanical Systems&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, vol. 19, Issue 2, pp. 229-238, 2010.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="0.28" ___lastKnownValue="0.28" ___unitName="nounit" isExpanded="true"/>
+            <G Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Shear Modulus of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>M. A. Hopcroft, W. D. Nix, and T. W. Kenny, &amp;quot;What is the Young's Modulus of Silicon?&amp;quot;, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>IEEE Journal of Microelectromechanical Systems&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, vol. 19, Issue 2, pp. 229-238, 2010.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="79.6" ___lastKnownValue="79.59999999999999" ___unitName="GPa" isExpanded="true"/>
+          </elasticCubic>
+          <elasticOrtho VersionNumber="2" isEnable="true" isExpanded="true">
+            <E1 ___expression="130" ___lastKnownValue="130.0" ___unitName="GPa" isExpanded="true"/>
+            <E2 ___expression="130" ___lastKnownValue="130.0" ___unitName="GPa" isExpanded="true"/>
+            <E3 ___expression="130" ___lastKnownValue="130.0" ___unitName="GPa" isExpanded="true"/>
+            <nu23 ___expression="0.28" ___lastKnownValue="0.28" ___unitName="nounit" isExpanded="true"/>
+            <nu31 ___expression="(0.28)*(130/130)" ___lastKnownValue="0.28" ___unitName="nounit" isExpanded="true"/>
+            <nu12 ___expression="0.28" ___lastKnownValue="0.28" ___unitName="nounit" isExpanded="true"/>
+            <G23 ___expression="79.6" ___lastKnownValue="79.59999999999999" ___unitName="GPa" isExpanded="true"/>
+            <G31 ___expression="79.6" ___lastKnownValue="79.59999999999999" ___unitName="GPa" isExpanded="true"/>
+            <G12 ___expression="79.6" ___lastKnownValue="79.59999999999999" ___unitName="GPa" isExpanded="true"/>
+          </elasticOrtho>
+          <elasticAnisotropic isEnable="true" isExpanded="true">
+            <C11 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C13 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C14 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C15 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C16 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C22 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C24 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C25 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C26 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C33 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C34 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C35 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C36 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C44 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C45 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C46 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C55 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C56 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C66 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+          </elasticAnisotropic>
+        </elastic>
+        <stress ___activeMember="stressPlanarIso ">
+          <stressPlanarIso isEnable="true">
+            <stress ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+          </stressPlanarIso>
+          <stressAnisotropic isEnable="true">
+            <x ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+            <y ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+            <z ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+          </stressAnisotropic>
+        </stress>
+        <stressGradientZ ___activeMember="stressGradientZPlanarIso ">
+          <stressGradientZPlanarIso isEnable="true">
+            <sg ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZPlanarIso>
+          <stressGradientZAnisotropic isEnable="true">
+            <sgx ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+            <sgy ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZAnisotropic>
+        </stressGradientZ>
+        <coefficientOfExpansion isEnable="true" isExpanded="true">
+          <alpha Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Thermal Coefficient of Expansion of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>TCE reported for a silicon substrate&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="2.5e-6" ___lastKnownValue="2.5e-06" ___unitName="1/K" isExpanded="true"/>
+          <zeroStressTemperature ___expression="273.15" ___lastKnownValue="273.15" ___unitName="K"/>
+        </coefficientOfExpansion>
+        <thermalConductivity Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Thermal Conductivity of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>This material property depends significantly on temperature and geometry (bulk, films, wires, etc).  148 W/(mK) is valid for bulk silicon at 300 K.&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>McConnell, A.D., and Goodson, K.E., &amp;quot;Thermal Conduction in Silicon Micro and Nanostructures,&amp;quot; &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Annual Review of Heat Transfer&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, Vol. 14, pp. 129-168, &lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>2005&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="148" ___lastKnownValue="148.0" ___unitName="W/(m*K)"/>
+        <specificHeat Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Specific Heat of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="712" ___lastKnownValue="712.0" ___unitName="J/(kg*K)"/>
+        <electricalConductivity Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Electrical Conductivity of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>The electrical conductivity of a semi-conductor such as Silicon will depend heavily on the doping scheme.  For example, Senturia gives a representative value of 1500 S/m for n-type Silicon doped to a concentration of 10^17 cm^-3 (S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001).  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>In MEMS+ if the electrical conductivity of a material is zero, the material is considered to be a dielectric. If the electrical conductivity of the material is greater than zero, the material is considered to be a conductor. Either electrical conductivity OR relative permittivity must be greater than 0 for solid materials.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>By convention, Silicon is taken to be doped with a representative Electrical Conductivity value.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;>&lt;br />&lt;/p>&lt;/body>&lt;/html>" ___expression="1.5e3" ___lastKnownValue="1500.0" ___unitName="S/m"/>
+        <piezoelectric ___activeMember="piezoelectricStress ">
+          <piezoelectricStress isEnable="true">
+            <e11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+          </piezoelectricStress>
+          <piezoelectricStrain isEnable="true">
+            <d11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+          </piezoelectricStrain>
+        </piezoelectric>
+        <relativePermittivity ___activeMember="relativePermittivityIsotropic " isExpanded="true">
+          <relativePermittivityIsotropic isEnable="true" isExpanded="true">
+            <er Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Relative Permittivity of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>In MEMS+, either electrical conductivity OR relative permittivity must be greater than 0 for soild materials. &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="11.7" ___lastKnownValue="11.7" ___unitName="nounit"/>
+          </relativePermittivityIsotropic>
+          <relativePermittivityAnisotropic isEnable="true" isExpanded="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropic>
+          <relativePermittivityIsotropicAtConstantStress isEnable="true">
+            <er ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropicAtConstantStress>
+          <relativePermittivityAnisotropicAtConstantStress isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropicAtConstantStress>
+        </relativePermittivity>
+        <piezoresistive isEnable="true" isExpanded="true">
+          <pi11 Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Piezoresistive Coefficients of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Valid for p-type silicon at room temperature&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="6.6e-11" ___lastKnownValue="6.6e-11" ___unitName="1/Pa"/>
+          <pi12 Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Piezoresistive Coefficients of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Valid for p-type silicon at room temperature&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="-1.1e-11" ___lastKnownValue="-1.1e-11" ___unitName="1/Pa"/>
+          <pi44 Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Piezoresistive Coefficients of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Valid for p-type silicon at room temperature&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="138.1e-11" ___lastKnownValue="1.381e-09" ___unitName="1/Pa"/>
+        </piezoresistive>
+        <relativePermeability ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" doNotDisplay="true"/>
+        <coercivity ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+        <saturationMagnetization ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___Name="BOX" ___Type="SolidMaterial" isExpanded="true">
+      <___Properties isEnable="true">
+        <visualProperties isEnable="true" isExpanded="true">
+          <color Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          <transparency ___expression="0"/>
+        </visualProperties>
+        <waferOrientation ___activeMember="orientationEulerAngles ">
+          <waferCut ___activeMember=""/>
+          <orientationEulerAngles isEnable="true">
+            <Phi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Theta ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Psi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerAngles>
+          <orientationEulerParameters isEnable="true">
+            <rx ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <ry ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <rz ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerParameters>
+        </waferOrientation>
+        <density ___expression="2e-15" ___lastKnownValue="2e-15.0" ___unitName="kg/um^3" isExpanded="true"/>
+        <elastic ___activeMember="elasticIsotropic " isExpanded="true">
+          <elasticIsotropic isEnable="true" isExpanded="true">
+            <E ___expression="7e4" ___lastKnownValue="70000.0" ___unitName="MPa" isExpanded="true"/>
+            <nu ___expression="3e-1" ___lastKnownValue="0.3" ___unitName="nounit" isExpanded="true"/>
+          </elasticIsotropic>
+          <elasticCubic isEnable="true">
+            <E ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <nu ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <G ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticCubic>
+          <elasticOrtho VersionNumber="2" isEnable="true">
+            <E1 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <E2 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <E3 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <nu23 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <nu31 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <nu12 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <G23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <G31 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <G12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticOrtho>
+          <elasticAnisotropic isEnable="true">
+            <C11 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C13 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C14 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C15 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C16 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C22 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C24 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C25 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C26 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C33 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C34 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C35 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C36 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C44 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C45 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C46 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C55 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C56 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C66 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticAnisotropic>
+        </elastic>
+        <stress ___activeMember="stressPlanarIso " isExpanded="true">
+          <stressPlanarIso isEnable="true" isExpanded="true">
+            <stress ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+          </stressPlanarIso>
+          <stressAnisotropic isEnable="true">
+            <x ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+            <y ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+            <z ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+          </stressAnisotropic>
+        </stress>
+        <stressGradientZ ___activeMember="stressGradientZPlanarIso ">
+          <stressGradientZPlanarIso isEnable="true">
+            <sg ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZPlanarIso>
+          <stressGradientZAnisotropic isEnable="true">
+            <sgx ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+            <sgy ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZAnisotropic>
+        </stressGradientZ>
+        <coefficientOfExpansion isEnable="true" isExpanded="true">
+          <alpha ___expression="0" ___lastKnownValue="0.0" ___unitName="1/K" isExpanded="true"/>
+          <zeroStressTemperature ___expression="273.15" ___lastKnownValue="273.15" ___unitName="K"/>
+        </coefficientOfExpansion>
+        <thermalConductivity ___expression="0" ___lastKnownValue="0.0" ___unitName="W/(m*K)"/>
+        <specificHeat ___expression="0" ___lastKnownValue="0.0" ___unitName="J/(kg*K)"/>
+        <electricalConductivity ___expression="-0" ___lastKnownValue="-0.0" ___unitName="S/m"/>
+        <piezoelectric ___activeMember="piezoelectricStress ">
+          <piezoelectricStress isEnable="true">
+            <e11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+          </piezoelectricStress>
+          <piezoelectricStrain isEnable="true">
+            <d11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+          </piezoelectricStrain>
+        </piezoelectric>
+        <relativePermittivity ___activeMember="relativePermittivityIsotropic " isExpanded="true">
+          <relativePermittivityIsotropic isEnable="true" isExpanded="true">
+            <er ___expression="8" ___lastKnownValue="8.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropic>
+          <relativePermittivityAnisotropic isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropic>
+          <relativePermittivityIsotropicAtConstantStress isEnable="true">
+            <er ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropicAtConstantStress>
+          <relativePermittivityAnisotropicAtConstantStress isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropicAtConstantStress>
+        </relativePermittivity>
+        <piezoresistive isEnable="true">
+          <pi11 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/Pa"/>
+          <pi12 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/Pa"/>
+          <pi44 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/Pa"/>
+        </piezoresistive>
+        <relativePermeability ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" doNotDisplay="true"/>
+        <coercivity ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+        <saturationMagnetization ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Single Crystal Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Monocrystalline silicon is an anisotropic material.  Proper material property definition and device orientation with respect to the wafer crystallographic structure are critical when constructing devices on SOI wafers or micromachining bulk silicon.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Default settings for Silicon:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Material Orientation&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;> can be used to orient the wafer with the crystalline planes of the material.  The most common form of single crystal silicon in MEMS is a standard (100) fabrication wafer; thus the default Material Orientation for Silicon is Wafer Orientation &amp;gt; 100 Wafer.  Other common MEMS fabrication wafers are available.  However, the silicon material may serve nothing more than the substrate for surface micromachining, in which case the orientation of the crystalline planes is not critical and any Material Orientation choice is appropriate. &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Elastic Constants&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, which define linear elastic behavior, are specified depending on the crystalline structure (or lack thereof) of the material. Monocrystalline silicon is a cubic material; thus the default Elastic Constant definition for Silicon is Cubic.  The elastic quantities for silicon oriented with respect to the cube principal axes (X,Y,Z aligned with [100], [010], and [001], respectively) are specified.  These elastic constants combined with the 100 Wafer orientation above construct the proper stiffness matrix for a silicon (100) fabrication wafer.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>As a material with cubic symmetry, Silicon may also be represented by orthotropic material constants or a complete set of anisotropic stiffness matrix parameters.  These are supplied for convenience.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;> &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___Name="SOI" ___Type="SolidMaterial">
+      <___Properties isEnable="true">
+        <visualProperties isEnable="true" isExpanded="true">
+          <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          <transparency ___expression="0"/>
+        </visualProperties>
+        <waferOrientation ___activeMember="waferCut " isExpanded="true">
+          <waferCut Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Wafer Orientation&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Set Wafer Orientation to reflect the type of fabrication wafer being used.  This option orients the canvas coordinate system with the crystalline planes of the material.&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>100 Wafer&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;> designates a fabrication wafer wherein the top surface of the wafer is oriented in the (100) plane of the silicon crystal and the flat is aligned with the [110] crystalline direction.  Consequently, the material properties will be automatically rotated to align the X,Y, Z axes of the canvas coordinate system with (110), (-110), (001) crystal planes, respectively. &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>If a &amp;quot;generic&amp;quot; Silicon material is desired wherein the {100} crystalline planes are oriented along the X,Y,Z axes of the canvas, Euler Angles of 0 are appropriate.  &lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___activeMember="wafer100" isExpanded="true"/>
+          <orientationEulerAngles isEnable="true">
+            <Phi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Theta ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Psi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerAngles>
+          <orientationEulerParameters isEnable="true">
+            <rx ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <ry ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <rz ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerParameters>
+        </waferOrientation>
+        <density Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Density of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="2331" ___lastKnownValue="2331.0" ___unitName="kg/m^3" isExpanded="true"/>
+        <elastic ___activeMember="elasticCubic " isExpanded="true">
+          <elasticIsotropic isEnable="true" isExpanded="true">
+            <E ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <nu ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" isExpanded="true"/>
+          </elasticIsotropic>
+          <elasticCubic isEnable="true" isExpanded="true">
+            <E Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Young's Modulus of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>M. A. Hopcroft, W. D. Nix, and T. W. Kenny, &amp;quot;What is the Young's Modulus of Silicon?&amp;quot;, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>IEEE Journal of Microelectromechanical Systems&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, vol. 19, Issue 2, pp. 229-238, 2010.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="130" ___lastKnownValue="130.0" ___unitName="GPa" isExpanded="true"/>
+            <nu Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Poisson's Ratio of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>M. A. Hopcroft, W. D. Nix, and T. W. Kenny, &amp;quot;What is the Young's Modulus of Silicon?&amp;quot;, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>IEEE Journal of Microelectromechanical Systems&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, vol. 19, Issue 2, pp. 229-238, 2010.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="0.28" ___lastKnownValue="0.28" ___unitName="nounit" isExpanded="true"/>
+            <G Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Shear Modulus of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>M. A. Hopcroft, W. D. Nix, and T. W. Kenny, &amp;quot;What is the Young's Modulus of Silicon?&amp;quot;, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>IEEE Journal of Microelectromechanical Systems&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, vol. 19, Issue 2, pp. 229-238, 2010.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="79.6" ___lastKnownValue="79.59999999999999" ___unitName="GPa" isExpanded="true"/>
+          </elasticCubic>
+          <elasticOrtho VersionNumber="2" isEnable="true" isExpanded="true">
+            <E1 ___expression="130" ___lastKnownValue="130.0" ___unitName="GPa" isExpanded="true"/>
+            <E2 ___expression="130" ___lastKnownValue="130.0" ___unitName="GPa" isExpanded="true"/>
+            <E3 ___expression="130" ___lastKnownValue="130.0" ___unitName="GPa" isExpanded="true"/>
+            <nu23 ___expression="0.28" ___lastKnownValue="0.28" ___unitName="nounit" isExpanded="true"/>
+            <nu31 ___expression="(0.28)*(130/130)" ___lastKnownValue="0.28" ___unitName="nounit" isExpanded="true"/>
+            <nu12 ___expression="0.28" ___lastKnownValue="0.28" ___unitName="nounit" isExpanded="true"/>
+            <G23 ___expression="79.6" ___lastKnownValue="79.59999999999999" ___unitName="GPa" isExpanded="true"/>
+            <G31 ___expression="79.6" ___lastKnownValue="79.59999999999999" ___unitName="GPa" isExpanded="true"/>
+            <G12 ___expression="79.6" ___lastKnownValue="79.59999999999999" ___unitName="GPa" isExpanded="true"/>
+          </elasticOrtho>
+          <elasticAnisotropic isEnable="true" isExpanded="true">
+            <C11 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C13 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C14 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C15 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C16 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C22 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C24 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C25 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C26 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C33 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C34 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C35 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C36 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C44 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C45 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C46 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C55 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C56 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+            <C66 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa" isExpanded="true"/>
+          </elasticAnisotropic>
+        </elastic>
+        <stress ___activeMember="stressPlanarIso ">
+          <stressPlanarIso isEnable="true">
+            <stress ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+          </stressPlanarIso>
+          <stressAnisotropic isEnable="true">
+            <x ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+            <y ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+            <z ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+          </stressAnisotropic>
+        </stress>
+        <stressGradientZ ___activeMember="stressGradientZPlanarIso ">
+          <stressGradientZPlanarIso isEnable="true">
+            <sg ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZPlanarIso>
+          <stressGradientZAnisotropic isEnable="true">
+            <sgx ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+            <sgy ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZAnisotropic>
+        </stressGradientZ>
+        <coefficientOfExpansion isEnable="true" isExpanded="true">
+          <alpha Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Thermal Coefficient of Expansion of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>TCE reported for a silicon substrate&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="2.5e-6" ___lastKnownValue="2.5e-06" ___unitName="1/K" isExpanded="true"/>
+          <zeroStressTemperature ___expression="273.15" ___lastKnownValue="273.15" ___unitName="K"/>
+        </coefficientOfExpansion>
+        <thermalConductivity Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Thermal Conductivity of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>This material property depends significantly on temperature and geometry (bulk, films, wires, etc).  148 W/(mK) is valid for bulk silicon at 300 K.&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>McConnell, A.D., and Goodson, K.E., &amp;quot;Thermal Conduction in Silicon Micro and Nanostructures,&amp;quot; &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Annual Review of Heat Transfer&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>, Vol. 14, pp. 129-168, &lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>2005&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="148" ___lastKnownValue="148.0" ___unitName="W/(m*K)"/>
+        <specificHeat Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Specific Heat of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="712" ___lastKnownValue="712.0" ___unitName="J/(kg*K)"/>
+        <electricalConductivity Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Electrical Conductivity of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>The electrical conductivity of a semi-conductor such as Silicon will depend heavily on the doping scheme.  For example, Senturia gives a representative value of 1500 S/m for n-type Silicon doped to a concentration of 10^17 cm^-3 (S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001).  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>In MEMS+ if the electrical conductivity of a material is zero, the material is considered to be a dielectric. If the electrical conductivity of the material is greater than zero, the material is considered to be a conductor. Either electrical conductivity OR relative permittivity must be greater than 0 for solid materials.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>By convention, Silicon is taken to be doped with a representative Electrical Conductivity value.  &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;>&lt;br />&lt;/p>&lt;/body>&lt;/html>" ___expression="1.5e3" ___lastKnownValue="1500.0" ___unitName="S/m"/>
+        <piezoelectric ___activeMember="piezoelectricStress ">
+          <piezoelectricStress isEnable="true">
+            <e11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+          </piezoelectricStress>
+          <piezoelectricStrain isEnable="true">
+            <d11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+          </piezoelectricStrain>
+        </piezoelectric>
+        <relativePermittivity ___activeMember="relativePermittivityIsotropic " isExpanded="true">
+          <relativePermittivityIsotropic isEnable="true" isExpanded="true">
+            <er Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Relative Permittivity of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>In MEMS+, either electrical conductivity OR relative permittivity must be greater than 0 for soild materials. &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="11.7" ___lastKnownValue="11.7" ___unitName="nounit"/>
+          </relativePermittivityIsotropic>
+          <relativePermittivityAnisotropic isEnable="true" isExpanded="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropic>
+          <relativePermittivityIsotropicAtConstantStress isEnable="true">
+            <er ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropicAtConstantStress>
+          <relativePermittivityAnisotropicAtConstantStress isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropicAtConstantStress>
+        </relativePermittivity>
+        <piezoresistive isEnable="true" isExpanded="true">
+          <pi11 Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Piezoresistive Coefficients of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Valid for p-type silicon at room temperature&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="6.6e-11" ___lastKnownValue="6.6e-11" ___unitName="1/Pa"/>
+          <pi12 Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Piezoresistive Coefficients of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Valid for p-type silicon at room temperature&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="-1.1e-11" ___lastKnownValue="-1.1e-11" ___unitName="1/Pa"/>
+          <pi44 Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Piezoresistive Coefficients of Silicon&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>Valid for p-type silicon at room temperature&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;>Reference:&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:600;&quot;>&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:12pt;&quot;>S. D. Senturia, &lt;/span>&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;>Microsystem Design&lt;/span>&lt;span style=&quot; font-size:12pt;&quot;>. Boston, MA: Kluwer, 2001&lt;/span>&lt;/p>&lt;/body>&lt;/html>" ___expression="138.1e-11" ___lastKnownValue="1.381e-09" ___unitName="1/Pa"/>
+        </piezoresistive>
+        <relativePermeability ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" doNotDisplay="true"/>
+        <coercivity ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+        <saturationMagnetization ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___Name="Si3N4_Stoichiometric" ___Type="SolidMaterial">
+      <___Properties isEnable="true">
+        <visualProperties isEnable="true" isExpanded="true">
+          <color Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          <transparency Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="0"/>
+        </visualProperties>
+        <waferOrientation ___activeMember="orientationEulerAngles ">
+          <waferCut ___activeMember=""/>
+          <orientationEulerAngles isEnable="true">
+            <Phi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Theta ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Psi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerAngles>
+          <orientationEulerParameters isEnable="true">
+            <rx ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <ry ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <rz ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerParameters>
+        </waferOrientation>
+        <density Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="2700" ___lastKnownValue="2700.0" ___unitName="kg/m^3" isExpanded="true"/>
+        <elastic Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___activeMember="elasticIsotropic " isExpanded="true">
+          <elasticIsotropic isEnable="true" isExpanded="true">
+            <E Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="2.54e5" ___lastKnownValue="254000.0" ___unitName="MPa" isExpanded="true"/>
+            <nu Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="2.3E-1" ___lastKnownValue="0.23" ___unitName="nounit" isExpanded="true"/>
+          </elasticIsotropic>
+          <elasticCubic isEnable="true">
+            <E ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <nu ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <G ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticCubic>
+          <elasticOrtho VersionNumber="2" isEnable="true">
+            <E1 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <E2 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <E3 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <nu23 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <nu31 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <nu12 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <G23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <G31 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <G12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticOrtho>
+          <elasticAnisotropic isEnable="true">
+            <C11 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C13 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C14 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C15 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C16 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C22 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C24 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C25 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C26 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C33 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C34 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C35 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C36 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C44 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C45 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C46 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C55 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C56 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C66 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticAnisotropic>
+        </elastic>
+        <stress Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___activeMember="stressAnisotropic " isExpanded="true">
+          <stressPlanarIso isEnable="true">
+            <stress ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+          </stressPlanarIso>
+          <stressAnisotropic isEnable="true" isExpanded="true">
+            <x Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="ResidualStressSiliconNitride" ___lastKnownValue="23.5" ___unitName="MPa"/>
+            <y Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="ResidualStressSiliconNitride" ___lastKnownValue="23.5" ___unitName="MPa"/>
+            <z Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="0" ___lastKnownValue="0.0" ___unitName="MPa"/>
+          </stressAnisotropic>
+        </stress>
+        <stressGradientZ ___activeMember="stressGradientZPlanarIso ">
+          <stressGradientZPlanarIso isEnable="true">
+            <sg ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZPlanarIso>
+          <stressGradientZAnisotropic isEnable="true">
+            <sgx ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+            <sgy ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZAnisotropic>
+        </stressGradientZ>
+        <coefficientOfExpansion isEnable="true" isExpanded="true">
+          <alpha Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="1.6e-6" ___lastKnownValue="1.6e-06" ___unitName="1/K" isExpanded="true"/>
+          <zeroStressTemperature Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="273.15" ___lastKnownValue="273.15" ___unitName="K"/>
+        </coefficientOfExpansion>
+        <thermalConductivity Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="2.5E7" ___lastKnownValue="25000000.0" ___unitName="pW/(um*K)"/>
+        <specificHeat Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="1.7E14" ___lastKnownValue="170000000000000.0" ___unitName="pJ/(kg*K)"/>
+        <electricalConductivity Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="0" ___lastKnownValue="0.0" ___unitName="pS/um"/>
+        <piezoelectric ___activeMember="piezoelectricStress ">
+          <piezoelectricStress isEnable="true">
+            <e11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+          </piezoelectricStress>
+          <piezoelectricStrain isEnable="true">
+            <d11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+          </piezoelectricStrain>
+        </piezoelectric>
+        <relativePermittivity Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___activeMember="relativePermittivityIsotropic " isExpanded="true">
+          <relativePermittivityIsotropic isEnable="true" isExpanded="true">
+            <er Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="8" ___lastKnownValue="8.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropic>
+          <relativePermittivityAnisotropic isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropic>
+          <relativePermittivityIsotropicAtConstantStress isEnable="true">
+            <er ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropicAtConstantStress>
+          <relativePermittivityAnisotropicAtConstantStress isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropicAtConstantStress>
+        </relativePermittivity>
+        <piezoresistive isEnable="true">
+          <pi11 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/Pa"/>
+          <pi12 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/Pa"/>
+          <pi44 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/Pa"/>
+        </piezoresistive>
+        <relativePermeability ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" doNotDisplay="true"/>
+        <coercivity ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+        <saturationMagnetization ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___Name="PolySi_NType" ___Type="SolidMaterial" isExpanded="true">
+      <___Properties isEnable="true">
+        <visualProperties isEnable="true" isExpanded="true">
+          <color Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          <transparency Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="0"/>
+        </visualProperties>
+        <waferOrientation ___activeMember="orientationEulerAngles ">
+          <waferCut ___activeMember=""/>
+          <orientationEulerAngles isEnable="true">
+            <Phi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Theta ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Psi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerAngles>
+          <orientationEulerParameters isEnable="true">
+            <rx ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <ry ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <rz ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerParameters>
+        </waferOrientation>
+        <density ___expression="2.23e-15" ___lastKnownValue="2.23e-15" ___unitName="kg/um^3" isExpanded="true"/>
+        <elastic ___activeMember="elasticIsotropic " isExpanded="true">
+          <elasticIsotropic isEnable="true" isExpanded="true">
+            <E ___expression="1.58e5" ___lastKnownValue="158000.0" ___unitName="MPa" isExpanded="true"/>
+            <nu ___expression="2.2e-1" ___lastKnownValue="0.22" ___unitName="nounit" isExpanded="true"/>
+          </elasticIsotropic>
+          <elasticCubic isEnable="true">
+            <E ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <nu ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <G ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticCubic>
+          <elasticOrtho VersionNumber="2" isEnable="true">
+            <E1 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <E2 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <E3 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <nu23 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <nu31 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <nu12 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <G23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <G31 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <G12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticOrtho>
+          <elasticAnisotropic isEnable="true">
+            <C11 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C13 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C14 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C15 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C16 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C22 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C24 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C25 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C26 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C33 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C34 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C35 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C36 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C44 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C45 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C46 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C55 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C56 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C66 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticAnisotropic>
+        </elastic>
+        <stress ___activeMember="stressAnisotropic " isExpanded="true">
+          <stressPlanarIso isEnable="true">
+            <stress ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+          </stressPlanarIso>
+          <stressAnisotropic isEnable="true" isExpanded="true">
+            <x ___expression="ResidualStressPoly0" ___lastKnownValue="-25.0" ___unitName="MPa"/>
+            <y ___expression="ResidualStressPoly0" ___lastKnownValue="-25.0" ___unitName="MPa"/>
+            <z ___expression="0" ___lastKnownValue="0.0" ___unitName="MPa"/>
+          </stressAnisotropic>
+        </stress>
+        <stressGradientZ ___activeMember="stressGradientZPlanarIso ">
+          <stressGradientZPlanarIso isEnable="true">
+            <sg ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZPlanarIso>
+          <stressGradientZAnisotropic isEnable="true">
+            <sgx ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+            <sgy ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZAnisotropic>
+        </stressGradientZ>
+        <coefficientOfExpansion isEnable="true" isExpanded="true">
+          <alpha ___expression="2.8e-6" ___lastKnownValue="2.8e-06" ___unitName="1/K" isExpanded="true"/>
+          <zeroStressTemperature Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="273.15" ___lastKnownValue="273.15" ___unitName="K"/>
+        </coefficientOfExpansion>
+        <thermalConductivity ___expression="3.2e7" ___lastKnownValue="32000000.0" ___unitName="pW/(um*K)"/>
+        <specificHeat ___expression="1e14" ___lastKnownValue="100000000000000.0" ___unitName="pJ/(kg*K)"/>
+        <electricalConductivity ___expression="1/(30*0.5e-6)*1e6" ___lastKnownValue="66666666666.66667" ___unitName="pS/um"/>
+        <piezoelectric ___activeMember="piezoelectricStress ">
+          <piezoelectricStress isEnable="true">
+            <e11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+          </piezoelectricStress>
+          <piezoelectricStrain isEnable="true">
+            <d11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+          </piezoelectricStrain>
+        </piezoelectric>
+        <relativePermittivity ___activeMember="relativePermittivityIsotropic " isExpanded="true">
+          <relativePermittivityIsotropic isEnable="true" isExpanded="true">
+            <er ___expression="" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropic>
+          <relativePermittivityAnisotropic isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropic>
+          <relativePermittivityIsotropicAtConstantStress isEnable="true">
+            <er ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropicAtConstantStress>
+          <relativePermittivityAnisotropicAtConstantStress isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropicAtConstantStress>
+        </relativePermittivity>
+        <piezoresistive isEnable="true" isExpanded="true">
+          <pi11 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/Pa"/>
+          <pi12 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/Pa"/>
+          <pi44 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/Pa"/>
+        </piezoresistive>
+        <relativePermeability ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" doNotDisplay="true"/>
+        <coercivity ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+        <saturationMagnetization ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___Name="Au" ___Type="SolidMaterial" isExpanded="true">
+      <___Properties isEnable="true">
+        <visualProperties isEnable="true" isExpanded="true">
+          <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+          <transparency ___expression="0"/>
+        </visualProperties>
+        <waferOrientation ___activeMember="orientationEulerAngles ">
+          <waferCut ___activeMember=""/>
+          <orientationEulerAngles isEnable="true">
+            <Phi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Theta ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <Psi ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerAngles>
+          <orientationEulerParameters isEnable="true">
+            <rx ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <ry ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <rz ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </orientationEulerParameters>
+        </waferOrientation>
+        <density ___expression="1.93e-14" ___lastKnownValue="1.93e-14" ___unitName="kg/um^3" isExpanded="true"/>
+        <elastic ___activeMember="elasticIsotropic " isExpanded="true">
+          <elasticIsotropic isEnable="true" isExpanded="true">
+            <E ___expression="5.7e4" ___lastKnownValue="57000.0" ___unitName="MPa" isExpanded="true"/>
+            <nu ___expression="3.5e-1" ___lastKnownValue="0.35" ___unitName="nounit" isExpanded="true"/>
+          </elasticIsotropic>
+          <elasticCubic isEnable="true">
+            <E ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <nu ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <G ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticCubic>
+          <elasticOrtho VersionNumber="2" isEnable="true">
+            <E1 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <E2 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <E3 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <nu23 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <nu31 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <nu12 ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <G23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <G31 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <G12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticOrtho>
+          <elasticAnisotropic isEnable="true">
+            <C11 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C12 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C13 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C14 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C15 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C16 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C22 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C23 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C24 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C25 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C26 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C33 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C34 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C35 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C36 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C44 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C45 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C46 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C55 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C56 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+            <C66 ___expression="" ___lastKnownValue="nan.0" ___unitName="Pa"/>
+          </elasticAnisotropic>
+        </elastic>
+        <stress ___activeMember="stressAnisotropic " isExpanded="true">
+          <stressPlanarIso isEnable="true">
+            <stress ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa"/>
+          </stressPlanarIso>
+          <stressAnisotropic isEnable="true" isExpanded="true">
+            <x ___expression="ResidualStressGold" ___lastKnownValue="50.0" ___unitName="MPa"/>
+            <y ___expression="ResidualStressGold" ___lastKnownValue="50.0" ___unitName="MPa"/>
+            <z ___expression="0" ___lastKnownValue="0.0" ___unitName="MPa"/>
+          </stressAnisotropic>
+        </stress>
+        <stressGradientZ ___activeMember="stressGradientZPlanarIso ">
+          <stressGradientZPlanarIso isEnable="true">
+            <sg ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZPlanarIso>
+          <stressGradientZAnisotropic isEnable="true">
+            <sgx ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+            <sgy ___expression="0" ___lastKnownValue="0.0" ___unitName="Pa/m"/>
+          </stressGradientZAnisotropic>
+        </stressGradientZ>
+        <coefficientOfExpansion isEnable="true" isExpanded="true">
+          <alpha ___expression="4.5e-9*T+1.273333e-5" ___lastKnownValue="1.3962505e-05" ___unitName="1/K" isExpanded="true"/>
+          <zeroStressTemperature ___expression="273.15" ___lastKnownValue="273.15" ___unitName="K"/>
+        </coefficientOfExpansion>
+        <thermalConductivity ___expression="2.97e8" ___lastKnownValue="297000000.0" ___unitName="pW/(um*K)"/>
+        <specificHeat ___expression="1.287e14" ___lastKnownValue="128700000000000.0" ___unitName="pJ/(kg*K)"/>
+        <electricalConductivity ___expression="1/(0.06*0.5e-6)*1e6" ___lastKnownValue="33333333333333.34" ___unitName="pS/um"/>
+        <piezoelectric ___activeMember="piezoelectricStress " isExpanded="true">
+          <piezoelectricStress isEnable="true" isExpanded="true">
+            <e11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+            <e36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/m^2"/>
+          </piezoelectricStress>
+          <piezoelectricStrain isEnable="true">
+            <d11 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d12 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d13 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d14 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d15 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d16 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d21 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d22 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d23 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d24 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d25 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d26 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d31 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d32 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d33 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d34 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d35 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+            <d36 ___expression="0" ___lastKnownValue="0.0" ___unitName="C/N"/>
+          </piezoelectricStrain>
+        </piezoelectric>
+        <relativePermittivity ___activeMember="relativePermittivityIsotropic " isExpanded="true">
+          <relativePermittivityIsotropic isEnable="true" isExpanded="true">
+            <er ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropic>
+          <relativePermittivityAnisotropic isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropic>
+          <relativePermittivityIsotropicAtConstantStress isEnable="true">
+            <er ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityIsotropicAtConstantStress>
+          <relativePermittivityAnisotropicAtConstantStress isEnable="true">
+            <erx ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <ery ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+            <erz ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </relativePermittivityAnisotropicAtConstantStress>
+        </relativePermittivity>
+        <piezoresistive isEnable="true" isExpanded="true">
+          <pi11 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/MPa"/>
+          <pi12 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/MPa"/>
+          <pi44 ___expression="0" ___lastKnownValue="0.0" ___unitName="1/MPa"/>
+        </piezoresistive>
+        <relativePermeability ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" doNotDisplay="true"/>
+        <coercivity ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+        <saturationMagnetization ___expression="" ___lastKnownValue="nan.0" ___unitName="A/m" doNotDisplay="true"/>
+      </___Properties>
+    </___Item>
+  </___DocumentTree>
+
+</___Document>

@@ -4,7 +4,8 @@ source ./setup.sh
 
 # Workaround for libssl for IC6.1.8 ISR20.
 # See https://support.cadence.com/apex/ArticleAttachmentPortal?id=a1O0V000009Mo6IUAS&pageName=ArticleContent.
-export LD_PRELOAD=/usr/lib64/libssl.so:/usr/lib64/libcrypto.so
+export LD_PRELOAD=/usr/lib64/libssl.so:/usr/lib64/libcrypto.so:/usr/lib64/libGL.so.1
+export LD_LIBRARY_PATH=/usr/lib64
 
 # PATH setup.
 export PATH=${CDS_HOME}/tools/plot/bin:${PATH}
@@ -13,3 +14,10 @@ export PATH=${CDS_HOME}/tools/bin:${PATH}
 
 # Virtuoso options.
 export CDS_Netlisting_Mode=Analog
+
+# MEMS+ 7.1 setup (Alcatraz Only)
+export MEMSPLUS_HOME=/usr/local/Coventor/CoventorMP2.1/MEMS+7.1
+export MCOSMLD_LICENSE_FILE=54000@ultrahighq.eecs.berkeley.edu
+export COV_NO_OPENGL=f
+
+

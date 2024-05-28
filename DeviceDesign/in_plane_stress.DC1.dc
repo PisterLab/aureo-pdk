@@ -1,0 +1,26 @@
+#
+# Simulation result data for dc on Wed Nov  8 17:16:56 2023
+#
+# Netlist:
+# Begin Instances
+# /I0 "C:/Coventor/Design_Files/aureo_pdk/Devices/in_plane_stress.3dsch" Pressure=101325 ResidualStressGold=50 ResidualStressPoly0=-25 ResidualStressPoly1=-10 ResidualStressPoly2=-10 ResidualStressSiliconNitride=23.5 T=273.15 ThicknessGold=0.67 ThicknessNIT=0.2 ThicknessPoly=0.5 ThicknessSOI=40 
+# End Instances
+# Begin Sources
+# /I0/F_M9_x	F_M9_x
+# /I0/F_M9_y	F_M9_y
+# /I0/F_M9_z	F_M9_z
+# /I0/M_M9_rx	M_M9_rx
+# /I0/M_M9_ry	M_M9_ry
+# /I0/M_M9_rz	M_M9_rz
+# End Sources
+# Begin Outputs
+# /I0/P_M9_x	P_M9_x
+# /I0/P_M9_y	P_M9_y
+# /I0/P_M9_z	P_M9_z
+# /I0/A_M9_rx	A_M9_rx
+# /I0/A_M9_ry	A_M9_ry
+# /I0/A_M9_rz	A_M9_rz
+# End Outputs
+# Version 1
+Step,#,int	/I0/F_M9_x,N,float	/I0/F_M9_y,N,float	/I0/F_M9_z,N,float	/I0/M_M9_rx,Nm,float	/I0/M_M9_ry,Nm,float	/I0/M_M9_rz,Nm,float	/I0/M1/x,m,float	/I0/M1/y,m,float	/I0/M1/z,m,float	/I0/M2/x,m,float	/I0/M2/y,m,float	/I0/M2/z,m,float	/I0/M4/x,m,float	/I0/M4/y,m,float	/I0/M4/z,m,float	/I0/M5/x,m,float	/I0/M5/y,m,float	/I0/M5/z,m,float	/I0/M6/x,m,float	/I0/M6/y,m,float	/I0/M6/z,m,float	/I0/M7/x,m,float	/I0/M7/y,m,float	/I0/M7/z,m,float	/I0/M8/x,m,float	/I0/M8/y,m,float	/I0/M8/z,m,float	/I0/M9/x,m,float	/I0/M9/y,m,float	/I0/M9/z,m,float	/I0/M1/rx,rad,float	/I0/M1/ry,rad,float	/I0/M1/rz,rad,float	/I0/M2/rx,rad,float	/I0/M2/ry,rad,float	/I0/M2/rz,rad,float	/I0/M4/rx,rad,float	/I0/M4/ry,rad,float	/I0/M4/rz,rad,float	/I0/M5/rx,rad,float	/I0/M5/ry,rad,float	/I0/M5/rz,rad,float	/I0/M6/rx,rad,float	/I0/M6/ry,rad,float	/I0/M6/rz,rad,float	/I0/M7/rx,rad,float	/I0/M7/ry,rad,float	/I0/M7/rz,rad,float	/I0/M8/rx,rad,float	/I0/M8/ry,rad,float	/I0/M8/rz,rad,float	/I0/M9/rx,rad,float	/I0/M9/ry,rad,float	/I0/M9/rz,rad,float	/I0/M1/x_dot,m_s,float	/I0/M1/y_dot,m_s,float	/I0/M1/z_dot,m_s,float	/I0/M2/x_dot,m_s,float	/I0/M2/y_dot,m_s,float	/I0/M2/z_dot,m_s,float	/I0/M4/x_dot,m_s,float	/I0/M4/y_dot,m_s,float	/I0/M4/z_dot,m_s,float	/I0/M5/x_dot,m_s,float	/I0/M5/y_dot,m_s,float	/I0/M5/z_dot,m_s,float	/I0/M6/x_dot,m_s,float	/I0/M6/y_dot,m_s,float	/I0/M6/z_dot,m_s,float	/I0/M7/x_dot,m_s,float	/I0/M7/y_dot,m_s,float	/I0/M7/z_dot,m_s,float	/I0/M8/x_dot,m_s,float	/I0/M8/y_dot,m_s,float	/I0/M8/z_dot,m_s,float	/I0/M9/x_dot,m_s,float	/I0/M9/y_dot,m_s,float	/I0/M9/z_dot,m_s,float	/I0/M1/rx_dot,rad_s,float	/I0/M1/ry_dot,rad_s,float	/I0/M1/rz_dot,rad_s,float	/I0/M2/rx_dot,rad_s,float	/I0/M2/ry_dot,rad_s,float	/I0/M2/rz_dot,rad_s,float	/I0/M4/rx_dot,rad_s,float	/I0/M4/ry_dot,rad_s,float	/I0/M4/rz_dot,rad_s,float	/I0/M5/rx_dot,rad_s,float	/I0/M5/ry_dot,rad_s,float	/I0/M5/rz_dot,rad_s,float	/I0/M6/rx_dot,rad_s,float	/I0/M6/ry_dot,rad_s,float	/I0/M6/rz_dot,rad_s,float	/I0/M7/rx_dot,rad_s,float	/I0/M7/ry_dot,rad_s,float	/I0/M7/rz_dot,rad_s,float	/I0/M8/rx_dot,rad_s,float	/I0/M8/ry_dot,rad_s,float	/I0/M8/rz_dot,rad_s,float	/I0/M9/rx_dot,rad_s,float	/I0/M9/ry_dot,rad_s,float	/I0/M9/rz_dot,rad_s,float	/I0/P_M9_x,m,float	/I0/P_M9_y,m,float	/I0/P_M9_z,m,float	/I0/A_M9_rx,rad,float	/I0/A_M9_ry,rad,float	/I0/A_M9_rz,rad,float
+1	0	10	0	0	0	0	1.61874e-06	8.4426e-06	-3.86355e-07	8.8086e-07	6.29121e-06	-1.08183e-07	4.57299e-06	6.99791e-06	-1.00816e-06	4.97794e-06	7.01542e-06	-6.35799e-07	5.23979e-06	7.03234e-06	-2.20767e-07	1.55054e-06	5.55374e-06	-2.04689e-06	8.1258e-07	7.73937e-06	-1.73032e-06	-6.8515e-08	1.40668e-05	-1.53136e-06	-0.00243164	-0.00312675	-0.0156416	-0.00115423	-0.00222673	-0.042206	-0.00403255	-0.00323753	0.000173893	-0.00425958	-0.00404919	0.000174526	-0.00301124	-0.00395332	0.000174889	-0.00706222	-0.00350205	0.0159931	-0.00670017	-0.00275744	0.0425537	-0.0118972	-0.0014276	0.0691135	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	-6.8515e-08	1.40668e-05	-1.53136e-06	-0.0118972	-0.0014276	0.0691135
