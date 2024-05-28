@@ -16,5 +16,5 @@ args = parser.parse_args()
 arg_env = os.environ.copy()
 arg_env['GDS_LIB'] = args.lib
 arg_env['GDS_CELL'] = args.cell
-arg_env['GDS_FILE'] = os.getcwd() + "/" + args.cell + '_preprocess.gds'
+arg_env['GDS_FILE'] = os.getcwd() + "/fab-export/" + args.cell + '_preprocess.gds'
 subprocess.Popen(["virtuoso", "-nograph", "-restore", "tools/stream_gds.il", args.lib, args.cell], env=arg_env).wait()

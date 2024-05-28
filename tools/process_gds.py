@@ -68,7 +68,7 @@ ld_soihole2 = (18, 0)
 
 # Load the GDS file into gdspy
 lib = gdspy.GdsLibrary()
-lib.read_gds(args.cell + '_preprocess.gds')
+lib.read_gds('fab-export/' + args.cell + '_preprocess.gds')
 
 # Select the cell
 cell = lib.cells[args.cell]
@@ -131,7 +131,7 @@ change_layers_all(cell, ld_poly2, ld_poly2fab)
 
 
 # Write out the new GDS file
-gdspy.write_gds(args.cell + '_merged.gds', cells=[cell])
+gdspy.write_gds('fab-export/' + args.cell + '_merged.gds', cells=[cell])
 #cell.write_svg('_merged.svg')
 #gdspy.LayoutViewer(cells=cell, depth=3)
 
@@ -185,9 +185,9 @@ change_layers_all(fab_cell, ld_metal1fab, ld_metalfab)
 change_layers_all(fab_cell, ld_poly1fab, ld_polyfab)
 
 # Write out the new GDS file
-lib.write_gds(args.cell + '_fab.gds', cells=[fab_cell])
+lib.write_gds('fab-export/' + args.cell + '_fab.gds', cells=[fab_cell])
 
 # reload the gds and view it
 lib = gdspy.GdsLibrary()
-lib.read_gds(args.cell + '_fab.gds')
+lib.read_gds('fab-export/' + args.cell + '_fab.gds')
 gdspy.LayoutViewer(cells=lib.cells[args.cell + '_fab'], depth=3)
