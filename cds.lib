@@ -7,5 +7,4 @@ DEFINE aureo_test_structure ./aureo_test_structure
 DEFINE aureo_robot ./aureo_robot
 DEFINE mems_demo_tf ./mems_demo_tf
 DEFINE aureo_scmv ./aureo_scmv
-#Removed by ddDeleteObj: DEFINE aureo_BOX /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_BOX
-DEFINE aureo_box /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_box
+DEFINE aureo_box ./aureo_box
