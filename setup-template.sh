@@ -8,5 +8,6 @@ export LM_LICENSE_FILE=<INSERT LICENSE HERE>
 export CDS_HOME=<INSERT CADENCE PATH HERE>
 
 # Coventor MEMS+
-export MEMSPLUS_HOME=<INSERT MEMS+ PATH HERE>
-export MCOSMLD_LICENSE_FILE=<INSERT MEMS+ LICENSE HERE>
+# Uncomment ONLY if you have MEMS+ installed, and are able to provide the path and license.
+#export MEMSPLUS_HOME=<INSERT MEMS+ PATH HERE>
+#export MCOSMLD_LICENSE_FILE=<INSERT MEMS+ LICENSE HERE>
