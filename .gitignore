@@ -19,5 +19,43 @@ drcRunDir/*
 abstract.log*
 abstract.record*
 
+# Cadence files.
+.abstract
+beol.drc.*
+PIPO.*
+.cadence
+**/*.cdslck*
+.calibreviewsetup
+.tmp_*
+libManager.log.*
+abstract*
+hdl.var
+lefout.list
+si.env
+xOasisOut_cellMap.txt
+**/*.oacache*
+gui.tcl
+
+# Python/IDE files.
+*.pyc
+__pycache__
+venv
+
+# PyCharm files.
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/tasks.xml
+
+# Miscellaneous edit/log files.
+*~
+*.log
+IPOPT.out
+lsyncd.status
+.ipython
+.jupyter
+.ipynb_checkpoints
+.vscode
+
+
 # PowerPoint autosave files
 ~$*

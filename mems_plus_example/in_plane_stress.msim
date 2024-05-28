@@ -1,0 +1,293 @@
+
+<___Document DocBuildTag="" DocCommit="62ee6a640569" DocType="msim" DocVersion="7.1.1">
+
+  <___Properties isEnable="true">
+    <SchematicFile RelativeFileName="in_plane_stress.3dsch" ___text="C:/Coventor/Design_Files/aureo_pdk/Devices/in_plane_stress.3dsch" readonly="true"/>
+    <GetInfoLimit ___expression="100" ___lastKnownValue="100.0" ___unitName="nounit"/>
+    <getInfoPrecision ___activeMember="getInfoDefaultPrecisionProperties " isExpanded="true">
+      <getInfoDefaultPrecisionProperties isEnable="true"/>
+      <getInfoScientificPrecisionProperties isEnable="true" isExpanded="true">
+        <MaxGetInfoNumericPrecision ___expression="5" ___lastKnownValue="5.0" ___unitName="nounit"/>
+      </getInfoScientificPrecisionProperties>
+    </getInfoPrecision>
+  </___Properties>
+
+  <___Parser ___Name="Variables" ___Type="VariableRoot" isExpanded="true">
+    <___Item Imported="true" ___Name="T" ___Type="Variable">
+      <___Properties isEnable="true">
+        <value ___expression="273.15" ___lastKnownValue="273.15" ___unitName="nounit"/>
+        <isExposed ___expression="true" readonly="true"/>
+        <limits isEnable="true">
+          <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+        </limits>
+      </___Properties>
+    </___Item>
+    <___Item Imported="true" ___Name="Pressure" ___Type="Variable">
+      <___Properties isEnable="true">
+        <value ___expression="101325" ___lastKnownValue="101325.0" ___unitName="nounit"/>
+        <isExposed ___expression="true" readonly="true"/>
+        <limits isEnable="true">
+          <lower ___expression="1e-3" ___lastKnownValue="0.001" ___unitName="nounit" readonly="true"/>
+          <upper ___expression="1e10" ___lastKnownValue="10000000000.0" ___unitName="nounit" readonly="true"/>
+        </limits>
+      </___Properties>
+    </___Item>
+    <___Item Imported="true" ___Name="ResidualStress" ___Type="VariableGroup">
+      <___Item Imported="true" ___Name="SiliconNitride" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="23.5" ___lastKnownValue="23.5" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Poly0" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="-25" ___lastKnownValue="-25.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Poly1" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="-10" ___lastKnownValue="-10.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Poly2" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="-10" ___lastKnownValue="-10.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Gold" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="50" ___lastKnownValue="50.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+    </___Item>
+    <___Item Imported="true" ___Name="Thickness" ___Type="VariableGroup">
+      <___Item Imported="true" ___Name="NIT" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="0.2" ___lastKnownValue="0.2" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Poly" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="0.5" ___lastKnownValue="0.5" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Gold" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="0.67" ___lastKnownValue="0.67" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="SOI" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="40" ___lastKnownValue="40.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+    </___Item>
+  </___Parser>
+
+  <___DocumentTree ___Name="Analyses" ___Type="SimulatorTreeRoot" isExpanded="true" schmd5="ADF54653772A95E1FAB5A9E48B76B02A">
+    <___Properties isEnable="true">
+      <infiniteQFactorThreshold ___expression="1e6" ___lastKnownValue="1000000.0" ___unitName="nounit"/>
+    </___Properties>
+    <___Item ___Name="DC1" ___Type="DCAnalysisItem" isExpanded="true" step="1">
+      <___Properties VersionNumber="3" isEnable="true">
+        <connectorOverride isEnable="true" isExpanded="true">
+          <M9_x ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" undefLabel="Inherited"/>
+          <M9_y ___expression="10" ___lastKnownValue="10.0" ___unitName="nounit" undefLabel="Inherited"/>
+          <M9_z ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" undefLabel="Inherited"/>
+          <M9_rx ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" undefLabel="Inherited"/>
+          <M9_ry ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" undefLabel="Inherited"/>
+          <M9_rz ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit" undefLabel="Inherited"/>
+        </connectorOverride>
+        <dcSolver isEnable="true" isExpanded="true">
+          <linearSolver ___activeMember="PardisoLU"/>
+          <tolerances isEnable="true">
+            <relative ___expression="1e-3" ___lastKnownValue="0.001" ___unitName="nounit"/>
+            <absolute ___expression="1e-6" ___lastKnownValue="1e-06.0" ___unitName="nounit"/>
+            <absoluteF ___expression="1e-12" ___lastKnownValue="1e-12.0" ___unitName="nounit"/>
+          </tolerances>
+          <maximumSolverIterations ___expression="100" ___lastKnownValue="100.0" ___unitName="nounit"/>
+          <recursiveIterationDepth ___expression="8" ___lastKnownValue="8.0" ___unitName="nounit"/>
+        </dcSolver>
+        <outputOption isEnable="true">
+          <decimation ___expression="1" ___lastKnownValue="1.0" ___unitName="nounit"/>
+          <saveOnlyVisibleToMatlab_ ___expression="true"/>
+        </outputOption>
+        <saveAllIterations ___expression="false"/>
+      </___Properties>
+      <___Item __Warning="The result file is no longer synchronized with the analysis. Please rerun." ___Name="in_plane_stress.DC1.dc" ___Type="AnalysisResult" filename="C:/Coventor/Design_Files/aureo_pdk/Devices/in_plane_stress.DC1.dc" md5="72190D21FB361F7E4232AB3A07592334"/>
+    </___Item>
+  </___DocumentTree>
+
+  <___ExposedConnectorTree ___Name="Exposed Connectors" ___Type="ExposedConnectorTreeRoot" isExpanded="true">
+    <___Item ConnectorRootName="MechanicalConnectorRoot" IconName="MechanicalConnectorRoot" ___Name="Mechanical Connectors" ___Type="ExposedConnectorsGroup" isExpanded="true">
+      <___Item ___Name="M9" ___Type="ExposedMechanicalConnectorItem" isExpanded="true">
+        <___Item ___Name="M9_x" ___Type="TranslationalConnectorItem" isExpanded="true">
+          <___Properties isEnable="true">
+            <sourceType ConnectorSourceType="TranslationalConnectorSourceType" ___activeMember="force ">
+              <position isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </position>
+              <force isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="N"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="N"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </force>
+            </sourceType>
+          </___Properties>
+        </___Item>
+        <___Item ___Name="M9_y" ___Type="TranslationalConnectorItem" isExpanded="true">
+          <___Properties isEnable="true">
+            <sourceType ConnectorSourceType="TranslationalConnectorSourceType" ___activeMember="force ">
+              <position isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </position>
+              <force isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="N"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="N"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </force>
+            </sourceType>
+          </___Properties>
+        </___Item>
+        <___Item ___Name="M9_z" ___Type="TranslationalConnectorItem" isExpanded="true">
+          <___Properties isEnable="true">
+            <sourceType ConnectorSourceType="TranslationalConnectorSourceType" ___activeMember="force ">
+              <position isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </position>
+              <force isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="N"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="N"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </force>
+            </sourceType>
+          </___Properties>
+        </___Item>
+        <___Item ___Name="M9_rx" ___Type="RotationalConnectorItem" isExpanded="true">
+          <___Properties isEnable="true">
+            <sourceType ConnectorSourceType="RotationalConnectorSourceType" ___activeMember="moment ">
+              <angle isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </angle>
+              <moment isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="Nm"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="Nm"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </moment>
+            </sourceType>
+          </___Properties>
+        </___Item>
+        <___Item ___Name="M9_ry" ___Type="RotationalConnectorItem" isExpanded="true">
+          <___Properties isEnable="true">
+            <sourceType ConnectorSourceType="RotationalConnectorSourceType" ___activeMember="moment ">
+              <angle isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </angle>
+              <moment isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="Nm"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="Nm"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </moment>
+            </sourceType>
+          </___Properties>
+        </___Item>
+        <___Item ___Name="M9_rz" ___Type="RotationalConnectorItem" isExpanded="true">
+          <___Properties isEnable="true">
+            <sourceType ConnectorSourceType="RotationalConnectorSourceType" ___activeMember="moment ">
+              <angle isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </angle>
+              <moment isEnable="true">
+                <dcValue ___expression="0" ___lastKnownValue="0.0" ___unitName="Nm"/>
+                <acSettings isEnable="true">
+                  <magnitude ___expression="0" ___lastKnownValue="0.0" ___unitName="Nm"/>
+                  <phase ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+                </acSettings>
+              </moment>
+            </sourceType>
+          </___Properties>
+        </___Item>
+      </___Item>
+    </___Item>
+  </___ExposedConnectorTree>
+
+</___Document>

@@ -1,0 +1,365 @@
+// Netlist automatically generated for spectre by MEMS+
+// Please to not edit.
+// Generated on: Mon Nov 13 09:33:16 2023
+//           with: MEMS+ 7.101, Revision: 62ee6a640569 (2022-08-24 03:42:22)
+
+// Some handy functions for converting physical values to voltage/amperes
+// ======================================================================
+
+// Convert from [m] to [V]
+real displacement(real d) {
+  return d*1000000
+}
+
+// Convert from [rad] to [V]
+real rotation(real r) {
+  return r*100
+}
+
+// Convert from [m/s] to [V]
+real translationalVelocity(real v) {
+  return v*0.010000000000000000208
+}
+
+// Convert from [rad/s] to [V]
+real angularVelocity(real w) {
+  return w*1.0000000000000001665e-06
+}
+
+// Convert from [m/s^2] to [V]
+real translationalAcceleration(real a) {
+  return a*9.9999999999999995475e-07
+}
+
+// Convert from [rad/s^2] to [V]
+real angularAcceleration(real a) {
+  return a*1.0000000000000000364e-10
+}
+
+// Convert from [N] to [A]
+real force(real f) {
+  return f*0.0010000000000000000208
+}
+
+// Convert from [N.m] to [A]
+real moment(real m) {
+  return m*10
+}
+
+// Convert from [Pa] to [V]
+real pressure(real p) {
+  return p*0.0010000000000000000208
+}
+
+// Convert from [m^3/s] to [A]
+real flowRate(real f) {
+  return f*1000
+}
+
+
+Q00_relay quantity name="displacement"
+Q01_relay quantity name="force"
+Q02_relay quantity name="angle"
+Q03_relay quantity name="moment"
+Q04_relay quantity name="velocity"
+Q05_relay quantity name="velocity flow"
+Q06_relay quantity name="angular velocity"
+Q07_relay quantity name="angular velocity flow"
+Q08_relay quantity name="acceleration"
+Q09_relay quantity name="acceleration flow"
+Q10_relay quantity name="angular acceleration"
+Q11_relay quantity name="angular acceleration flow"
+Q12_relay quantity name="capacitance"
+Q13_relay quantity name="capacitance flow"
+Q14_relay quantity name="conductance"
+Q15_relay quantity name="conductance flow"
+Q16_relay quantity name="gauge pressure"
+Q17_relay quantity name="flow rate"
+Q18_relay quantity name="warping"
+Q19_relay quantity name="warping flow"
+Q20_relay quantity name="warping velocity"
+Q21_relay quantity name="warping velocity flow"
+Q22_relay quantity name="warping acceleration"
+Q23_relay quantity name="warping acceleration flow"
+Q24_relay quantity name="charge"
+Q25_relay quantity name="charge flow"
+
+
+// MEMS+ device
+// ============
+
+subckt relay ( E5 E7  )
+
+	parameters T=273.15 Pressure=101325 ResidualStressSiliconNitride=23.5 ResidualStressPoly0=-25 ResidualStressPoly1=-10 ResidualStressPoly2=-10 ResidualStressGold=50 ThicknessNIT=0.2 ThicknessPoly=0.5 ThicknessGold=0.67 ThicknessSOI=40 Scene3DfileBasename="./scene3d" SuggestScaling=no UseSimulatorTemperature=no
+
+	I0_schematic_manager_0 _schematic_managerV2 schematic_name="/home/eecs/lyichen/aureo/cadence/aureo-pdk/DeviceDesign/aureo_pdk.3dsch" search=no global_values=[ T Pressure ResidualStressSiliconNitride ResidualStressPoly0 ResidualStressPoly1 ResidualStressPoly2 ResidualStressGold ThicknessNIT ThicknessPoly ThicknessGold ThicknessSOI ] global_names=[ "T" "Pressure" "ResidualStressSiliconNitride" "ResidualStressPoly0" "ResidualStressPoly1" "ResidualStressPoly2" "ResidualStressGold" "ThicknessNIT" "ThicknessPoly" "ThicknessGold" "ThicknessSOI" ] version=6.2 result_file_basename=Scene3DfileBasename suggest_scaling=SuggestScaling bind_temperature=UseSimulatorTemperature displacement=displacement(1) rotation=rotation(1) translationalVelocity=translationalVelocity(1) translationalAcceleration=translationalAcceleration(1) force=force(1) pressure=pressure(1)
+
+
+	I1__RectangularPlate_Actuator ( M1x M1y M1z M1rx M1ry M1rz M2x M2y M2z M2rx M2ry M2rz M3x M3y M3z M3rx M3ry M3rz M4x M4y M4z M4rx M4ry M4rz M5x M5y M5z M5rx M5ry M5rz M24x M24y M24z M24rx M24ry M24rz M7x M7y M7z M7rx M7ry M7rz M8x M8y M8z M8rx M8ry M8rz M9x M9y M9z M9rx M9ry M9rz M1vx M1vy M1vz M1vrx M1vry M1vrz M2vx M2vy M2vz M2vrx M2vry M2vrz M3vx M3vy M3vz M3vrx M3vry M3vrz M4vx M4vy M4vz M4vrx M4vry M4vrz M5vx M5vy M5vz M5vrx M5vry M5vrz M24vx M24vy M24vz M24vrx M24vry M24vrz M7vx M7vy M7vz M7vrx M7vry M7vrz M8vx M8vy M8vz M8vrx M8vry M8vrz M9vx M9vy M9vz M9vrx M9vry M9vrz 0 0 0 0 0 0 ) LinearFiniteElementModel_M9_V0 name="/RectangularPlate.Actuator" index=0
+
+
+	I1__RectangularPlate_Actuator__RectangularStack_RectangularStack1 ( M1x M1y M1z M1rx M1ry M1rz M2x M2y M2z M2rx M2ry M2rz M3x M3y M3z M3rx M3ry M3rz M4x M4y M4z M4rx M4ry M4rz M5x M5y M5z M5rx M5ry M5rz M24x M24y M24z M24rx M24ry M24rz M7x M7y M7z M7rx M7ry M7rz M8x M8y M8z M8rx M8ry M8rz M9x M9y M9z M9rx M9ry M9rz M1vx M1vy M1vz M1vrx M1vry M1vrz M2vx M2vy M2vz M2vrx M2vry M2vrz M3vx M3vy M3vz M3vrx M3vry M3vrz M4vx M4vy M4vz M4vrx M4vry M4vrz M5vx M5vy M5vz M5vrx M5vry M5vrz M24vx M24vy M24vz M24vrx M24vry M24vrz M7vx M7vy M7vz M7vrx M7vry M7vrz M8vx M8vy M8vz M8vrx M8vry M8vrz M9vx M9vy M9vz M9vrx M9vry M9vrz 0 0 0 0 0 0 ) LinearFiniteElementModel_M9_V0 name="/RectangularPlate.Actuator/RectangularStack.RectangularStack1" index=0
+
+
+	I1__RectangularPlate_Actuator__RectangularPlateInheritedGap_InheritedGap1 ( M1x M1y M1z M1rx M1ry M1rz M2x M2y M2z M2rx M2ry M2rz M3x M3y M3z M3rx M3ry M3rz M4x M4y M4z M4rx M4ry M4rz M5x M5y M5z M5rx M5ry M5rz M24x M24y M24z M24rx M24ry M24rz M7x M7y M7z M7rx M7ry M7rz M8x M8y M8z M8rx M8ry M8rz M9x M9y M9z M9rx M9ry M9rz ) ElectroMechanicalModel_M9_E0_V0 name="/RectangularPlate.Actuator/RectangularPlateInheritedGap.InheritedGap1" index=0
+
+	I2__RectangularPlate_Actuator__RectangularPlateInheritedGap_InheritedGap1 ( M1x M1y M1z M1rx M1ry M1rz M2x M2y M2z M2rx M2ry M2rz M3x M3y M3z M3rx M3ry M3rz M4x M4y M4z M4rx M4ry M4rz M5x M5y M5z M5rx M5ry M5rz M24x M24y M24z M24rx M24ry M24rz M7x M7y M7z M7rx M7ry M7rz M8x M8y M8z M8rx M8ry M8rz M9x M9y M9z M9rx M9ry M9rz 0  E5 0 0 ) ElectroMechanicalModel_M9_E2_V0 name="/RectangularPlate.Actuator/RectangularPlateInheritedGap.InheritedGap1" index=1
+
+
+	I1__Beam_Spring ( M4x M4y M4z M4rx M4ry M4rz M11x M11y M11z M11rx M11ry M11rz M4vx M4vy M4vz M4vrx M4vry M4vrz M11vx M11vy M11vz M11vrx M11vry M11vrz 0 0 0 0 0 0 ) LinearFiniteElementModel_M2_V0 name="/Beam.Spring" index=0
+
+
+	I1__RectangularPlate_Anchor ( M12x M12y M12z M12rx M12ry M12rz M13x M13y M13z M13rx M13ry M13rz M14x M14y M14z M14rx M14ry M14rz M15x M15y M15z M15rx M15ry M15rz 0 0 0 0 0 0 M11x M11y M11z M11rx M11ry M11rz M18x M18y M18z M18rx M18ry M18rz M19x M19y M19z M19rx M19ry M19rz M20x M20y M20z M20rx M20ry M20rz M12vx M12vy M12vz M12vrx M12vry M12vrz M13vx M13vy M13vz M13vrx M13vry M13vrz M14vx M14vy M14vz M14vrx M14vry M14vrz M15vx M15vy M15vz M15vrx M15vry M15vrz 0 0 0 0 0 0 M11vx M11vy M11vz M11vrx M11vry M11vrz M18vx M18vy M18vz M18vrx M18vry M18vrz M19vx M19vy M19vz M19vrx M19vry M19vrz M20vx M20vy M20vz M20vrx M20vry M20vrz 0 0 0 0 0 0 ) LinearFiniteElementModel_M9_V0 name="/RectangularPlate.Anchor" index=0
+
+
+	I1__RectangularPlate_Anchor__RectangularStack_RectangularStack1 ( M12x M12y M12z M12rx M12ry M12rz M13x M13y M13z M13rx M13ry M13rz M14x M14y M14z M14rx M14ry M14rz M15x M15y M15z M15rx M15ry M15rz 0 0 0 0 0 0 M11x M11y M11z M11rx M11ry M11rz M18x M18y M18z M18rx M18ry M18rz M19x M19y M19z M19rx M19ry M19rz M20x M20y M20z M20rx M20ry M20rz M12vx M12vy M12vz M12vrx M12vry M12vrz M13vx M13vy M13vz M13vrx M13vry M13vrz M14vx M14vy M14vz M14vrx M14vry M14vrz M15vx M15vy M15vz M15vrx M15vry M15vrz 0 0 0 0 0 0 M11vx M11vy M11vz M11vrx M11vry M11vrz M18vx M18vy M18vz M18vrx M18vry M18vrz M19vx M19vy M19vz M19vrx M19vry M19vrz M20vx M20vy M20vz M20vrx M20vry M20vrz 0 0 0 0 0 0 ) LinearFiniteElementModel_M9_V0 name="/RectangularPlate.Anchor/RectangularStack.RectangularStack1" index=0
+
+
+	I1__RectangularPlate_Anchor__PlateRectangularSegmentGap_RectangularGap1 ( M12x M12y M12z M12rx M12ry M12rz M13x M13y M13z M13rx M13ry M13rz M14x M14y M14z M14rx M14ry M14rz M15x M15y M15z M15rx M15ry M15rz 0 0 0 0 0 0 M11x M11y M11z M11rx M11ry M11rz M18x M18y M18z M18rx M18ry M18rz M19x M19y M19z M19rx M19ry M19rz M20x M20y M20z M20rx M20ry M20rz ) ElectroMechanicalModel_M9_E0_V0 name="/RectangularPlate.Anchor/PlateRectangularSegmentGap.RectangularGap1" index=0
+
+	I2__RectangularPlate_Anchor__PlateRectangularSegmentGap_RectangularGap1 ( M12x M12y M12z M12rx M12ry M12rz M13x M13y M13z M13rx M13ry M13rz M14x M14y M14z M14rx M14ry M14rz M15x M15y M15z M15rx M15ry M15rz 0 0 0 0 0 0 M11x M11y M11z M11rx M11ry M11rz M18x M18y M18z M18rx M18ry M18rz M19x M19y M19z M19rx M19ry M19rz M20x M20y M20z M20rx M20ry M20rz 0  0  0 0 ) ElectroMechanicalModel_M9_E2_V0 name="/RectangularPlate.Anchor/PlateRectangularSegmentGap.RectangularGap1" index=1
+
+
+	I1__RectangularPlate_Arm ( M21x M21y M21z M21rx M21ry M21rz M22x M22y M22z M22rx M22ry M22rz M23x M23y M23z M23rx M23ry M23rz M24x M24y M24z M24rx M24ry M24rz M25x M25y M25z M25rx M25ry M25rz M33x M33y M33z M33rx M33ry M33rz M27x M27y M27z M27rx M27ry M27rz M28x M28y M28z M28rx M28ry M28rz M29x M29y M29z M29rx M29ry M29rz M21vx M21vy M21vz M21vrx M21vry M21vrz M22vx M22vy M22vz M22vrx M22vry M22vrz M23vx M23vy M23vz M23vrx M23vry M23vrz M24vx M24vy M24vz M24vrx M24vry M24vrz M25vx M25vy M25vz M25vrx M25vry M25vrz M33vx M33vy M33vz M33vrx M33vry M33vrz M27vx M27vy M27vz M27vrx M27vry M27vrz M28vx M28vy M28vz M28vrx M28vry M28vrz M29vx M29vy M29vz M29vrx M29vry M29vrz 0 0 0 0 0 0 ) LinearFiniteElementModel_M9_V0 name="/RectangularPlate.Arm" index=0
+
+
+	I1__RectangularPlate_Contact ( M30x M30y M30z M30rx M30ry M30rz M31x M31y M31z M31rx M31ry M31rz M32x M32y M32z M32rx M32ry M32rz M33x M33y M33z M33rx M33ry M33rz M34x M34y M34z M34rx M34ry M34rz M35x M35y M35z M35rx M35ry M35rz M36x M36y M36z M36rx M36ry M36rz M37x M37y M37z M37rx M37ry M37rz M38x M38y M38z M38rx M38ry M38rz M30vx M30vy M30vz M30vrx M30vry M30vrz M31vx M31vy M31vz M31vrx M31vry M31vrz M32vx M32vy M32vz M32vrx M32vry M32vrz M33vx M33vy M33vz M33vrx M33vry M33vrz M34vx M34vy M34vz M34vrx M34vry M34vrz M35vx M35vy M35vz M35vrx M35vry M35vrz M36vx M36vy M36vz M36vrx M36vry M36vrz M37vx M37vy M37vz M37vrx M37vry M37vrz M38vx M38vy M38vz M38vrx M38vry M38vrz 0 0 0 0 0 0 ) LinearFiniteElementModel_M9_V0 name="/RectangularPlate.Contact" index=0
+
+
+	I1__RectangularPlate_Contact__RectangularPlateInheritedGap_InheritedGap1 ( M30x M30y M30z M30rx M30ry M30rz M31x M31y M31z M31rx M31ry M31rz M32x M32y M32z M32rx M32ry M32rz M33x M33y M33z M33rx M33ry M33rz M34x M34y M34z M34rx M34ry M34rz M35x M35y M35z M35rx M35ry M35rz M36x M36y M36z M36rx M36ry M36rz M37x M37y M37z M37rx M37ry M37rz M38x M38y M38z M38rx M38ry M38rz ) ElectroMechanicalModel_M9_E0_V0 name="/RectangularPlate.Contact/RectangularPlateInheritedGap.InheritedGap1" index=0
+
+	I2__RectangularPlate_Contact__RectangularPlateInheritedGap_InheritedGap1 ( M30x M30y M30z M30rx M30ry M30rz M31x M31y M31z M31rx M31ry M31rz M32x M32y M32z M32rx M32ry M32rz M33x M33y M33z M33rx M33ry M33rz M34x M34y M34z M34rx M34ry M34rz M35x M35y M35z M35rx M35ry M35rz M36x M36y M36z M36rx M36ry M36rz M37x M37y M37z M37rx M37ry M37rz M38x M38y M38z M38rx M38ry M38rz 0  E7 0 0 ) ElectroMechanicalModel_M9_E2_V0 name="/RectangularPlate.Contact/RectangularPlateInheritedGap.InheritedGap1" index=1
+
+
+	I1_M1_x ( M1x M1vx ) LinearTranslationalDOF name="/M1x"
+	I1_M1_y ( M1y M1vy ) LinearTranslationalDOF name="/M1y"
+	I1_M1_z ( M1z M1vz ) LinearTranslationalDOF name="/M1z"
+	I1_M1_rx ( M1rx M1vrx ) LinearAngularDOF name="/M1rx"
+	I1_M1_ry ( M1ry M1vry ) LinearAngularDOF name="/M1ry"
+	I1_M1_rz ( M1rz M1vrz ) LinearAngularDOF name="/M1rz"
+
+	I1_M2_x ( M2x M2vx ) LinearTranslationalDOF name="/M2x"
+	I1_M2_y ( M2y M2vy ) LinearTranslationalDOF name="/M2y"
+	I1_M2_z ( M2z M2vz ) LinearTranslationalDOF name="/M2z"
+	I1_M2_rx ( M2rx M2vrx ) LinearAngularDOF name="/M2rx"
+	I1_M2_ry ( M2ry M2vry ) LinearAngularDOF name="/M2ry"
+	I1_M2_rz ( M2rz M2vrz ) LinearAngularDOF name="/M2rz"
+
+	I1_M3_x ( M3x M3vx ) LinearTranslationalDOF name="/M3x"
+	I1_M3_y ( M3y M3vy ) LinearTranslationalDOF name="/M3y"
+	I1_M3_z ( M3z M3vz ) LinearTranslationalDOF name="/M3z"
+	I1_M3_rx ( M3rx M3vrx ) LinearAngularDOF name="/M3rx"
+	I1_M3_ry ( M3ry M3vry ) LinearAngularDOF name="/M3ry"
+	I1_M3_rz ( M3rz M3vrz ) LinearAngularDOF name="/M3rz"
+
+	I1_M4_x ( M4x M4vx ) LinearTranslationalDOF name="/M4x"
+	I1_M4_y ( M4y M4vy ) LinearTranslationalDOF name="/M4y"
+	I1_M4_z ( M4z M4vz ) LinearTranslationalDOF name="/M4z"
+	I1_M4_rx ( M4rx M4vrx ) LinearAngularDOF name="/M4rx"
+	I1_M4_ry ( M4ry M4vry ) LinearAngularDOF name="/M4ry"
+	I1_M4_rz ( M4rz M4vrz ) LinearAngularDOF name="/M4rz"
+
+	I1_M5_x ( M5x M5vx ) LinearTranslationalDOF name="/M5x"
+	I1_M5_y ( M5y M5vy ) LinearTranslationalDOF name="/M5y"
+	I1_M5_z ( M5z M5vz ) LinearTranslationalDOF name="/M5z"
+	I1_M5_rx ( M5rx M5vrx ) LinearAngularDOF name="/M5rx"
+	I1_M5_ry ( M5ry M5vry ) LinearAngularDOF name="/M5ry"
+	I1_M5_rz ( M5rz M5vrz ) LinearAngularDOF name="/M5rz"
+
+	I1_M7_x ( M7x M7vx ) LinearTranslationalDOF name="/M7x"
+	I1_M7_y ( M7y M7vy ) LinearTranslationalDOF name="/M7y"
+	I1_M7_z ( M7z M7vz ) LinearTranslationalDOF name="/M7z"
+	I1_M7_rx ( M7rx M7vrx ) LinearAngularDOF name="/M7rx"
+	I1_M7_ry ( M7ry M7vry ) LinearAngularDOF name="/M7ry"
+	I1_M7_rz ( M7rz M7vrz ) LinearAngularDOF name="/M7rz"
+
+	I1_M8_x ( M8x M8vx ) LinearTranslationalDOF name="/M8x"
+	I1_M8_y ( M8y M8vy ) LinearTranslationalDOF name="/M8y"
+	I1_M8_z ( M8z M8vz ) LinearTranslationalDOF name="/M8z"
+	I1_M8_rx ( M8rx M8vrx ) LinearAngularDOF name="/M8rx"
+	I1_M8_ry ( M8ry M8vry ) LinearAngularDOF name="/M8ry"
+	I1_M8_rz ( M8rz M8vrz ) LinearAngularDOF name="/M8rz"
+
+	I1_M9_x ( M9x M9vx ) LinearTranslationalDOF name="/M9x"
+	I1_M9_y ( M9y M9vy ) LinearTranslationalDOF name="/M9y"
+	I1_M9_z ( M9z M9vz ) LinearTranslationalDOF name="/M9z"
+	I1_M9_rx ( M9rx M9vrx ) LinearAngularDOF name="/M9rx"
+	I1_M9_ry ( M9ry M9vry ) LinearAngularDOF name="/M9ry"
+	I1_M9_rz ( M9rz M9vrz ) LinearAngularDOF name="/M9rz"
+
+	I1_M11_x ( M11x M11vx ) LinearTranslationalDOF name="/M11x"
+	I1_M11_y ( M11y M11vy ) LinearTranslationalDOF name="/M11y"
+	I1_M11_z ( M11z M11vz ) LinearTranslationalDOF name="/M11z"
+	I1_M11_rx ( M11rx M11vrx ) LinearAngularDOF name="/M11rx"
+	I1_M11_ry ( M11ry M11vry ) LinearAngularDOF name="/M11ry"
+	I1_M11_rz ( M11rz M11vrz ) LinearAngularDOF name="/M11rz"
+
+	I1_M12_x ( M12x M12vx ) LinearTranslationalDOF name="/M12x"
+	I1_M12_y ( M12y M12vy ) LinearTranslationalDOF name="/M12y"
+	I1_M12_z ( M12z M12vz ) LinearTranslationalDOF name="/M12z"
+	I1_M12_rx ( M12rx M12vrx ) LinearAngularDOF name="/M12rx"
+	I1_M12_ry ( M12ry M12vry ) LinearAngularDOF name="/M12ry"
+	I1_M12_rz ( M12rz M12vrz ) LinearAngularDOF name="/M12rz"
+
+	I1_M13_x ( M13x M13vx ) LinearTranslationalDOF name="/M13x"
+	I1_M13_y ( M13y M13vy ) LinearTranslationalDOF name="/M13y"
+	I1_M13_z ( M13z M13vz ) LinearTranslationalDOF name="/M13z"
+	I1_M13_rx ( M13rx M13vrx ) LinearAngularDOF name="/M13rx"
+	I1_M13_ry ( M13ry M13vry ) LinearAngularDOF name="/M13ry"
+	I1_M13_rz ( M13rz M13vrz ) LinearAngularDOF name="/M13rz"
+
+	I1_M14_x ( M14x M14vx ) LinearTranslationalDOF name="/M14x"
+	I1_M14_y ( M14y M14vy ) LinearTranslationalDOF name="/M14y"
+	I1_M14_z ( M14z M14vz ) LinearTranslationalDOF name="/M14z"
+	I1_M14_rx ( M14rx M14vrx ) LinearAngularDOF name="/M14rx"
+	I1_M14_ry ( M14ry M14vry ) LinearAngularDOF name="/M14ry"
+	I1_M14_rz ( M14rz M14vrz ) LinearAngularDOF name="/M14rz"
+
+	I1_M15_x ( M15x M15vx ) LinearTranslationalDOF name="/M15x"
+	I1_M15_y ( M15y M15vy ) LinearTranslationalDOF name="/M15y"
+	I1_M15_z ( M15z M15vz ) LinearTranslationalDOF name="/M15z"
+	I1_M15_rx ( M15rx M15vrx ) LinearAngularDOF name="/M15rx"
+	I1_M15_ry ( M15ry M15vry ) LinearAngularDOF name="/M15ry"
+	I1_M15_rz ( M15rz M15vrz ) LinearAngularDOF name="/M15rz"
+
+	I1_M18_x ( M18x M18vx ) LinearTranslationalDOF name="/M18x"
+	I1_M18_y ( M18y M18vy ) LinearTranslationalDOF name="/M18y"
+	I1_M18_z ( M18z M18vz ) LinearTranslationalDOF name="/M18z"
+	I1_M18_rx ( M18rx M18vrx ) LinearAngularDOF name="/M18rx"
+	I1_M18_ry ( M18ry M18vry ) LinearAngularDOF name="/M18ry"
+	I1_M18_rz ( M18rz M18vrz ) LinearAngularDOF name="/M18rz"
+
+	I1_M19_x ( M19x M19vx ) LinearTranslationalDOF name="/M19x"
+	I1_M19_y ( M19y M19vy ) LinearTranslationalDOF name="/M19y"
+	I1_M19_z ( M19z M19vz ) LinearTranslationalDOF name="/M19z"
+	I1_M19_rx ( M19rx M19vrx ) LinearAngularDOF name="/M19rx"
+	I1_M19_ry ( M19ry M19vry ) LinearAngularDOF name="/M19ry"
+	I1_M19_rz ( M19rz M19vrz ) LinearAngularDOF name="/M19rz"
+
+	I1_M20_x ( M20x M20vx ) LinearTranslationalDOF name="/M20x"
+	I1_M20_y ( M20y M20vy ) LinearTranslationalDOF name="/M20y"
+	I1_M20_z ( M20z M20vz ) LinearTranslationalDOF name="/M20z"
+	I1_M20_rx ( M20rx M20vrx ) LinearAngularDOF name="/M20rx"
+	I1_M20_ry ( M20ry M20vry ) LinearAngularDOF name="/M20ry"
+	I1_M20_rz ( M20rz M20vrz ) LinearAngularDOF name="/M20rz"
+
+	I1_M21_x ( M21x M21vx ) LinearTranslationalDOF name="/M21x"
+	I1_M21_y ( M21y M21vy ) LinearTranslationalDOF name="/M21y"
+	I1_M21_z ( M21z M21vz ) LinearTranslationalDOF name="/M21z"
+	I1_M21_rx ( M21rx M21vrx ) LinearAngularDOF name="/M21rx"
+	I1_M21_ry ( M21ry M21vry ) LinearAngularDOF name="/M21ry"
+	I1_M21_rz ( M21rz M21vrz ) LinearAngularDOF name="/M21rz"
+
+	I1_M22_x ( M22x M22vx ) LinearTranslationalDOF name="/M22x"
+	I1_M22_y ( M22y M22vy ) LinearTranslationalDOF name="/M22y"
+	I1_M22_z ( M22z M22vz ) LinearTranslationalDOF name="/M22z"
+	I1_M22_rx ( M22rx M22vrx ) LinearAngularDOF name="/M22rx"
+	I1_M22_ry ( M22ry M22vry ) LinearAngularDOF name="/M22ry"
+	I1_M22_rz ( M22rz M22vrz ) LinearAngularDOF name="/M22rz"
+
+	I1_M23_x ( M23x M23vx ) LinearTranslationalDOF name="/M23x"
+	I1_M23_y ( M23y M23vy ) LinearTranslationalDOF name="/M23y"
+	I1_M23_z ( M23z M23vz ) LinearTranslationalDOF name="/M23z"
+	I1_M23_rx ( M23rx M23vrx ) LinearAngularDOF name="/M23rx"
+	I1_M23_ry ( M23ry M23vry ) LinearAngularDOF name="/M23ry"
+	I1_M23_rz ( M23rz M23vrz ) LinearAngularDOF name="/M23rz"
+
+	I1_M24_x ( M24x M24vx ) LinearTranslationalDOF name="/M24x"
+	I1_M24_y ( M24y M24vy ) LinearTranslationalDOF name="/M24y"
+	I1_M24_z ( M24z M24vz ) LinearTranslationalDOF name="/M24z"
+	I1_M24_rx ( M24rx M24vrx ) LinearAngularDOF name="/M24rx"
+	I1_M24_ry ( M24ry M24vry ) LinearAngularDOF name="/M24ry"
+	I1_M24_rz ( M24rz M24vrz ) LinearAngularDOF name="/M24rz"
+
+	I1_M25_x ( M25x M25vx ) LinearTranslationalDOF name="/M25x"
+	I1_M25_y ( M25y M25vy ) LinearTranslationalDOF name="/M25y"
+	I1_M25_z ( M25z M25vz ) LinearTranslationalDOF name="/M25z"
+	I1_M25_rx ( M25rx M25vrx ) LinearAngularDOF name="/M25rx"
+	I1_M25_ry ( M25ry M25vry ) LinearAngularDOF name="/M25ry"
+	I1_M25_rz ( M25rz M25vrz ) LinearAngularDOF name="/M25rz"
+
+	I1_M27_x ( M27x M27vx ) LinearTranslationalDOF name="/M27x"
+	I1_M27_y ( M27y M27vy ) LinearTranslationalDOF name="/M27y"
+	I1_M27_z ( M27z M27vz ) LinearTranslationalDOF name="/M27z"
+	I1_M27_rx ( M27rx M27vrx ) LinearAngularDOF name="/M27rx"
+	I1_M27_ry ( M27ry M27vry ) LinearAngularDOF name="/M27ry"
+	I1_M27_rz ( M27rz M27vrz ) LinearAngularDOF name="/M27rz"
+
+	I1_M28_x ( M28x M28vx ) LinearTranslationalDOF name="/M28x"
+	I1_M28_y ( M28y M28vy ) LinearTranslationalDOF name="/M28y"
+	I1_M28_z ( M28z M28vz ) LinearTranslationalDOF name="/M28z"
+	I1_M28_rx ( M28rx M28vrx ) LinearAngularDOF name="/M28rx"
+	I1_M28_ry ( M28ry M28vry ) LinearAngularDOF name="/M28ry"
+	I1_M28_rz ( M28rz M28vrz ) LinearAngularDOF name="/M28rz"
+
+	I1_M29_x ( M29x M29vx ) LinearTranslationalDOF name="/M29x"
+	I1_M29_y ( M29y M29vy ) LinearTranslationalDOF name="/M29y"
+	I1_M29_z ( M29z M29vz ) LinearTranslationalDOF name="/M29z"
+	I1_M29_rx ( M29rx M29vrx ) LinearAngularDOF name="/M29rx"
+	I1_M29_ry ( M29ry M29vry ) LinearAngularDOF name="/M29ry"
+	I1_M29_rz ( M29rz M29vrz ) LinearAngularDOF name="/M29rz"
+
+	I1_M30_x ( M30x M30vx ) LinearTranslationalDOF name="/M30x"
+	I1_M30_y ( M30y M30vy ) LinearTranslationalDOF name="/M30y"
+	I1_M30_z ( M30z M30vz ) LinearTranslationalDOF name="/M30z"
+	I1_M30_rx ( M30rx M30vrx ) LinearAngularDOF name="/M30rx"
+	I1_M30_ry ( M30ry M30vry ) LinearAngularDOF name="/M30ry"
+	I1_M30_rz ( M30rz M30vrz ) LinearAngularDOF name="/M30rz"
+
+	I1_M31_x ( M31x M31vx ) LinearTranslationalDOF name="/M31x"
+	I1_M31_y ( M31y M31vy ) LinearTranslationalDOF name="/M31y"
+	I1_M31_z ( M31z M31vz ) LinearTranslationalDOF name="/M31z"
+	I1_M31_rx ( M31rx M31vrx ) LinearAngularDOF name="/M31rx"
+	I1_M31_ry ( M31ry M31vry ) LinearAngularDOF name="/M31ry"
+	I1_M31_rz ( M31rz M31vrz ) LinearAngularDOF name="/M31rz"
+
+	I1_M32_x ( M32x M32vx ) LinearTranslationalDOF name="/M32x"
+	I1_M32_y ( M32y M32vy ) LinearTranslationalDOF name="/M32y"
+	I1_M32_z ( M32z M32vz ) LinearTranslationalDOF name="/M32z"
+	I1_M32_rx ( M32rx M32vrx ) LinearAngularDOF name="/M32rx"
+	I1_M32_ry ( M32ry M32vry ) LinearAngularDOF name="/M32ry"
+	I1_M32_rz ( M32rz M32vrz ) LinearAngularDOF name="/M32rz"
+
+	I1_M33_x ( M33x M33vx ) LinearTranslationalDOF name="/M33x"
+	I1_M33_y ( M33y M33vy ) LinearTranslationalDOF name="/M33y"
+	I1_M33_z ( M33z M33vz ) LinearTranslationalDOF name="/M33z"
+	I1_M33_rx ( M33rx M33vrx ) LinearAngularDOF name="/M33rx"
+	I1_M33_ry ( M33ry M33vry ) LinearAngularDOF name="/M33ry"
+	I1_M33_rz ( M33rz M33vrz ) LinearAngularDOF name="/M33rz"
+
+	I1_M34_x ( M34x M34vx ) LinearTranslationalDOF name="/M34x"
+	I1_M34_y ( M34y M34vy ) LinearTranslationalDOF name="/M34y"
+	I1_M34_z ( M34z M34vz ) LinearTranslationalDOF name="/M34z"
+	I1_M34_rx ( M34rx M34vrx ) LinearAngularDOF name="/M34rx"
+	I1_M34_ry ( M34ry M34vry ) LinearAngularDOF name="/M34ry"
+	I1_M34_rz ( M34rz M34vrz ) LinearAngularDOF name="/M34rz"
+
+	I1_M35_x ( M35x M35vx ) LinearTranslationalDOF name="/M35x"
+	I1_M35_y ( M35y M35vy ) LinearTranslationalDOF name="/M35y"
+	I1_M35_z ( M35z M35vz ) LinearTranslationalDOF name="/M35z"
+	I1_M35_rx ( M35rx M35vrx ) LinearAngularDOF name="/M35rx"
+	I1_M35_ry ( M35ry M35vry ) LinearAngularDOF name="/M35ry"
+	I1_M35_rz ( M35rz M35vrz ) LinearAngularDOF name="/M35rz"
+
+	I1_M36_x ( M36x M36vx ) LinearTranslationalDOF name="/M36x"
+	I1_M36_y ( M36y M36vy ) LinearTranslationalDOF name="/M36y"
+	I1_M36_z ( M36z M36vz ) LinearTranslationalDOF name="/M36z"
+	I1_M36_rx ( M36rx M36vrx ) LinearAngularDOF name="/M36rx"
+	I1_M36_ry ( M36ry M36vry ) LinearAngularDOF name="/M36ry"
+	I1_M36_rz ( M36rz M36vrz ) LinearAngularDOF name="/M36rz"
+
+	I1_M37_x ( M37x M37vx ) LinearTranslationalDOF name="/M37x"
+	I1_M37_y ( M37y M37vy ) LinearTranslationalDOF name="/M37y"
+	I1_M37_z ( M37z M37vz ) LinearTranslationalDOF name="/M37z"
+	I1_M37_rx ( M37rx M37vrx ) LinearAngularDOF name="/M37rx"
+	I1_M37_ry ( M37ry M37vry ) LinearAngularDOF name="/M37ry"
+	I1_M37_rz ( M37rz M37vrz ) LinearAngularDOF name="/M37rz"
+
+	I1_M38_x ( M38x M38vx ) LinearTranslationalDOF name="/M38x"
+	I1_M38_y ( M38y M38vy ) LinearTranslationalDOF name="/M38y"
+	I1_M38_z ( M38z M38vz ) LinearTranslationalDOF name="/M38z"
+	I1_M38_rx ( M38rx M38vrx ) LinearAngularDOF name="/M38rx"
+	I1_M38_ry ( M38ry M38vry ) LinearAngularDOF name="/M38ry"
+	I1_M38_rz ( M38rz M38vrz ) LinearAngularDOF name="/M38rz"
+
+ends

@@ -1,0 +1,1016 @@
+
+<___Document DocBuildTag="" DocCommit="62ee6a640569" DocType="proc" DocVersion="7.1.1">
+
+  <___Properties isEnable="true">
+    <MaterialDataBaseFile RelativeFileName="aureo_process.mmdb" ___text="C:/Coventor/Design_Files/aureo_pdk/Devices/aureo_process.mmdb" readonly="true"/>
+  </___Properties>
+
+  <___Parser ___Name="Variables" ___Type="VariableRoot" isExpanded="true">
+    <___Item Imported="true" ___Name="T" ___Type="Variable">
+      <___Properties isEnable="true">
+        <value ___expression="273.15" ___lastKnownValue="273.15" ___unitName="nounit"/>
+        <isExposed ___expression="true" readonly="true"/>
+        <limits isEnable="true">
+          <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+        </limits>
+      </___Properties>
+    </___Item>
+    <___Item Imported="true" ___Name="Pressure" ___Type="Variable">
+      <___Properties isEnable="true">
+        <value ___expression="101325" ___lastKnownValue="101325.0" ___unitName="nounit"/>
+        <isExposed ___expression="true" readonly="true"/>
+        <limits isEnable="true">
+          <lower ___expression="1e-3" ___lastKnownValue="0.001" ___unitName="nounit" readonly="true"/>
+          <upper ___expression="1e10" ___lastKnownValue="10000000000.0" ___unitName="nounit" readonly="true"/>
+        </limits>
+      </___Properties>
+    </___Item>
+    <___Item Imported="true" ___Name="ResidualStress" ___Type="VariableGroup">
+      <___Item Imported="true" ___Name="SiliconNitride" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="23.5" ___lastKnownValue="23.5" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Poly0" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="-25" ___lastKnownValue="-25.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Poly1" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="-10" ___lastKnownValue="-10.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Poly2" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="-10" ___lastKnownValue="-10.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item Imported="true" ___Name="Gold" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="50" ___lastKnownValue="50.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+    </___Item>
+    <___Item ___Name="Thickness" ___Type="VariableGroup" isExpanded="true">
+      <___Item ___Name="NIT" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="0.2" ___lastKnownValue="0.2" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item ___Name="Poly" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="0.5" ___lastKnownValue="0.5" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item ___Name="Gold" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="0.67" ___lastKnownValue="0.67" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+      <___Item ___Name="SOI" ___Type="Variable">
+        <___Properties isEnable="true">
+          <value ___expression="40" ___lastKnownValue="40.0" ___unitName="nounit"/>
+          <isExposed ___expression="true" readonly="true"/>
+          <limits isEnable="true">
+            <lower ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+            <upper ___expression="" ___lastKnownValue="nan.0" ___unitName="nounit"/>
+          </limits>
+        </___Properties>
+      </___Item>
+    </___Item>
+  </___Parser>
+
+  <___DocumentTree ___Name="Substrate" ___Type="Substrate" isExpanded="true">
+    <___Properties VersionNumber="3" isEnable="true">
+      <material ___activeMember="SCS " isExpanded="true">
+        <SCS isEnable="true" isExpanded="true">
+          <color ___blue="192" ___green="192" ___red="192"/>
+        </SCS>
+        <BOX isEnable="true">
+          <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+        </BOX>
+        <SOI isEnable="true">
+          <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+        </SOI>
+        <Si3N4_Stoichiometric isEnable="true">
+          <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+        </Si3N4_Stoichiometric>
+        <PolySi_NType isEnable="true">
+          <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+        </PolySi_NType>
+        <Au isEnable="true">
+          <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+        </Au>
+      </material>
+      <thickness ___expression="500" ___lastKnownValue="500.0" ___unitName="um"/>
+      <verticalOffset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+    </___Properties>
+    <___Item VersionNumber="2" ___Name="SOI1" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="SCS " isExpanded="true">
+          <SCS isEnable="true" isExpanded="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true">
+            <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true">
+            <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+          </Au>
+        </material>
+        <thickness ___expression="ThicknessSOI" ___lastKnownValue="40.0" ___unitName="um"/>
+        <verticalOffset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item VersionNumber="2" ___Name="Etch_DRIE_40um_SOI1" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="SOI1 " isExpanded="true">
+          <SOI1 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true">
+            <defaultLayer ___activeMember="POLY1 ">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL1 ">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL2 ">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true">
+            <defaultLayer ___activeMember="POLY2 ">
+              <POLY2 isEnable="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide ___expression="true"/>
+        <sidewallAngles isEnable="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>LPCVD Deposition 600nm SixNy&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>A 600 nm blanket layer of low stress silicon nitride (Nitride) is deposited.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="NIT1" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="Si3N4_Stoichiometric " isExpanded="true">
+          <SCS isEnable="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true">
+            <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true" isExpanded="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true">
+            <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+          </Au>
+        </material>
+        <thickness Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="ThicknessNIT" ___lastKnownValue="0.2" ___unitName="um" isExpanded="true"/>
+        <verticalOffset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:8pt;&quot;>The wafers are coated with photoresist and the second level (DIMPLE) is lithographically patterned. The dimples, 750 nm deep, are reactive ion etched into the first oxide layer. After the etch, the photoresist is stripped.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="Etch_RIE_200nm_NITRIDE1" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="POLY1 " isExpanded="true">
+          <SOI1 isEnable="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="POLY1 " isExpanded="true">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL1 ">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL2 ">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true">
+            <defaultLayer ___activeMember="POLY2 ">
+              <POLY2 isEnable="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="true"/>
+        <sidewallAngles isEnable="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>LPCVD Deposition 500nm PolySi&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>A blanket layer of 500 nm polysilicon (Poly 0) is deposited. The wafers are then coated with UV-sensitive photoresist.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="POLY1" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="PolySi_NType " isExpanded="true">
+          <SCS isEnable="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true">
+            <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true" isExpanded="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true">
+            <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+          </Au>
+        </material>
+        <thickness ___expression="ThicknessPoly" ___lastKnownValue="0.5" ___unitName="um" isExpanded="true"/>
+        <verticalOffset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The wafers are then coated with UV-sensitive photoresist.  &lt;span style=&quot; font-size:8pt;&quot;>The photoresist is lithographically patterned by exposing it to UV light through the first level mask (POLY0) and then developing it. The photoresist in exposed areas is removed leaving behind a patterned photoresist mask for etching. &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:8pt;&quot;>Plasma etching is used to remove the unwanted polysilicon. After the etch, the photoresist is chemically stripped in a solvent bath. This method of patterning the wafers with photoresist, etching and stripping the remaining photoresist is used repeatedly in the PolyMUMPs process.&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:8pt;&quot;>The hole layers (HOLE0, HOLE1, HOLE2 and HOLEM) for POLY0, POLY1, POLY2 and METAL, respectively, are shown as separate levels in order to make layout of POLY0, POLY1, POLY2 and METAL easier.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="Etch_RIE_500nm_POLY1" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="POLY1 " isExpanded="true">
+          <SOI1 isEnable="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="POLY1 ">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL1 ">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL2 ">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true">
+            <defaultLayer ___activeMember="POLY2 ">
+              <POLY2 isEnable="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide ___expression="true"/>
+        <sidewallAngles isEnable="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Evaporate 500nm Au&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The substrate is placed in a high vacuum chamber at room temperature with a crucible containing the material to be deposited. A heating source is used to heat the crucible causing the material to evaporate and condense on all exposed cool surfaces of the vacuum chamber and substrate. The process is typically performed on one side of the substrate at a time. Typical sources of heating are: E-beam, Resistive heating, RF-inductive heating. In some systems the substrate can be heated during deposition to alter the composition/stress of the deposited material.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="LOWMETAL1" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="Au " isExpanded="true">
+          <SCS isEnable="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true">
+            <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true" isExpanded="true">
+            <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+          </Au>
+        </material>
+        <thickness Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="ThicknessGold" ___lastKnownValue="0.67" ___unitName="um" isExpanded="true"/>
+        <verticalOffset ___expression="-ThicknessNIT-ThicknessPoly" ___lastKnownValue="-0.7" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The side wall of the photoresist is sloped at a reentrant angle, which allows the metal to be deposited on the surfaces of the wafer and the photoresist, but provides breaks in the continuity of the metal over the reentrant photoresist step. The photoresist and unwanted metal (atop the photoresist) are then removed in a solvent bath. &lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The process is now complete and the wafers can be coated with a protective layer of photoresist and diced. The chips are sorted and shipped.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="Liftoff_Metal_670nm_LM1" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="METAL1 " isExpanded="true">
+          <SOI1 isEnable="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true">
+            <defaultLayer ___activeMember="POLY1 ">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="LOWMETAL1 ">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL2 ">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true">
+            <defaultLayer ___activeMember="POLY2 ">
+              <POLY2 isEnable="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide ___expression="true"/>
+        <sidewallAngles isEnable="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true" isExpanded="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Evaporate 500nm Au&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The substrate is placed in a high vacuum chamber at room temperature with a crucible containing the material to be deposited. A heating source is used to heat the crucible causing the material to evaporate and condense on all exposed cool surfaces of the vacuum chamber and substrate. The process is typically performed on one side of the substrate at a time. Typical sources of heating are: E-beam, Resistive heating, RF-inductive heating. In some systems the substrate can be heated during deposition to alter the composition/stress of the deposited material.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="HIGHMETAL1" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="Au " isExpanded="true">
+          <SCS isEnable="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true">
+            <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true" isExpanded="true">
+            <color ___blue="0" ___green="85" ___red="255"/>
+          </Au>
+        </material>
+        <thickness Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="ThicknessGold" ___lastKnownValue="0.67" ___unitName="um" isExpanded="true"/>
+        <verticalOffset ___expression="ThicknessNIT+ThicknessPoly-ThicknessGold" ___lastKnownValue="0.02999999999999992" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The side wall of the photoresist is sloped at a reentrant angle, which allows the metal to be deposited on the surfaces of the wafer and the photoresist, but provides breaks in the continuity of the metal over the reentrant photoresist step. The photoresist and unwanted metal (atop the photoresist) are then removed in a solvent bath. &lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The process is now complete and the wafers can be coated with a protective layer of photoresist and diced. The chips are sorted and shipped.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="Liftoff_Metal_670nm_HM1" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="METAL1 " isExpanded="true">
+          <SOI1 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true">
+            <defaultLayer ___activeMember="POLY1 ">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="HIGHMETAL1 " isExpanded="true">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true" isExpanded="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL2 ">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true">
+            <defaultLayer ___activeMember="POLY2 ">
+              <POLY2 isEnable="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide ___expression="true"/>
+        <sidewallAngles isEnable="true" isExpanded="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true" isExpanded="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Evaporate 500nm Au&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The substrate is placed in a high vacuum chamber at room temperature with a crucible containing the material to be deposited. A heating source is used to heat the crucible causing the material to evaporate and condense on all exposed cool surfaces of the vacuum chamber and substrate. The process is typically performed on one side of the substrate at a time. Typical sources of heating are: E-beam, Resistive heating, RF-inductive heating. In some systems the substrate can be heated during deposition to alter the composition/stress of the deposited material.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="HIGHMETAL2" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="Au " isExpanded="true">
+          <SCS isEnable="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true">
+            <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true" isExpanded="true">
+            <color ___blue="0" ___green="85" ___red="255"/>
+          </Au>
+        </material>
+        <thickness Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="ThicknessGold" ___lastKnownValue="0.67" ___unitName="um" isExpanded="true"/>
+        <verticalOffset ___expression="" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The side wall of the photoresist is sloped at a reentrant angle, which allows the metal to be deposited on the surfaces of the wafer and the photoresist, but provides breaks in the continuity of the metal over the reentrant photoresist step. The photoresist and unwanted metal (atop the photoresist) are then removed in a solvent bath. &lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The process is now complete and the wafers can be coated with a protective layer of photoresist and diced. The chips are sorted and shipped.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="Liftoff_Metal_670nm_HM2" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="METAL2 " isExpanded="true">
+          <SOI1 isEnable="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true">
+            <defaultLayer ___activeMember="POLY1 ">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL1 ">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="LOWMETAL2 " isExpanded="true">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true">
+            <defaultLayer ___activeMember="POLY2 ">
+              <POLY2 isEnable="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide ___expression="true"/>
+        <sidewallAngles isEnable="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true" isExpanded="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>Evaporate 500nm Au&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The substrate is placed in a high vacuum chamber at room temperature with a crucible containing the material to be deposited. A heating source is used to heat the crucible causing the material to evaporate and condense on all exposed cool surfaces of the vacuum chamber and substrate. The process is typically performed on one side of the substrate at a time. Typical sources of heating are: E-beam, Resistive heating, RF-inductive heating. In some systems the substrate can be heated during deposition to alter the composition/stress of the deposited material.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="LOWMETAL2" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="Au " isExpanded="true">
+          <SCS isEnable="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true">
+            <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true" isExpanded="true">
+            <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+          </Au>
+        </material>
+        <thickness Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="ThicknessGold" ___lastKnownValue="0.67" ___unitName="um" isExpanded="true"/>
+        <verticalOffset ___expression="ThicknessPoly+ThicknessNIT-ThicknessGold" ___lastKnownValue="0.02999999999999992" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The side wall of the photoresist is sloped at a reentrant angle, which allows the metal to be deposited on the surfaces of the wafer and the photoresist, but provides breaks in the continuity of the metal over the reentrant photoresist step. The photoresist and unwanted metal (atop the photoresist) are then removed in a solvent bath. &lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The process is now complete and the wafers can be coated with a protective layer of photoresist and diced. The chips are sorted and shipped.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="Liftoff_Metal_670nm_LM2" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="METAL2 " isExpanded="true">
+          <SOI1 isEnable="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true">
+            <defaultLayer ___activeMember="POLY1 ">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL1 ">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="HIGHMETAL2 " isExpanded="true">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true" isExpanded="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true">
+            <defaultLayer ___activeMember="POLY2 ">
+              <POLY2 isEnable="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide ___expression="true"/>
+        <sidewallAngles isEnable="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true" isExpanded="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>LPCVD Deposition 500nm PolySi&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>A blanket layer of 500 nm polysilicon (Poly 0) is deposited. The wafers are then coated with UV-sensitive photoresist.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="POLY2" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="PolySi_NType " isExpanded="true">
+          <SCS isEnable="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true">
+            <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true" isExpanded="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true">
+            <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+          </Au>
+        </material>
+        <thickness ___expression="ThicknessPoly" ___lastKnownValue="0.5" ___unitName="um" isExpanded="true"/>
+        <verticalOffset ___expression="-ThicknessNIT-ThicknessPoly" ___lastKnownValue="-0.7" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>The wafers are then coated with UV-sensitive photoresist.  &lt;span style=&quot; font-size:8pt;&quot;>The photoresist is lithographically patterned by exposing it to UV light through the first level mask (POLY0) and then developing it. The photoresist in exposed areas is removed leaving behind a patterned photoresist mask for etching. &lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:8pt;&quot;>Plasma etching is used to remove the unwanted polysilicon. After the etch, the photoresist is chemically stripped in a solvent bath. This method of patterning the wafers with photoresist, etching and stripping the remaining photoresist is used repeatedly in the PolyMUMPs process.&lt;/span>&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:8pt;&quot;>The hole layers (HOLE0, HOLE1, HOLE2 and HOLEM) for POLY0, POLY1, POLY2 and METAL, respectively, are shown as separate levels in order to make layout of POLY0, POLY1, POLY2 and METAL easier.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="Etch_RIE_500nm_POLY2" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="POLY2 " isExpanded="true">
+          <SOI1 isEnable="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true">
+            <defaultLayer ___activeMember="POLY1 ">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL1 ">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL2 ">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="POLY2 " isExpanded="true">
+              <POLY2 isEnable="true" isExpanded="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide ___expression="true"/>
+        <sidewallAngles isEnable="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>LPCVD Deposition 600nm SixNy&lt;/p>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;br />&lt;/p>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>A 600 nm blanket layer of low stress silicon nitride (Nitride) is deposited.&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="NIT2" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="Si3N4_Stoichiometric " isExpanded="true">
+          <SCS isEnable="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true">
+            <color ___blue="192" ___green="192" ___red="192" useDefaultColor="true"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true" isExpanded="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true">
+            <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+          </Au>
+        </material>
+        <thickness Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="ThicknessNIT" ___lastKnownValue="0.2" ___unitName="um" isExpanded="true"/>
+        <verticalOffset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:7.5pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;span style=&quot; font-size:8pt;&quot;>The wafers are coated with photoresist and the second level (DIMPLE) is lithographically patterned. The dimples, 750 nm deep, are reactive ion etched into the first oxide layer. After the etch, the photoresist is stripped.&lt;/span>&lt;/p>&lt;/body>&lt;/html>" VersionNumber="2" ___Name="Etch_RIE_200nm_NITRIDE2" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="POLY2 " isExpanded="true">
+          <SOI1 isEnable="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true">
+            <defaultLayer ___activeMember="POLY1 ">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL1 ">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL2 ">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="POLY2 " isExpanded="true">
+              <POLY2 isEnable="true" isExpanded="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide Comment="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>&#xA;&lt;html>&lt;head>&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; />&lt;style type=&quot;text/css&quot;>&#xA;p, li { white-space: pre-wrap; }&#xA;&lt;/style>&lt;/head>&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;>&#xA;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;>&lt;/p>&lt;/body>&lt;/html>" ___expression="true"/>
+        <sidewallAngles isEnable="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item VersionNumber="2" ___Name="SOI2" ___Type="StackMaterial">
+      <___Properties VersionNumber="3" isEnable="true">
+        <material ___activeMember="SOI " isExpanded="true">
+          <SCS isEnable="true">
+            <color ___blue="128" ___green="128" ___red="128" useDefaultColor="true"/>
+          </SCS>
+          <BOX isEnable="true">
+            <color ___blue="0" ___green="170" ___red="255" useDefaultColor="true"/>
+          </BOX>
+          <SOI isEnable="true" isExpanded="true">
+            <color ___blue="128" ___green="128" ___red="128"/>
+          </SOI>
+          <Si3N4_Stoichiometric isEnable="true">
+            <color ___blue="0" ___green="128" ___red="0" useDefaultColor="true"/>
+          </Si3N4_Stoichiometric>
+          <PolySi_NType isEnable="true">
+            <color ___blue="0" ___green="0" ___red="255" useDefaultColor="true"/>
+          </PolySi_NType>
+          <Au isEnable="true">
+            <color ___blue="0" ___green="255" ___red="255" useDefaultColor="true"/>
+          </Au>
+        </material>
+        <thickness ___expression="40" ___lastKnownValue="40.0" ___unitName="um"/>
+        <verticalOffset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+    <___Item VersionNumber="2" ___Name="Etch_DRIE_40um_SOI2" ___Type="StraightCut">
+      <___Properties VersionNumber="4" isEnable="true">
+        <maskSelection ___activeMember="SOI2 " isExpanded="true">
+          <SOI1 isEnable="true">
+            <defaultLayer ___activeMember="SOI1 ">
+              <SOI1 isEnable="true"/>
+            </defaultLayer>
+          </SOI1>
+          <POLY1 isEnable="true">
+            <defaultLayer ___activeMember="POLY1 ">
+              <POLY1 isEnable="true"/>
+            </defaultLayer>
+          </POLY1>
+          <METAL1 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL1 ">
+              <LOWMETAL1 isEnable="true"/>
+              <HIGHMETAL1 isEnable="true"/>
+            </defaultLayer>
+          </METAL1>
+          <METAL2 isEnable="true">
+            <defaultLayer ___activeMember="LOWMETAL2 ">
+              <LOWMETAL2 isEnable="true"/>
+              <HIGHMETAL2 isEnable="true"/>
+            </defaultLayer>
+          </METAL2>
+          <POLY2 isEnable="true">
+            <defaultLayer ___activeMember="POLY2 ">
+              <POLY2 isEnable="true"/>
+            </defaultLayer>
+          </POLY2>
+          <SOI2 isEnable="true" isExpanded="true">
+            <defaultLayer ___activeMember="SOI2 ">
+              <SOI2 isEnable="true"/>
+            </defaultLayer>
+          </SOI2>
+        </maskSelection>
+        <etchSide ___expression="true"/>
+        <sidewallAngles isEnable="true">
+          <nominalValue ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          <angleIncrements isEnable="true">
+            <xFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+            <yFaces ___expression="0" ___lastKnownValue="0.0" ___unitName="degrees"/>
+          </angleIncrements>
+        </sidewallAngles>
+        <offset ___expression="0" ___lastKnownValue="0.0" ___unitName="um"/>
+      </___Properties>
+    </___Item>
+  </___DocumentTree>
+
+  <Layers ___Name="Layers" ___Type="Layers" isExpanded="true">
+    <___Properties isEnable="true"/>
+    <___Item ___Name="SOI1" ___Type="Mask" isExpanded="true">
+      <___Properties isEnable="true"/>
+      <___Item ___Name="SOI1" ___Type="Layer" isExpanded="true">
+        <___Properties isEnable="true">
+          <designLayer ___text="" undefLabel="SOI1"/>
+          <purpose ___text="drawing"/>
+          <gdsNumber ___expression="9" ___lastKnownValue="9.0" ___unitName="nounit"/>
+          <dataType ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+        </___Properties>
+        <___Item ___Name="NegativeLayer1" ___Type="NegativeLayer">
+          <___Properties isEnable="true">
+            <designLayer ___text="" undefLabel="SOI1_negative"/>
+            <purpose ___text="drawing"/>
+            <gdsNumber ___expression="10" ___lastKnownValue="10.0" ___unitName="nounit"/>
+            <dataType ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+          </___Properties>
+        </___Item>
+      </___Item>
+    </___Item>
+    <___Item ___Name="POLY1" ___Type="Mask" isExpanded="true">
+      <___Properties isEnable="true"/>
+      <___Item ___Name="POLY1" ___Type="Layer" isExpanded="true">
+        <___Properties isEnable="true">
+          <designLayer ___text="" undefLabel="POLY1"/>
+          <purpose ___text="drawing"/>
+          <gdsNumber ___expression="11" ___lastKnownValue="11.0" ___unitName="nounit"/>
+          <dataType ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+        </___Properties>
+      </___Item>
+    </___Item>
+    <___Item ___Name="METAL1" ___Type="Mask" isExpanded="true">
+      <___Properties isEnable="true"/>
+      <___Item ___Name="LOWMETAL1" ___Type="Layer">
+        <___Properties isEnable="true">
+          <designLayer ___text="LOWMETAL1" undefLabel="LOWMETAL1"/>
+          <purpose ___text="drawing"/>
+          <gdsNumber ___expression="12" ___lastKnownValue="12.0" ___unitName="nounit"/>
+          <dataType ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+        </___Properties>
+        <___Item ___Name="NegativeLayer1" ___Type="NegativeLayer">
+          <___Properties isEnable="true">
+            <designLayer ___text="" undefLabel="LOWMETAL1_negative"/>
+            <purpose ___text="drawing"/>
+            <gdsNumber ___expression="12" ___lastKnownValue="12.0" ___unitName="nounit"/>
+            <dataType ___expression="1" ___lastKnownValue="1.0" ___unitName="nounit"/>
+          </___Properties>
+        </___Item>
+      </___Item>
+      <___Item ___Name="HIGHMETAL1" ___Type="Layer">
+        <___Properties isEnable="true">
+          <designLayer ___text="" undefLabel="HIGHMETAL1"/>
+          <purpose ___text="drawing"/>
+          <gdsNumber ___expression="13" ___lastKnownValue="13.0" ___unitName="nounit"/>
+          <dataType ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+        </___Properties>
+        <___Item ___Name="NegativeLayer1" ___Type="NegativeLayer">
+          <___Properties isEnable="true">
+            <designLayer ___text="" undefLabel="HIGHMETAL1_negative"/>
+            <purpose ___text="drawing"/>
+            <gdsNumber ___expression="13" ___lastKnownValue="13.0" ___unitName="nounit"/>
+            <dataType ___expression="1" ___lastKnownValue="1.0" ___unitName="nounit"/>
+          </___Properties>
+        </___Item>
+      </___Item>
+    </___Item>
+    <___Item ___Name="METAL2" ___Type="Mask" isExpanded="true">
+      <___Properties isEnable="true"/>
+      <___Item ___Name="LOWMETAL2" ___Type="Layer">
+        <___Properties isEnable="true">
+          <designLayer ___text="" undefLabel="LOWMETAL2"/>
+          <purpose ___text="drawing"/>
+          <gdsNumber ___expression="15" ___lastKnownValue="15.0" ___unitName="nounit"/>
+          <dataType ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+        </___Properties>
+        <___Item ___Name="NegativeLayer1" ___Type="NegativeLayer">
+          <___Properties isEnable="true">
+            <designLayer ___text="" undefLabel="LOWMETAL2_negative"/>
+            <purpose ___text="drawing"/>
+            <gdsNumber ___expression="15" ___lastKnownValue="15.0" ___unitName="nounit"/>
+            <dataType ___expression="1" ___lastKnownValue="1.0" ___unitName="nounit"/>
+          </___Properties>
+        </___Item>
+      </___Item>
+      <___Item ___Name="HIGHMETAL2" ___Type="Layer">
+        <___Properties isEnable="true">
+          <designLayer ___text="" undefLabel="HIGHMETAL2"/>
+          <purpose ___text="drawing"/>
+          <gdsNumber ___expression="14" ___lastKnownValue="14.0" ___unitName="nounit"/>
+          <dataType ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+        </___Properties>
+        <___Item ___Name="NegativeLayer1" ___Type="NegativeLayer">
+          <___Properties isEnable="true">
+            <designLayer ___text="" undefLabel="HIGHMETAL2_negative"/>
+            <purpose ___text="drawing"/>
+            <gdsNumber ___expression="14" ___lastKnownValue="14.0" ___unitName="nounit"/>
+            <dataType ___expression="1" ___lastKnownValue="1.0" ___unitName="nounit"/>
+          </___Properties>
+        </___Item>
+      </___Item>
+    </___Item>
+    <___Item ___Name="POLY2" ___Type="Mask" isExpanded="true">
+      <___Properties isEnable="true"/>
+      <___Item ___Name="POLY2" ___Type="Layer">
+        <___Properties isEnable="true">
+          <designLayer ___text="" undefLabel="POLY2"/>
+          <purpose ___text="drawing"/>
+          <gdsNumber ___expression="16" ___lastKnownValue="16.0" ___unitName="nounit"/>
+          <dataType ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+        </___Properties>
+      </___Item>
+    </___Item>
+    <___Item ___Name="SOI2" ___Type="Mask" isExpanded="true">
+      <___Properties isEnable="true"/>
+      <___Item ___Name="SOI2" ___Type="Layer" isExpanded="true">
+        <___Properties isEnable="true">
+          <designLayer ___text="" undefLabel="SOI2"/>
+          <purpose ___text="drawing"/>
+          <gdsNumber ___expression="17" ___lastKnownValue="17.0" ___unitName="nounit"/>
+          <dataType ___expression="0" ___lastKnownValue="0.0" ___unitName="nounit"/>
+        </___Properties>
+        <___Item ___Name="NegativeLayer1" ___Type="NegativeLayer">
+          <___Properties isEnable="true">
+            <designLayer ___text="" undefLabel="SOI2_negative"/>
+            <purpose ___text="drawing"/>
+            <gdsNumber ___expression="18" ___lastKnownValue="18.0" ___unitName="nounit"/>
+            <dataType ___expression="1" ___lastKnownValue="1.0" ___unitName="nounit"/>
+          </___Properties>
+        </___Item>
+      </___Item>
+    </___Item>
+  </Layers>
+
+</___Document>

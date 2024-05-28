@@ -68,7 +68,7 @@ ld_soihole2 = (18, 0)
 
 # Load the GDS file into gdspy
 lib = gdspy.GdsLibrary()
-lib.read_gds(args.cell + '_preprocess.gds')
+lib.read_gds('fab_export/' + args.cell + '_preprocess.gds')
 
 # Select the cell
 cell = lib.cells[args.cell]
@@ -118,8 +118,8 @@ if lm2paths or hm2paths:
     merged_m2paths = lm2paths + hm2paths
     for path in merged_m2paths:
         path = gdspy.copy(path)
-        path.layer = [ld_metal2fab[0]]
-        path.datatype = [ld_metal2fab[1]]
+        path.layers = [ld_metal2fab[0]]
+        path.datatypes = [ld_metal2fab[1]]
         cell.add(path)
 
 # Now assign the SOI1, POLY1, SOI2, POLY2 layers to the fab layers
@@ -131,7 +131,7 @@ change_layers_all(cell, ld_poly2, ld_poly2fab)
 
 
 # Write out the new GDS file
-gdspy.write_gds(args.cell + '_merged.gds', cells=[cell])
+gdspy.write_gds('fab_export/' + args.cell + '_merged.gds', cells=[cell])
 #cell.write_svg('_merged.svg')
 #gdspy.LayoutViewer(cells=cell, depth=3)
 
@@ -155,7 +155,8 @@ for ld_fab in [(ld_soi2fab, ld_soifab), (ld_metal2fab, ld_metalfab), (ld_poly2fa
     if fab_shapes:
         for shape in fab_shapes:
             shape = gdspy.copy(shape)
-            shape.mirror((xmax,ymin), (xmax,ymax))  # reflect about the line x = rightmost
+            #shape.mirror((xmax,ymin), (xmax,ymax))  # reflect about the line x = rightmost
+            shape.translate(xmax*2,0)		
             shape.layers = [ld_fab[1][0]]
             shape.datatypes = [ld_fab[1][1]]
             fab_cell.add(shape)
@@ -164,7 +165,7 @@ for ld_fab in [(ld_soi2fab, ld_soifab), (ld_metal2fab, ld_metalfab), (ld_poly2fa
         copied = fab_paths.copy()
         for path in fab_paths:
             path = gdspy.copy(path)
-            path.mirror((xmax,ymin), (xmax,ymax))
+            path.translate(xmax*2,0)
             path.layers = [ld_fab[1][0]]
             path.datatypes = [ld_fab[1][1]]
             fab_cell.add(path)
@@ -184,9 +185,9 @@ change_layers_all(fab_cell, ld_metal1fab, ld_metalfab)
 change_layers_all(fab_cell, ld_poly1fab, ld_polyfab)
 
 # Write out the new GDS file
-lib.write_gds(args.cell + '_fab.gds', cells=[fab_cell])
+lib.write_gds('fab_export/' + args.cell + '_fab.gds', cells=[fab_cell])
 
 # reload the gds and view it
 lib = gdspy.GdsLibrary()
-lib.read_gds(args.cell + '_fab.gds')
+lib.read_gds('fab_export/' + args.cell + '_fab.gds')
 gdspy.LayoutViewer(cells=lib.cells[args.cell + '_fab'], depth=3)

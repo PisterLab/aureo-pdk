@@ -1,0 +1,98 @@
+// Netlist automatically generated for spectre by MEMS+
+// Please to not edit.
+// Generated on: Wed Nov  8 21:31:00 2023
+//           with: MEMS+ 7.101, Revision: 62ee6a640569 (2022-08-24 03:42:22)
+
+// Some handy functions for converting physical values to voltage/amperes
+// ======================================================================
+
+// Convert from [m] to [V]
+real displacement(real d) {
+  return d*1000000
+}
+
+// Convert from [rad] to [V]
+real rotation(real r) {
+  return r*100
+}
+
+// Convert from [m/s] to [V]
+real translationalVelocity(real v) {
+  return v*0.010000000000000000208
+}
+
+// Convert from [rad/s] to [V]
+real angularVelocity(real w) {
+  return w*1.0000000000000001665e-06
+}
+
+// Convert from [m/s^2] to [V]
+real translationalAcceleration(real a) {
+  return a*9.9999999999999995475e-07
+}
+
+// Convert from [rad/s^2] to [V]
+real angularAcceleration(real a) {
+  return a*1.0000000000000000364e-10
+}
+
+// Convert from [N] to [A]
+real force(real f) {
+  return f*0.0010000000000000000208
+}
+
+// Convert from [N.m] to [A]
+real moment(real m) {
+  return m*10
+}
+
+// Convert from [Pa] to [V]
+real pressure(real p) {
+  return p*0.0010000000000000000208
+}
+
+// Convert from [m^3/s] to [A]
+real flowRate(real f) {
+  return f*1000
+}
+
+
+Q00_aureo_pdk quantity name="displacement"
+Q01_aureo_pdk quantity name="force"
+Q02_aureo_pdk quantity name="angle"
+Q03_aureo_pdk quantity name="moment"
+Q04_aureo_pdk quantity name="velocity"
+Q05_aureo_pdk quantity name="velocity flow"
+Q06_aureo_pdk quantity name="angular velocity"
+Q07_aureo_pdk quantity name="angular velocity flow"
+Q08_aureo_pdk quantity name="acceleration"
+Q09_aureo_pdk quantity name="acceleration flow"
+Q10_aureo_pdk quantity name="angular acceleration"
+Q11_aureo_pdk quantity name="angular acceleration flow"
+Q12_aureo_pdk quantity name="capacitance"
+Q13_aureo_pdk quantity name="capacitance flow"
+Q14_aureo_pdk quantity name="conductance"
+Q15_aureo_pdk quantity name="conductance flow"
+Q16_aureo_pdk quantity name="gauge pressure"
+Q17_aureo_pdk quantity name="flow rate"
+Q18_aureo_pdk quantity name="warping"
+Q19_aureo_pdk quantity name="warping flow"
+Q20_aureo_pdk quantity name="warping velocity"
+Q21_aureo_pdk quantity name="warping velocity flow"
+Q22_aureo_pdk quantity name="warping acceleration"
+Q23_aureo_pdk quantity name="warping acceleration flow"
+Q24_aureo_pdk quantity name="charge"
+Q25_aureo_pdk quantity name="charge flow"
+
+
+// MEMS+ device
+// ============
+
+subckt aureo_pdk (  )
+
+	parameters T=273.15 Pressure=101325 ResidualStressSiliconNitride=23.5 ResidualStressPoly0=-25 ResidualStressPoly1=-10 ResidualStressPoly2=-10 ResidualStressGold=50 ThicknessNIT=0.2 ThicknessPoly=0.5 ThicknessGold=0.67 ThicknessSOI=40 Scene3DfileBasename="./scene3d" SuggestScaling=no UseSimulatorTemperature=no
+
+	I0_schematic_manager_0 _schematic_managerV2 schematic_name="/home/eecs/lyichen/aureo/cadence/aureo-pdk/DeviceDesign/aureo_pdk.3dsch" search=no global_values=[ T Pressure ResidualStressSiliconNitride ResidualStressPoly0 ResidualStressPoly1 ResidualStressPoly2 ResidualStressGold ThicknessNIT ThicknessPoly ThicknessGold ThicknessSOI ] global_names=[ "T" "Pressure" "ResidualStressSiliconNitride" "ResidualStressPoly0" "ResidualStressPoly1" "ResidualStressPoly2" "ResidualStressGold" "ThicknessNIT" "ThicknessPoly" "ThicknessGold" "ThicknessSOI" ] version=6.2 result_file_basename=Scene3DfileBasename suggest_scaling=SuggestScaling bind_temperature=UseSimulatorTemperature displacement=displacement(1) rotation=rotation(1) translationalVelocity=translationalVelocity(1) translationalAcceleration=translationalAcceleration(1) force=force(1) pressure=pressure(1)
+
+
+ends

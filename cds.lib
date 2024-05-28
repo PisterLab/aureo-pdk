@@ -1,5 +1,10 @@
+INCLUDE cds.lib.core
 DEFINE aureo_lib ./aureo_lib
 DEFINE aureo_scm3c ./aureo_scm3c
 DEFINE scm3c_outline ./scm3c_outline
 DEFINE aureo_mask_run ./aureo_mask_run
 DEFINE aureo_test_structure ./aureo_test_structure
+DEFINE aureo_robot ./aureo_robot
+DEFINE mems_demo_tf ./mems_demo_tf
+DEFINE aureo_scmv ./aureo_scmv
+DEFINE aureo_box ./aureo_box
