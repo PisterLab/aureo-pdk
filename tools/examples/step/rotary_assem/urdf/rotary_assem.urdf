@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rotary_assem">
+  <link
+    name="rotary_b">
+    <inertial>
+      <origin
+        xyz="-0.0010796 -0.0012684 -0.0018353"
+        rpy="0 0 0" />
+      <mass
+        value="2.411E-09" />
+      <inertia
+        ixx="1.7881E-17"
+        ixy="4.9621E-21"
+        ixz="1.4103E-18"
+        iyy="1.1238E-17"
+        iyz="-1.4191E-21"
+        izz="2.6581E-17" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rotary_assem/meshes/rotary_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rotary_assem/meshes/rotary_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rev"
+    type="revolute">
+    <origin
+      xyz="-0.0010626 0.0018021 -0.0012685"
+      rpy="1.5708 0.0061711 0" />
+    <parent
+      link="rotary_b" />
+    <child
+      link="rotary_f" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.6557"
+      upper="0.60094"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="rotary_f">
+    <inertial>
+      <origin
+        xyz="8.5498E-06 2.2271E-08 -4.9626E-05"
+        rpy="0 0 0" />
+      <mass
+        value="2.1508E-09" />
+      <inertia
+        ixx="1.2836E-17"
+        ixy="-8.8908E-21"
+        ixz="-9.4929E-19"
+        iyy="1.7191E-17"
+        iyz="-5.2946E-22"
+        izz="2.7756E-17" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rotary_assem/meshes/rotary_f.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rotary_assem/meshes/rotary_f.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rev"
+    type="revolute">
+    <origin
+      xyz="-0.0010626 0.0018021 -0.0012685"
+      rpy="1.5708 0.0061711 0" />
+    <parent
+      link="rotary_b" />
+    <child
+      link="rotary_f" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.6557"
+      upper="0.60094"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
