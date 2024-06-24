@@ -6,9 +6,10 @@
 # Layer        Purpose        LayerNum    Datatype
 ####################################################################
 
- POLY1FAB  drawing  4  0 
- SOI1  drawing  9  0 
  POLY1  drawing  11  0 
- L43  drawing  43  0 
- SOI1  pin  9  251 
+ HIGHMETAL2  drawing  14  0 
+ SOI1  drawing  9  0 
+ POLY2  drawing  16  0 
+ SOI2  drawing  17  0 
  HIGHMETAL1  drawing  13  0 
+ stretch  drawing  218  0 
