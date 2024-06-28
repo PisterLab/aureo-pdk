@@ -190,6 +190,15 @@ drDefinePacket(
  ( display      whiteDashed    grid     dashed    white     white     outlineStipple )
  ( display      whiteDotted    dots     dotted    white     white     outlineStipple )
 
+ ( display      tanSolid      dots     solid     tan       tan       outlineStipple )
+ ( display      tanSolidSp    dotsSp   solid     tan       tan       outlineStipple )
+ ( display      tanSolidDe    dotsDe   solid     tan       tan       outlineStipple )
+ ( display      tanSolid3     dots     solid3    tan       tan       outlineStipple )
+ ( display      tanSolid3Sp   dotsSp   solid3    tan       tan       outlineStipple )
+ ( display      tanSolid3De   dotsDe   solid3    tan       tan       outlineStipple )
+ ( display      tanDashed     grid     dashed    tan       tan       outlineStipple )
+ ( display      tanDotted     dots     dotted    tan       tan       outlineStipple )
+
  ( display      yellowSolid    dots     solid     yellow    yellow     outlineStipple )
  ( display      yellowSolidSp   dotsSp   solid     yellow   yellow     outlineStipple )
  ( display      yellowSolidDe   dotsDe   solid     yellow   yellow     outlineStipple )
