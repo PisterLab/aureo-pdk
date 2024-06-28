@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="hinge_assem">
+  <link
+    name="hinge_b">
+    <inertial>
+      <origin
+        xyz="0.00678351290342848 0.0068675823323398 0.00683589318687806"
+        rpy="0 0 0" />
+      <mass
+        value="3.96840879043448E-09" />
+      <inertia
+        ixx="5.57015376752821E-17"
+        ixy="-3.42135113365659E-19"
+        ixz="-2.39931358535603E-18"
+        iyy="8.54838038238452E-17"
+        iyz="-8.4520912321861E-20"
+        izz="1.37513314168561E-16" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hinge_assem/meshes/hinge_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hinge_assem/meshes/hinge_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="hinge_f">
+    <inertial>
+      <origin
+        xyz="0.00681294364582006 -0.00667393012237625 -0.00697199201293916"
+        rpy="0 0 0" />
+      <mass
+        value="2.82631947230041E-09" />
+      <inertia
+        ixx="3.31216404642102E-17"
+        ixy="1.47095711919682E-19"
+        ixz="1.79529470410642E-18"
+        iyy="1.94627974514953E-17"
+        iyz="-7.82478462201055E-21"
+        izz="5.04780296263065E-17" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hinge_assem/meshes/hinge_f.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://hinge_assem/meshes/hinge_f.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rev_hinge"
+    type="revolute">
+    <origin
+      xyz="0.0069395 -0.0068461 0.0066739"
+      rpy="1.5708 0 1.566" />
+    <parent
+      link="hinge_b" />
+    <child
+      link="hinge_f" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

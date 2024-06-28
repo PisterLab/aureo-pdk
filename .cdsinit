@@ -12,8 +12,37 @@ if( getShellEnvVar("MEMSPLUS_HOME")
 then
   load( strcat( getShellEnvVar("MEMSPLUS_HOME") "/runtime/cadence/skill/MEMSplusInit.il") )
 else
-  error("[MEMS+]: The environment variable MEMSPLUS_HOME is not defined")
 )
+
+; load key bindings scripts
+let( (bindKeyFileList file path saveSkillPath)
+    bindKeyFileList = '(
+                   "leBindKeys.il" 
+                   "schBindKeys.il"
+                    )
+    ; paths of key binding scripts
+    path = strcat(
+              ".  ~  "
+              prependInstallPath("local ")
+              prependInstallPath("samples/local")
+             )
+    saveSkillPath=getSkillPath()
+    setSkillPath(path)
+
+    foreach(file bindKeyFileList
+       if(isFile(file ) then
+          loadi(file)
+         )
+    )
+    setSkillPath(saveSkillPath)
+)
+
+envLoadFile( "./.cdsenv" ) 
+
+if( isFile( ".cdsenv.personal" ) then
+    envLoadFile( ".cdsenv.personal" )
+)
+
 
 ; To ensure that the pins on Verilog-A symbols generated with a ModelExport are in the same order as the MEMS+ symbols
 ; uncomment the following line. 

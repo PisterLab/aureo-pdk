@@ -128,12 +128,12 @@ for fab by merging the metal layers:
  
 Then `SOI1/2` become `SOIFAB1/2` and `POLY1/2` become `POLYFAB1/2`.
 
-At this point the first gds file is written out with the filename `[CELLNAME]_merged.gds.`
+At this point the first gds file is written out to the fab_export/ folder with the filename `[CELLNAME]_merged.gds.`
 
 Then, all `[LAYERNAME]2` layers are reflected about the X-axis and moved to `SOIFAB`, `POLYFAB`, `METALFAB` layers.
 The second gds file is written out. This final gds file contains only 3 layers for 3 masks.
 
-The final gds file is written out with the filename `[CELLNAME]_fab.gds.`
+The final gds file is written out to the fab_export/ folder with the filename `[CELLNAME]_fab.gds.`
 
 ### 3D view of the GDS
 
@@ -221,8 +221,3 @@ Single layer space rules are enforced on spaces between drawings/shapes on the s
 | `LOWMETAL2` | 4um | 
 | `POLY2` | 2um | 
 | `SOI2` | 2um |
-
-### MEMS+ 7.1 Connection (Alcatraz Only)
-MCOSMLD_LICENSE_FILE=54000@ultrahighq.EECS.Berkeley.EDU
-export CONV_NO_OPENGL=f
-/usr/local/Coventor/CoventorMP2.1/MEMSp7.1
