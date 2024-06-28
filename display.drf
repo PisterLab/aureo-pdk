@@ -37,6 +37,7 @@ drDefineColor(
   ( display      brownB     128  64     0     t     )
   ( display      pink       255  128    128         )
   ( display      pinkB      255  128    128   t     )
+  ( display      tan        255  230    191         )
   ( display      olymBlue   0    142    204         ) ; olympic blue
   ( display      olymBlueB  0    142    204   t     )
   ( display      skyBlue    77    177    248         ) ; sky blue

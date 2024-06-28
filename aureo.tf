@@ -57,6 +57,9 @@ layerDefinitions(
   ( POLY2                     16         P2           )
   ( SOI2                      17         S2           )
   ( SOIHOLE2                  18         S2HOLE       )
+  ( PIMPLANT                  19         PIMP         )
+  ( NIMPLANT                  20         NIMP         )
+  ( BOUNDARY                  43         BOUND        )
  ) ;techLayers
 
  techDerivedLayers(
@@ -80,6 +83,9 @@ layerDefinitions(
   ( POLY2                     drawing    )
   ( LOWMETAL2                 drawing    )
   ( HIGHMETAL2                drawing    )
+  ( PIMPLANT                  drawing    )
+  ( NIMPLANT                  drawing    )
+  ( BOUNDARY                  drawing    )
   ( POLY1                     net        )
   ( POLY2                     net        )
   ( LOWMETAL1                 net        )
@@ -126,6 +132,8 @@ layerDefinitions(
  techDisplays(
  ;( LayerName    Purpose      Packet          Vis Sel Con2ChgLy DrgEnbl Valid)
  ;( ---------    -------      ------          --- --- --------- ------- -----)
+  ( PIMPLANT     drawing      purpleSolid    t t t t t )
+  ( NIMPLANT     drawing      tanSolid  t t t t t )
   ( SOI1         drawing      whiteSolid       t t t t t )
   ( POLY1        drawing      redSolid         t t t t t )
   ( LOWMETAL1    drawing      cyanSolidSp        t t t t t )
@@ -134,6 +142,7 @@ layerDefinitions(
   ( HIGHMETAL2   drawing      greenSolidSp       t t t t t )
   ( POLY2        drawing      orangeSolid    t t t t t )
   ( SOI2         drawing      skyBlueSolid   t t t t t )
+
 
   ( SOI1         fill         whiteSolid       t t t t t )
   ( POLY1        fill         redSolid         t t t t t )
@@ -190,8 +199,10 @@ techLayerProperties(
   ( sheetResistance       HIGHMETAL2              0.0244  )
   ( sheetResistance       SOI1                    2.5     )
   ( sheetResistance       SOI2                    2.5     )
-  ( sheetResistance       POLY1                   30     )
-  ( sheetResistance       POLY2                   30     )
+  ( sheetResistance       POLY1                   30      )
+  ( sheetResistance       POLY2                   30      )
+  ( sheetResistance       PIMPLANT                2.5     )
+  ( sheetResistance       NIMPLANT                2.5     )
 )
 
 
@@ -206,7 +217,7 @@ layerRules(
   functions(
     ;( layer          function         [maskNumber] )
     ;( -----          --------          ----------  )
-    ( SOI1          "li"                1          )
+    ( SOI1          "substrate"         1          )
     ( LOWMETAL1     "li"                3          )
     ( POLY1         "li"                4          )
     ( HIGHMETAL1    "li"                5          )
@@ -214,6 +225,8 @@ layerRules(
     ( POLY2         "li"                8          )
     ( LOWMETAL2     "li"                9          )
     ( SOI2          "li"                10         )
+    ( NIMPLANT      "li"                11         )
+    ( PIMPLANT      "li"                12         )
     
     
   ) ;functions
