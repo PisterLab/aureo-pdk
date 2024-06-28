@@ -2,6 +2,12 @@
 procedure( show_adjacent_layers( bot_layer )
     let( (layer_1_name layer_2_name layer_3_name layer_4_name)
         cond(
+            (bot_layer == 0
+                layer_1_name = "PIMPLANT"
+                layer_2_name = "NIMPLANT"
+                layer_3_name = "SOI1"
+                layer_4_name = "SOI1" ; Repeated intentionally
+            )
             (bot_layer == 1
                 layer_1_name = "SOI1"
                 layer_2_name = "POLY1"
@@ -51,9 +57,32 @@ procedure( show_adjacent_layers( bot_layer )
     )
 )
 
+procedure( toggle_implant_layer(  )
+        
+    layer_1_name = "PIMPLANT"
+    layer_2_name = "NIMPLANT"
+
+    leSetEntryLayer(list(layer_1_name "drawing"))
+    leSetAllLayerVisible(nil)
+    
+    leSetLayerVisible(list(layer_1_name "drawing") t)
+    leSetLayerVisible(list(layer_1_name "pin") t)
+    leSetLayerVisible(list(layer_1_name "resID") t)
+    leSetLayerVisible(list(layer_1_name "dummy") t)
+    leSetLayerVisible(list(layer_1_name "fill") t)
+
+    leSetLayerVisible(list(layer_2_name "drawing") t)
+    leSetLayerVisible(list(layer_2_name "pin") t)
+    leSetLayerVisible(list(layer_2_name "resID") t)
+    leSetLayerVisible(list(layer_2_name "dummy") t)
+    leSetLayerVisible(list(layer_2_name "fill") t)
+
+    hiRedraw()
+)
+
 
 procedure( toggle_layer( layer_id )
-    let( (layer_name draw_layer dum_layer pin_layer)
+    let( (layer_name )
         cond(
             (layer_id == 1
                 layer_name = "SOI1"
@@ -100,6 +129,7 @@ procedure( toggle_layer( layer_id )
 
 hiSetBindKeys( "Layout" list(
     list("Ctrl<Key>q" "leSetAllLayerVisible(t) hiRedraw()")
+    list("<Key>`" "show_adjacent_layers(0)")
     list("<Key>1" "show_adjacent_layers(1)")
     list("<Key>2" "show_adjacent_layers(2)")
     list("<Key>3" "show_adjacent_layers(3)")
@@ -108,6 +138,7 @@ hiSetBindKeys( "Layout" list(
     list("<Key>6" "show_adjacent_layers(6)")
     list("<Key>7" "show_adjacent_layers(7)")
     list("<Key>8" "show_adjacent_layers(8)")
+    list("Ctrl<Key>`" "toggle_implant_layer()")
     list("Ctrl<Key>1" "toggle_layer(1)")
     list("Ctrl<Key>2" "toggle_layer(2)")
     list("Ctrl<Key>3" "toggle_layer(3)")
