@@ -1,5 +1,9 @@
 load "aureo.il"
 
+; load 3D Layout View Render
+; load("GDS3D/skill/icdGDS3D.il")
+load "GDS3D/skill/icdGDS3D.il"
+
 ; Cadence psfXL and SST2 result formats are failing to report custom quantity labels to Virtuoso result viewer.
 ; It is recommended to use psf format when working with MEMS+.
 ; Please see the Known Problems and Solutions section of the Release Notes for more information.
@@ -42,6 +46,7 @@ envLoadFile( "./.cdsenv" )
 if( isFile( ".cdsenv.personal" ) then
     envLoadFile( ".cdsenv.personal" )
 )
+
 
 
 ; To ensure that the pins on Verilog-A symbols generated with a ModelExport are in the same order as the MEMS+ symbols

@@ -1,0 +1,170 @@
+# This file describes how to render the layers in the GDS. 
+# You can make one file for each technology that you are using.
+
+# Do not remove this layer, it must always be here with GDS layer number 255
+LayerStart: Substrate
+Layer: 255
+Height: -900
+Thickness: 900
+Red: 0.0
+Green: 1.0
+Blue: 1.0
+Filter: 0.5
+Metal: 0
+Show: 0
+Shortkey: 9
+LayerEnd
+
+# Start editing here
+LayerStart: SOI1
+Layer: 9		# GDS layer number
+Height: 0		# Start height
+Thickness: 40000	# Stop height = start height + thickness
+Red: 0.25		# Color red component, [0,1]
+Green: 0.25		# Color green component, [0,1]
+Blue: 0.25		# Color blue component, [0,1]
+Filter: 0.0		# Keep at 0 (controls transparency)
+Metal: 0		# Not used at the moment
+Shortkey: 0		# Defines a shortkey from 0 to 9 to toggle the layer visibility. Can be pre-pended with any combination 
+			# of <Alt> <Ctrl> and <Shift> as modifiers
+Show: 1			# Shown during rendering
+LayerEnd
+
+LayerStart: SOIHOLE1
+Layer: 10
+Height: 0
+Thickness: 40000
+Red: 0.05
+Green: 0.99
+Blue: 0.05
+Filter: 0.0
+Metal: 0
+Shortkey: <Shift> 0
+Show: 1
+LayerEnd
+
+LayerStart: NIT1
+Layer: 11
+Height: 40000
+Thickness: 200
+Red: 0.15
+Green: 0.55
+Blue: 0.42
+Filter: 0.0
+Metal: 1
+Show: 1
+LayerEnd
+
+LayerStart: POLY1
+Layer: 11
+Height: 40200
+Thickness: 500
+Red: 0.99
+Green: 0.53
+Blue: 0.05
+Filter: 0.0
+Metal: 0
+Show: 1
+LayerEnd
+
+LayerStart: LOWMETAL1
+Layer: 12
+Height: 40000
+Thickness: 670
+Red: 1.0
+Green: 1.0
+Blue: 0.0
+Filter: 0.0
+Metal: 0
+Show: 1
+LayerEnd
+
+LayerStart: HIGHMETAL1
+Layer: 13
+Height: 40700
+Thickness: 670
+Red: 0.91
+Green: 0.12
+Blue: 0.05
+Filter: 0.0
+Metal: 0
+Show: 1
+LayerEnd
+
+LayerStart: HIGHMETAL2
+Layer: 14
+Height: 41370
+Thickness: 670
+Red: 1.0
+Green: 0.9
+Blue: 0.75
+Filter: 0.0
+Metal: 0
+Show: 1
+LayerEnd
+
+LayerStart: LOWMETAL2
+Layer: 15
+Height: 42540
+Thickness: 200
+Red: 0.0
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 1
+Show: 1
+LayerEnd
+
+LayerStart: POLY2
+Layer: 16
+Height: 42040
+Thickness: 500
+Red: 0.50
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 0
+Show: 1
+LayerEnd
+
+LayerStart: NIT2
+Layer: 16
+Height: 42540
+Thickness: 200
+Red: 1.0
+Green: 0.5
+Blue: 0.0
+Filter: 0.0
+Metal: 1
+Shortkey: 8
+Show: 1
+LayerEnd
+
+LayerStart: SOI2
+Layer: 17
+Height: 42740
+Thickness: 40000
+Red: 1.0
+Green: 0.0
+Blue: 1.0
+Filter: 0.0
+Metal: 1
+Shortkey: 1
+Show: 1
+LayerEnd
+
+LayerStart: SOIHOLE2
+Layer: 18
+Height: 42740
+Thickness: 40000
+Red: 0.5
+Green: 0.4
+Blue: 0.7
+Filter: 0.0
+Metal: 0
+Shortkey: <Shift> 1
+Show: 1
+LayerEnd
+
+# End of the file
+

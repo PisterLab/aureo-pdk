@@ -76,13 +76,15 @@ layerDefinitions(
  ;( LayerName                 Purpose    )
  ;( ---------                 -------    )
 
-  ( SOI1                      drawing    ) 
+  ( SOI1                      drawing    )
+  ( SOIHOLE1                  drawing    )
   ( NIMPLANT                  drawing    )
   ( PIMPLANT                  drawing    )
   ( POLY1                     drawing    )
   ( LOWMETAL1                 drawing    )
   ( HIGHMETAL1                drawing    )
   ( SOI2                      drawing    )
+  ( SOIHOLE2                  drawing    )
   ( POLY2                     drawing    )
   ( LOWMETAL2                 drawing    )
   ( HIGHMETAL2                drawing    )
@@ -155,6 +157,7 @@ layerDefinitions(
  ;( ---------    -------      ------          --- --- --------- ------- -----)
 
   ( SOI1         drawing      whiteSolid     t t t t t )
+  ( SOIHOLE1     drawing      graySolid      t t t t t )
   ( NIMPLANT     drawing      tanSolid       t t t t t )
   ( PIMPLANT     drawing      purpleSolid    t t t t t )
   ( POLY1        drawing      redSolid       t t t t t )
@@ -164,6 +167,7 @@ layerDefinitions(
   ( HIGHMETAL2   drawing      greenSolidSp   t t t t t )
   ( POLY2        drawing      orangeSolid    t t t t t )
   ( SOI2         drawing      skyBlueSolid   t t t t t )
+  ( SOIHOLE2     drawing      brownSolid     t t t t t )
 
   ( SOI1         fill         whiteSolid     t t t t t )
   ( NIMPLANT     fill         tanSolid       t t t t t )
@@ -273,8 +277,8 @@ layerRules(
     ( "POLY2"  0.01 )
     ( "SOI1"   0.01 )
     ( "SOI2"   0.01 )
-    ;( "SOIHOLE1" 0.01 )
-    ;( "SOIHOLE2" 0.01 )
+    ( "SOIHOLE1" 0.01 )
+    ( "SOIHOLE2" 0.01 )
   ) ;mfgResolutions
 ) ;layerRules
 
