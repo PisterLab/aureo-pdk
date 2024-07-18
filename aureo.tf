@@ -346,12 +346,12 @@ constraintGroups(
       spacings(
         ;( constraint     layer1     layer2     value )
         ;( ----------     ------     ------     ----- )
-        ( minWidth       "LOWMETAL1"            2 )
-        ( minWidth       "HIGHMETAL1"           2 )
+        ( minWidth       "LOWMETAL1"            4 )
+        ( minWidth       "HIGHMETAL1"           4 )
         ( minWidth       "SOI1"                 2 )
         ( minWidth       "POLY1"                2 )
-        ( minWidth       "LOWMETAL2"            2 )
-        ( minWidth       "HIGHMETAL2"           2 )
+        ( minWidth       "LOWMETAL2"            4 )
+        ( minWidth       "HIGHMETAL2"           4 )
         ( minWidth       "SOI2"                 2 )
         ( minWidth       "POLY2"                2 )
 
