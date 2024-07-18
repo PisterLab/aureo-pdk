@@ -59,7 +59,8 @@ layerDefinitions(
   ( SOIHOLE2                  18         S2HOLE       )
   ( PIMPLANT                  19         PIMP         )
   ( NIMPLANT                  20         NIMP         )
-  ( BOUNDARY                  43         BOUND        )
+  ( BONDCONTACT               41         BONDCONTACT  )
+  ( MASKBOUNDARY              43         MSKBOUNDARY  )
  ) ;techLayers
 
  techDerivedLayers(
@@ -86,7 +87,8 @@ layerDefinitions(
   ( POLY2                     drawing    )
   ( LOWMETAL2                 drawing    )
   ( HIGHMETAL2                drawing    )
-  ( BOUNDARY                  drawing    )
+  ( BONDCONTACT               drawing    )
+  ( MASKBOUNDARY              drawing    )
 
   ( SOI1                      net        )
   ( NIMPLANT                  net        )
@@ -98,7 +100,6 @@ layerDefinitions(
   ( POLY2                     net        )
   ( LOWMETAL2                 net        )
   ( HIGHMETAL2                net        )
-  ( BOUNDARY                  net        )
 
   ( SOI1                      pin        )
   ( NIMPLANT                  pin        )
@@ -110,7 +111,6 @@ layerDefinitions(
   ( POLY2                     pin        )
   ( LOWMETAL2                 pin        )
   ( HIGHMETAL2                pin        )
-  ( BOUNDARY                  pin        )
 
   ( SOI1                      resID      )
   ( NIMPLANT                  resID      )
@@ -122,7 +122,6 @@ layerDefinitions(
   ( POLY2                     resID      )
   ( LOWMETAL2                 resID      )
   ( HIGHMETAL2                resID      )
-  ( BOUNDARY                  resID      )
 
   ( SOI1                      dummy      )
   ( NIMPLANT                  dummy      )
@@ -134,7 +133,6 @@ layerDefinitions(
   ( POLY2                     dummy      )
   ( LOWMETAL2                 dummy      )
   ( HIGHMETAL2                dummy      )
-  ( BOUNDARY                  dummy      )
 
   ( SOI1                      fill       )
   ( NIMPLANT                  fill       )
@@ -146,7 +144,6 @@ layerDefinitions(
   ( POLY2                     fill       )
   ( LOWMETAL2                 fill       )
   ( HIGHMETAL2                fill       )
-  ( BOUNDARY                  fill       )
  ) ;techLayerPurposePriorities
 
 
