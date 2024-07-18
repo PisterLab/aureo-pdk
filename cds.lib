@@ -6,6 +6,7 @@ DEFINE aureo_mask_run ./aureo_mask_run
 DEFINE aureo_test_structure ./aureo_test_structure
 DEFINE aureo_robot ./aureo_robot
 DEFINE mems_demo_tf ./mems_demo_tf
-DEFINE aureo_scmv ./aureo_scmv
 DEFINE aureo_box ./aureo_box
 DEFINE aureo_solar ./aureo_solar
+DEFINE aureo_scumv22 ./aureo_scumv22
+DEFINE aureo_scumv24 ./aureo_scumv24
