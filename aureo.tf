@@ -59,7 +59,8 @@ layerDefinitions(
   ( SOIHOLE2                  18         S2HOLE       )
   ( PIMPLANT                  19         PIMP         )
   ( NIMPLANT                  20         NIMP         )
-  ( BOUNDARY                  43         BOUND        )
+  ( BONDCONTACT               41         BONDCONTACT  )
+  ( MASKBOUNDARY              43         MSKBOUNDARY  )
  ) ;techLayers
 
  techDerivedLayers(
@@ -76,19 +77,18 @@ layerDefinitions(
  ;( LayerName                 Purpose    )
  ;( ---------                 -------    )
 
-  ( SOI1                      drawing    )
-  ( SOIHOLE1                  drawing    )
+  ( SOI1                      drawing    ) 
   ( NIMPLANT                  drawing    )
   ( PIMPLANT                  drawing    )
   ( POLY1                     drawing    )
   ( LOWMETAL1                 drawing    )
   ( HIGHMETAL1                drawing    )
   ( SOI2                      drawing    )
-  ( SOIHOLE2                  drawing    )
   ( POLY2                     drawing    )
   ( LOWMETAL2                 drawing    )
   ( HIGHMETAL2                drawing    )
-  ( BOUNDARY                  drawing    )
+  ( BONDCONTACT               drawing    )
+  ( MASKBOUNDARY              drawing    )
 
   ( SOI1                      net        )
   ( NIMPLANT                  net        )
@@ -100,7 +100,6 @@ layerDefinitions(
   ( POLY2                     net        )
   ( LOWMETAL2                 net        )
   ( HIGHMETAL2                net        )
-  ( BOUNDARY                  net        )
 
   ( SOI1                      pin        )
   ( NIMPLANT                  pin        )
@@ -112,7 +111,6 @@ layerDefinitions(
   ( POLY2                     pin        )
   ( LOWMETAL2                 pin        )
   ( HIGHMETAL2                pin        )
-  ( BOUNDARY                  pin        )
 
   ( SOI1                      resID      )
   ( NIMPLANT                  resID      )
@@ -124,7 +122,6 @@ layerDefinitions(
   ( POLY2                     resID      )
   ( LOWMETAL2                 resID      )
   ( HIGHMETAL2                resID      )
-  ( BOUNDARY                  resID      )
 
   ( SOI1                      dummy      )
   ( NIMPLANT                  dummy      )
@@ -136,7 +133,6 @@ layerDefinitions(
   ( POLY2                     dummy      )
   ( LOWMETAL2                 dummy      )
   ( HIGHMETAL2                dummy      )
-  ( BOUNDARY                  dummy      )
 
   ( SOI1                      fill       )
   ( NIMPLANT                  fill       )
@@ -148,7 +144,6 @@ layerDefinitions(
   ( POLY2                     fill       )
   ( LOWMETAL2                 fill       )
   ( HIGHMETAL2                fill       )
-  ( BOUNDARY                  fill       )
  ) ;techLayerPurposePriorities
 
 
@@ -157,7 +152,6 @@ layerDefinitions(
  ;( ---------    -------      ------          --- --- --------- ------- -----)
 
   ( SOI1         drawing      whiteSolid     t t t t t )
-  ( SOIHOLE1     drawing      graySolid      t t t t t )
   ( NIMPLANT     drawing      tanSolid       t t t t t )
   ( PIMPLANT     drawing      purpleSolid    t t t t t )
   ( POLY1        drawing      redSolid       t t t t t )
@@ -167,7 +161,6 @@ layerDefinitions(
   ( HIGHMETAL2   drawing      greenSolidSp   t t t t t )
   ( POLY2        drawing      orangeSolid    t t t t t )
   ( SOI2         drawing      skyBlueSolid   t t t t t )
-  ( SOIHOLE2     drawing      brownSolid     t t t t t )
 
   ( SOI1         fill         whiteSolid     t t t t t )
   ( NIMPLANT     fill         tanSolid       t t t t t )
@@ -277,8 +270,8 @@ layerRules(
     ( "POLY2"  0.01 )
     ( "SOI1"   0.01 )
     ( "SOI2"   0.01 )
-    ( "SOIHOLE1" 0.01 )
-    ( "SOIHOLE2" 0.01 )
+    ;( "SOIHOLE1" 0.01 )
+    ;( "SOIHOLE2" 0.01 )
   ) ;mfgResolutions
 ) ;layerRules
 
@@ -353,12 +346,12 @@ constraintGroups(
       spacings(
         ;( constraint     layer1     layer2     value )
         ;( ----------     ------     ------     ----- )
-        ( minWidth       "LOWMETAL1"            2 )
-        ( minWidth       "HIGHMETAL1"           2 )
+        ( minWidth       "LOWMETAL1"            4 )
+        ( minWidth       "HIGHMETAL1"           4 )
         ( minWidth       "SOI1"                 2 )
         ( minWidth       "POLY1"                2 )
-        ( minWidth       "LOWMETAL2"            2 )
-        ( minWidth       "HIGHMETAL2"           2 )
+        ( minWidth       "LOWMETAL2"            4 )
+        ( minWidth       "HIGHMETAL2"           4 )
         ( minWidth       "SOI2"                 2 )
         ( minWidth       "POLY2"                2 )
 

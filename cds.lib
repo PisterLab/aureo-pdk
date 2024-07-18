@@ -8,7 +8,14 @@ DEFINE aureo_robot ./aureo_robot
 DEFINE mems_demo_tf ./mems_demo_tf
 DEFINE aureo_scmv ./aureo_scmv
 DEFINE aureo_box ./aureo_box
+<<<<<<< HEAD
 DEFINE aureo_solar ./aureo_solar
 #Removed by ddDeleteObj: DEFINE aureo_basic /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_basic
 DEFINE aureo_basic /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_basic
 DEFINE aureo_pcb /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_pcb
+=======
+#Removed by ddDeleteObj: DEFINE aureo_basic /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_basic
+DEFINE aureo_basic /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_basic
+#Removed by ddDeleteObj: DEFINE aureo_solar /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_solar
+DEFINE aureo_solar /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_solar
+>>>>>>> master

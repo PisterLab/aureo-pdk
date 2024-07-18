@@ -7,4 +7,6 @@ HIGHMETAL2     drawing            14                      0
 LOWMETAL2      drawing            15                      0
 POLY2          drawing            16                      0
 SOI2           drawing            17                      0
+PDOPED         drawing            19                      0
+NDOPED         drawing            20                      0
            
