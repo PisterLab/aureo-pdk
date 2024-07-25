@@ -8,7 +8,7 @@
 
  POLY2  drawing  16  0 
  SOIHOLE2  drawing  18  0 
- BOUNDARY  drawing  43  0 
+ MASKBOUNDARY  drawing  43  0 
  PIMPLANT  drawing  19  0 
  HIGHMETAL1  drawing  13  0 
  HIGHMETAL2  drawing  14  0 
