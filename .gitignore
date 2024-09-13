@@ -60,3 +60,4 @@ lsyncd.status
 # PowerPoint autosave files
 ~$*
 /tools/phobos_aureo
+.DS_Store
