@@ -6,17 +6,8 @@
 # Layer        Purpose        LayerNum    Datatype
 ####################################################################
 
- POLY2  drawing  16  0 
- SOIHOLE2  drawing  18  0 
- MASKBOUNDARY  drawing  43  0 
- PIMPLANT  drawing  19  0 
- HIGHMETAL1  drawing  13  0 
- HIGHMETAL2  drawing  14  0 
- POLY1  drawing  11  0 
- LOWMETAL1  drawing  12  0 
  SOI1  drawing  9  0 
- SOIHOLE1  drawing  10  0 
- SOI2  drawing  17  0 
- LOWMETAL2  drawing  15  0 
- NIMPLANT  drawing  20  0 
+ POLY1  drawing  11  0 
+ MASKBOUNDARY  drawing  43  0 
  SOI1  pin  9  251 
+ HIGHMETAL1  drawing  13  0 
