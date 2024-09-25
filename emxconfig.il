@@ -21,7 +21,7 @@ EMX_layer_table=""
 
 ; EMX_process_path (*TF*) tells where you keep EMX process files
 ; EMX_process_path=(strcat (getShellEnvVar "BAG_TECH_CONFIG_DIR") "/emx_setup")
-EMX_process_path="."
+EMX_process_path=(getShellEnvVar "PWD")
 
 ; EMX_process_name (*TF*) is the process file name (sans path).  Nil
 ; means take the first .proc file in the EMX_process_path directory
