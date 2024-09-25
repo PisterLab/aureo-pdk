@@ -11,6 +11,7 @@ export LD_LIBRARY_PATH=/usr/lib64
 export PATH=${CDS_HOME}/tools/plot/bin:${PATH}
 export PATH=${CDS_HOME}/tools/dfII/bin:${PATH}
 export PATH=${CDS_HOME}/tools/bin:${PATH}
+export PATH=${EMX_HOME}/bin:${PATH}
 
 # Virtuoso options.
 export CDS_Netlisting_Mode=Analog
