@@ -2,10 +2,11 @@ assume microns
 temperature 25
 geometry scaling 1
 
+define SOI2 = l17t0+l17t14+l17t15+l17t251
 define POLY2 = l16t0+l16t14+l16t15+l16t251
 define NITRIDE2 = grow(POLY2, -0.15um)
-define VIANITRIDE2POLY2 = NITRIDE2*POLY2
 define LOWMETAL2 = l15t0+l15t14+l15t15+l15t251
+define VIALOWMETAL2SOI2 = LOWMETAL2*SOI2
 define HIGHMETAL2 = l14t0+l14t14+l14t15+l14t251
 define VIAHIGHMETAL2POLY2 = HIGHMETAL2*POLY2
 define VIAHIGHMETAL2LOWMETAL2 = HIGHMETAL2*LOWMETAL2
@@ -16,13 +17,16 @@ define VIALOWMETAL1HIGHMETAL1 = LOWMETAL1*HIGHMETAL1
 define POLY1 = l11t0+l11t14+l11t15+l11t251
 define VIAPOLY1HIGHMETAL1 = POLY1*HIGHMETAL1
 define NITRIDE1 = grow(POLY1, -0.15um)
-define VIAPOLY1NITRIDE1 = POLY1*NITRIDE1
+define SOI1 = l9t0+l9t14+l9t15+l9t251
+define VIASOI1LOWMETAL1 = SOI1*LOWMETAL1
 
-layer 40 11.7 1 10.0 ohm-cm name SOI1
-layer 5.0 1.0 1 1e-12 ohm-cm
-  conductor 1.0 2.44e-8 ohm-cm LOWMETAL1
-  conductor 0.499 1e3 ohm-cm NITRIDE1
-  offset 0.5
+layer 1000 1.0 1 # Air
+layer 85 1.0 1 1e-12 ohm-cm
+  conductor 40.0 10.0 ohm-cm SOI1
+  offset 40.0
+  offset 0.001
+  conductor 0.999 2.44e-8 ohm-cm LOWMETAL1
+  offset 0.499
   conductor 1.0 1.0 ohm-cm POLY1
   offset 1.0
   offset 0.001
@@ -33,17 +37,18 @@ layer 5.0 1.0 1 1e-12 ohm-cm
   offset 0.999
   conductor 1.0 1.0 ohm-cm POLY2
   offset 0.5
-  conductor 1.0 2.44e-8 ohm-cm LOWMETAL2
+  conductor 0.999 2.44e-8 ohm-cm LOWMETAL2
   offset 0.5
-  offset 0.001
-  conductor 0.499 1e3 ohm-cm NITRIDE2
-layer 40 11.7 1 10.0 ohm-cm name SOI2
+  offset 0.5
+  conductor 40.0 10.0 ohm-cm SOI2
 layer infinity 1.0
 
-via POLY1 NITRIDE1 1e3 ohm-cm VIAPOLY1NITRIDE1
+via SOI1 POLY1 10 ohm-cm NITRIDE1
+via SOI1 LOWMETAL1 2.44e-8 ohm-cm VIASOI1LOWMETAL1
 via LOWMETAL1 HIGHMETAL1 2.44e-8 ohm-cm VIALOWMETAL1HIGHMETAL1
 via POLY1 HIGHMETAL1 2.44e-8 ohm-cm VIAPOLY1HIGHMETAL1
 via HIGHMETAL1 HIGHMETAL2 2.44e-8 ohm-cm VIAHIGHMETAL1HIGHMETAL2
 via HIGHMETAL2 POLY2 2.44e-8 ohm-cm VIAHIGHMETAL2POLY2
 via HIGHMETAL2 LOWMETAL2 2.44e-8 ohm-cm VIAHIGHMETAL2LOWMETAL2
-via NITRIDE2 POLY2 1e3 ohm-cm VIANITRIDE2POLY2
+via LOWMETAL2 SOI2 2.44e-8 ohm-cm VIALOWMETAL2SOI2
+via POLY2 SOI2 10 ohm-cm NITRIDE2
