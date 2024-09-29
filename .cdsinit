@@ -1,4 +1,4 @@
-load "aureo.il"
+load("aureo.il")
 
 ; Cadence psfXL and SST2 result formats are failing to report custom quantity labels to Virtuoso result viewer.
 ; It is recommended to use psf format when working with MEMS+.
@@ -8,10 +8,8 @@ envSetVal("spectre.outputs" "simOutputFormat" 'string "psf")
 
 ; Load MEMS+ configuration into Virtuoso
 ; The MEMSPLUS_HOME environment variable must be defined before starting Virtuoso
-if( getShellEnvVar("MEMSPLUS_HOME")
-then
-  load( strcat( getShellEnvVar("MEMSPLUS_HOME") "/runtime/cadence/skill/MEMSplusInit.il") )
-else
+if( getShellEnvVar("MEMSPLUS_HOME") then
+    load( strcat( getShellEnvVar("MEMSPLUS_HOME") "/runtime/cadence/skill/MEMSplusInit.il") )
 )
 
 ; load key bindings scripts
@@ -43,6 +41,15 @@ if( isFile( ".cdsenv.personal" ) then
     envLoadFile( ".cdsenv.personal" )
 )
 
+; Open the library manager.
+ddsOpenLibManager()
+
+; Load EMX into Virtuoso.
+if( getShellEnvVar("EMX_HOME") then
+    load("emxconfig.il")
+else
+    warn("[EMX] The EMX_HOME environment variable is not defined.")
+)
 
 ; To ensure that the pins on Verilog-A symbols generated with a ModelExport are in the same order as the MEMS+ symbols
 ; uncomment the following line. 
