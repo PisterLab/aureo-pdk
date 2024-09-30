@@ -1,0 +1,28 @@
+INCLUDE cds.lib.core
+DEFINE aureo_lib ./aureo_lib
+DEFINE aureo_scm3c ./aureo_scm3c
+DEFINE scm3c_outline ./scm3c_outline
+DEFINE aureo_mask_run ./aureo_mask_run
+DEFINE aureo_test_structure ./aureo_test_structure
+DEFINE aureo_robot ./aureo_robot
+DEFINE mems_demo_tf ./mems_demo_tf
+DEFINE aureo_box ./aureo_box
+<<<<<<< HEAD
+DEFINE aureo_solar ./aureo_solar
+<<<<<<< HEAD
+DEFINE aureo_scumv22 ./aureo_scumv22
+DEFINE aureo_scumv24 ./aureo_scumv24
+=======
+#Removed by ddDeleteObj: DEFINE aureo_basic /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_basic
+DEFINE aureo_basic /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_basic
+DEFINE aureo_pcb /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_pcb
+<<<<<<< HEAD
+>>>>>>> adding new aureo solar design and gds3d view integration
+=======
+=======
+#Removed by ddDeleteObj: DEFINE aureo_basic /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_basic
+DEFINE aureo_basic /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_basic
+#Removed by ddDeleteObj: DEFINE aureo_solar /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_solar
+DEFINE aureo_solar /home/eecs/lyichen/aureo/cadence/aureo-pdk/aureo_solar
+>>>>>>> master
+>>>>>>> merge master to lyichen
