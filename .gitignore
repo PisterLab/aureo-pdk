@@ -4,6 +4,9 @@ setup.sh
 # Cadence Virtuoso
 .cadence/
 
+# EMX.
+EMX_work/
+
 # Log files
 *.log
 panic*.log.*
@@ -60,3 +63,4 @@ lsyncd.status
 # PowerPoint autosave files
 ~$*
 /tools/phobos_aureo
+.DS_Store
