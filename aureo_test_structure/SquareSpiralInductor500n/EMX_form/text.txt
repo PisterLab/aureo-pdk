@@ -1,0 +1,46 @@
+"Process" "aureo.proc"
+"Proc_options" ""
+"Edge_mesh" 2.0
+"Thickness" 2.0
+"Via_merge" 0.5
+"_3D_metals" "*"
+"Signals" "a b"
+"Grounds" "gnd"
+"Global_ref" nil
+"Start" 1000000.0
+"Stop" 1e+08
+"Step" "100000"
+"Type" "Single-ended inductor"
+"Plot_res" (t nil nil nil nil)
+"File_or_view" "EMX_form"
+
+"Capacitive" ""
+"Inductive" ""
+"Internal" ""
+"Size" 1.0
+"Label_depth" 2
+"Cadence_pins" t
+"Collapse_ports" nil
+"Resistance" 1.0
+"Separation" 5.0
+"Mode" "RLC"
+"Radiation" nil
+"Threads" 0
+"Simul_freqs" 0
+"Memory" "recommended"
+"Licensing" ""
+"Types" (t nil)
+"Formats" (t nil nil)
+"PZ_method" "none"
+"Data_file" ""
+"EMX" ""
+"EMX_GDSview_combined" ""
+"GDSview" ""
+"ModelGen" ""
+"Work_dir" "./EMX_work"
+"EMX_path" ""
+
+"device_cells" nil
+"selected_nets" nil
+"expanded_cells" nil
+"process_path" nil
