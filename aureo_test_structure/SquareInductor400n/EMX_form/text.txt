@@ -1,4 +1,4 @@
-"Process" "aureo.proc"
+"Process" "emx/aureo.proc"
 "Proc_options" ""
 "Edge_mesh" 2.0
 "Thickness" 2.0

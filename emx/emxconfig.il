@@ -25,7 +25,7 @@ EMX_process_path=(getShellEnvVar "PWD")
 
 ; EMX_process_name (*TF*) is the process file name (sans path).  Nil
 ; means take the first .proc file in the EMX_process_path directory
-EMX_process_name="aureo.proc"
+EMX_process_name="emx/aureo.proc"
 
 ; If you want to run EMX on a remote machine, set this to the machine
 ; name (or IP address).  You must be able to execute a command on the
