@@ -7,8 +7,13 @@ export LM_LICENSE_FILE=<INSERT LICENSE HERE>
 # Cadence.
 export CDS_HOME=<INSERT CADENCE PATH HERE>
 
+# Spectre.
+# Uncomment ONLY if you have Spectre installed and are able to provide the path and license.
+# Spectre is needed to plot EMX results.
+#export SPECTRE_HOME=<INSERT SPECTRE PATH HERE>
+
 # EMX.
-# Uncomment ONLY if you have EMX installed and are able to to provide the path and license.
+# Uncomment ONLY if you have EMX installed and are able to provide the path and license.
 #export EMX_HOME=<INSERT EMX PATH HERE>
 
 # Coventor MEMS+
