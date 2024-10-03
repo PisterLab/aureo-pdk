@@ -46,7 +46,7 @@ ddsOpenLibManager()
 
 ; Load EMX into Virtuoso.
 if( getShellEnvVar("EMX_HOME") then
-    load("emxconfig.il")
+    load("emx/emxconfig.il")
 else
     warn("[EMX] The EMX_HOME environment variable is not defined.")
 )
